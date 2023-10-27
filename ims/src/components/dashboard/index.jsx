@@ -2,10 +2,14 @@ import React from "react";
 import "./style.scss";
 import {dashInfo, data1, data2, topSeller, topSellCol} from "./data"
 import {latestSell, latestSellCol, recentProduct, productCol} from "./data"
+import { useDispatch, useSelector } from "react-redux";
+import { pageActions } from "../../store/pageSlice";
 import DashCard from "../common/dash_card";
 import {Table} from "antd";
 
 export default function Dashboard() {
+	let dispatch = useDispatch();
+	dispatch((pageActions.setDashboard()));
 	let InfoList = dashInfo.map((card, i) => {
 		return (
 		<div className="dashcard__wrapper">
