@@ -69,3 +69,12 @@
 	height: 1px;
 	background-color: $line-color;
 }
+// Button Style
+.add__btn
+{
+	border-radius: 5px;
+	padding: 1rem;
+	background-color: $primary;
+	color: white;
+	border: 0px solid transparent;
+}

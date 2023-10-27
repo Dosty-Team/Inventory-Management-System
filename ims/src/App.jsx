@@ -4,6 +4,7 @@ import Dashboard from "./components/dashboard";
 import Sidebar from "./components/common/sidebar"
 import Topbar from "./components/common/topbar"
 import Product from "./components/products";
+import Category from './components/category';
 import "./App.scss";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Dashboard/>}/>
 					<Route path="/product" element={<Product/>}/>
+					<Route path="/category" element={<Category/>}/>
 				</Routes>
 			</div>
 		</div>
