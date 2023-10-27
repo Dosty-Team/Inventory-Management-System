@@ -61,3 +61,425 @@ export const dashInfo = [
 // Here, data2 = [profit, normal, receive, category, shareholder, cost]
 export const data1 = [832, 868, 49, 10, 300, 106]; 
 export const data2 = [204, 24, 10, 4, 2110, 4320]; 
+
+// Top Seller Table Data
+export const topSeller = [
+	{
+	  key: '1',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '2',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '3',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '4',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '5',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '6',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '7',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '8',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '9',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '10',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '11',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '12',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '13',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '14',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '15',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '16',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '17',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '18',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '19',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '20',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '21',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '22',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '23',
+	  name: 'Earbud',
+	  soldQty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '24',
+	  name: 'Headphone',
+	  soldQty: 4,
+	  price: 8000,
+	},
+  ];
+
+  export const topSellCol = [
+	{
+	  title: 'Name',
+	  dataIndex: 'name',
+	  key: 'name',
+	},
+	{
+	  title: 'Sold Qty',
+	  dataIndex: 'soldQty',
+	  key: 'soldQty',
+	},
+	{
+	  title: 'Price',
+	  dataIndex: 'price',
+	  key: 'price',
+	},
+  ];
+
+// Latest Seller Table Data 
+export const latestSell = [
+	{
+	  key: '1',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '2',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '3',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '4',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '5',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '6',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '7',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '8',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '9',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '10',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '11',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '12',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '13',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '14',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '15',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+	{
+	  key: '16',
+	  name: 'Smartwatch',
+	  soldQty: 3,
+	  date: "2023/10/15",
+	  price: 7600,
+	},
+];
+export const latestSellCol = [
+	{
+	  title: 'Name',
+	  dataIndex: 'name',
+	  key: 'name',
+	},
+	{
+	  title: 'Sold Qty',
+	  dataIndex: 'soldQty',
+	  key: 'soldQty',
+	},
+	{
+	  title: 'Date',
+	  dataIndex: 'date',
+	  key: 'date',
+	},
+	{
+	  title: 'Price',
+	  dataIndex: 'price',
+	  key: 'price',
+	},
+  ];
+
+  // Top Seller Table Data
+export const recentProduct = [
+	{
+	  key: '1',
+	  name: 'Earbud',
+	  qty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '2',
+	  name: 'Headphone',
+	  qty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '3',
+	  name: 'Earbud',
+	  qty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '4',
+	  name: 'Headphone',
+	  qty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '5',
+	  name: 'Earbud',
+	  qty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '6',
+	  name: 'Headphone',
+	  qty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '7',
+	  name: 'Earbud',
+	  qty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '8',
+	  name: 'Headphone',
+	  qty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '9',
+	  name: 'Earbud',
+	  qty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '10',
+	  name: 'Headphone',
+	  qty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '11',
+	  name: 'Earbud',
+	  qty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '12',
+	  name: 'Headphone',
+	  qty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '13',
+	  name: 'Earbud',
+	  qty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '14',
+	  name: 'Headphone',
+	  qty: 4,
+	  price: 8000,
+	},
+	{
+	  key: '15',
+	  name: 'Earbud',
+	  qty: 7,
+	  price: 2800,
+	},
+	{
+	  key: '16',
+	  name: 'Headphone',
+	  qty: 4,
+	  price: 8000,
+	},
+  ];
+
+  export const productCol = [
+	{
+	  title: 'Name',
+	  dataIndex: 'name',
+	  key: 'name',
+	},
+	{
+	  title: 'Qty',
+	  dataIndex: 'qty',
+	  key: 'qty',
+	},
+	{
+	  title: 'Price',
+	  dataIndex: 'price',
+	  key: 'price',
+	},
+  ];

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
-import {dashInfo, data1, data2} from "./data"
+import {dashInfo, data1, data2, topSeller, topSellCol} from "./data"
+import {latestSell, latestSellCol, recentProduct, productCol} from "./data"
 import DashCard from "../common/dash_card";
 import {Table} from "antd";
 
@@ -14,159 +15,24 @@ export default function Dashboard() {
 			/>
 		</div>);
 	});
-	const dataSource = [
-  {
-    key: '1',
-    name: 'Mike',
-    age: 32,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-  {
-    key: '2',
-    name: 'John',
-    age: 42,
-    address: '10 Downing Street',
-  },
-];
-
-const columns = [
-  {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-  },
-  {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
-  },
-  {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-  },
-];
 
     return <div className="dashboard">
 		<div className="dashboard__info">
 			{InfoList}
-			
-			<Table dataSource={dataSource} columns={columns} />;
-
 		</div>
+    <div className="dashboard__highlight flex__row">
+      <div className="dashboard__highlight--seller hard__shadow">
+        <h2>Top Seller</h2>
+		<Table dataSource={topSeller} columns={topSellCol} size="small"/>
+      </div>
+      <div className="dashboard__highlight--latest hard__shadow">
+        <h2>Latest Sales</h2>
+		<Table dataSource={latestSell} columns={latestSellCol} size="small"/>
+      </div>
+      <div className="dashboard__highlight--products hard__shadow">
+        <h2>Recent Products</h2>
+		<Table dataSource={recentProduct} columns={productCol} size="small"/>
+      </div>
+    </div>
 	</div>;
 }
