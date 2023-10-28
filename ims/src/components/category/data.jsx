@@ -1,11 +1,11 @@
 import {Space} from 'antd';
 export const categoryInfo = [
     {
-        value: 9,
+        value: 21,
         attribute: "Total Categories"
     },
     {
-        value: 8,
+        value: 18,
         attribute: "Active Categories"
     }
 ];
