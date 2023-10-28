@@ -10,24 +10,30 @@ import predictionLogo from "../../../img/sidebar-img/predict.svg"
 import userLogo from "../../../img/sidebar-img/manage-user.svg"
 import shareLogo from "../../../img/sidebar-img/share.svg"
 import logoutLogo from "../../../img/sidebar-img/logout.svg"
-
+import { Link } from 'react-router-dom'
+import Login from '../../login'
 export default function Sidebar() {
   return (
 	<div className='sidebar flex__col'>
 		<div className="sidebar__logo flex__row"><img src={logo} alt="IMS Logo" /><h1>IMS</h1></div>
 		<ul className="sidebar__menu flex__col">
+			<Link to="/">
 			<li className="sidebar__menu--option flex__row">
 				<div className="sidebar__iconbox">
 					<img src={dashboardLogo} alt="" className="option__icon" />
 				</div>
 				<h3 className="option__name">Dashboard</h3>
 			</li>
+			</Link>
+			<Link to="/product">
 			<li className="sidebar__menu--option flex__row">
+				
 				<div className="sidebar__iconbox">
 					<img src={productLogo} alt="" className="option__icon" />
 				</div>
 				<h3 className="option__name">Products</h3>
 			</li>
+			</Link>
 			<li className="sidebar__menu--option flex__row">
 				<div className="sidebar__iconbox">
 					<img src={categoryLogo} alt="" className="option__icon" />
@@ -65,12 +71,15 @@ export default function Sidebar() {
 				<h3 className="option__name">Share Distribution</h3>
 			</li>
 		</ul>
+			<Link to="/Login">
 		<div className="sidebar__logout  flex__row">
+
 			<div className="sidebar__iconbox">
 				<img src={logoutLogo} alt="" className="sidebar__logout--icon" />
 			</div>
 			<h3 className="sidebar__logout--name">Log Out</h3>
 		</div>
+			</Link>
 	</div>
   )
 }
