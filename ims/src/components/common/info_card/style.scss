@@ -1,0 +1,41 @@
+@import "../../sass/variables";
+.infocard
+{
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.product
+{
+    &__inventory
+    {
+        &--wrap
+        {
+            gap: 2rem;
+            h2
+            {
+                line-height: 2rem;
+                color: $dark-text;
+            }
+            h3
+            {
+                color: $grey-text;
+            }
+        }
+    }
+    &__list
+    {
+        border-radius: 10px;
+        padding-top: 1rem;
+        background-color: white;
+        h2
+        {
+            width: fit-content;
+            text-align: left;
+            margin: 0 0 1rem 1rem;
+        }
+    }
+}
