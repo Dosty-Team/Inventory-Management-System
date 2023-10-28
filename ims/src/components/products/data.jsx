@@ -1,5 +1,20 @@
 import {Space} from "antd";
 // Product Table Data 
+export const productOveview=[
+    {
+        value: 14,
+        attribute: "Category"
+    },
+    {
+        value: 868,
+        attribute: "Total Products"
+    },
+    {
+        value: 2500,
+        attribute: "Total Cost"
+    },
+];
+
 export const productData = [
     {
         key: '1',
