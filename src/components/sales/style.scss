@@ -1,0 +1,57 @@
+@import "../../sass/variables";
+.sales
+{
+	&__actions
+	{
+		padding: 1rem;
+		border-radius: 10px;
+		background-color: white;
+		margin-bottom: 0.5rem;
+		height: 80px;
+		align-items: center;
+		gap: 1rem;
+		justify-content: space-between;
+		#sales__time
+		{
+			height: 45px;
+			border-radius: 7px;
+			border: 1px solid $line-color;
+			background-color: white;
+			padding: 0 1rem;
+			color: $dark-text;
+		}
+		.sales__by--date
+		{
+			z-index: -9999;
+			gap: 1rem;
+			transition: all 0.15s ease-in;
+			.sales__start, .sales__end
+			{
+				gap: 0.5rem;
+				align-items: center;
+				.datepick
+				{
+					height: 45px;
+				}
+			}
+		}
+		.sales__by--date.active
+		{
+			z-index: 1;
+		}
+		.add__sales
+		{
+			height: 45px;
+
+		}
+	}
+	&__okay
+	{
+		height: 45px;
+	}
+	&__list
+	{
+		border-radius: 10px;
+		background-color: white;
+	}
+}

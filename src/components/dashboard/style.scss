@@ -1,0 +1,31 @@
+@import "../../sass/variables";
+.dashboard {
+    height: calc(100% - 60px - 0.5rem);
+    &__info {
+        display: grid;
+        height: fit-content;
+        gap: 0.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    &__highlight {
+        width: 100%;
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+        &--seller, &--latest, &--products {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 28%;
+        }
+        h2 {
+            text-align: left;
+            margin-bottom: 1rem;
+            color: $dark-text;
+        }
+        &--latest
+        {
+            width: calc(44% - 1rem);
+        }
+    }
+}
