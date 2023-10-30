@@ -34,23 +34,18 @@ export default function Sidebar() {
 				<h3 className="option__name">Products</h3>
 			</li>
 			</Link>
-			<Link to="/category">
-
 			<li className="sidebar__menu--option flex__row">
 				<div className="sidebar__iconbox">
 					<img src={categoryLogo} alt="" className="option__icon" />
 				</div>
 				<h3 className="option__name">Category</h3>
 			</li>
-			</Link>
-			<Link to="/sale">
 			<li className="sidebar__menu--option flex__row">
 				<div className="sidebar__iconbox">
 					<img src={salesLogo} alt="" className="option__icon" />
 				</div>
 				<h3 className="option__name">Sales</h3>
 			</li>
-			</Link>
 			<li className="sidebar__menu--option flex__row">
 				<div className="sidebar__iconbox">
 					<img src={reportLogo} alt="" className="option__icon" />

@@ -6,7 +6,6 @@ import { categoryInfo } from './data';
 import "./style.scss"
 import { Space, Table } from 'antd';
 import { categoryData, categoryCol } from './data';
-import Popcategory from './popcategory';
 
 
 export default function Category() {
@@ -17,7 +16,8 @@ export default function Category() {
             <div className="category__info flex__row">
                 <div className="category__add flex__row hard__shadow">
                     <input type="text" placeholder='Category Name' className='r' />
-<Popcategory/>                </div>
+                    <button className='add__btn r'>Add Category</button>
+                </div>
                 <div className="category__info--wrap hard__shadow">
                     <InfoCard info={categoryInfo} />
                 </div>

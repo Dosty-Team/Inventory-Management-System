@@ -2,7 +2,6 @@ import React from "react";
 import "./style.scss";
 import { Table, DatePicker } from 'antd';
 import { saleData, saleCol } from "./data";
-import Popsales from "./popsales";
 export default function Sales() {
 	function handleMonthly()
 	{
@@ -45,7 +44,7 @@ function handleByDate()
 				</div>
 				<button className="sales__okay add__btn">OK</button>
 			</div>
-<Popsales/>
+			<div className="add__sales add__btn flex__row flex__center">Add Sales</div>
 		</div>
 		<div className="sales__list hard__shadow">
 			<Table dataSource={saleData} columns={saleCol} />;
