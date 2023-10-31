@@ -1,6 +1,6 @@
 import {Space} from "antd";
 // Product Table Data 
-export const productOveview=[
+export const productOverview=[
     {
         value: 14,
         attribute: "Category"

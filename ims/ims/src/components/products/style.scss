@@ -3,11 +3,13 @@
 {
     &__inventory
     {
+        height: 80px;
         padding: 1rem;
         background-color: white;
         border-radius: 10px;
         margin-bottom: 0.5rem;
         justify-content: space-between;
+        align-items: center;
         &--wrap
         {
             gap: 2rem;
