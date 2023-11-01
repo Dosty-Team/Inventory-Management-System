@@ -1,0 +1,32 @@
+h1
+{
+	font-size: 28px;
+	font-weight: 500;
+	// line-height: 3rem;
+}
+h2
+{
+	font-size: 18px;
+	font-weight: 500;
+}
+h3
+{
+	font-size: 12px;
+	font-weight: 500;
+}
+h4
+{
+	font-size: 12px;
+	font-weight: 300;
+}
+p
+{
+	font-size: 16px;
+	font-weight: 400;
+}
+
+a{
+	// yo kura le <Link to="/"> routing element ma defualt underline lagauda underline remove gardinxa.
+	// so eslai nahataunu hola 
+	text-decoration: none;
+}
