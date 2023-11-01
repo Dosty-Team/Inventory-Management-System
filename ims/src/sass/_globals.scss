@@ -77,4 +77,14 @@
 	background-color: $primary;
 	color: white;
 	border: 0px solid transparent;
+	transition: all 0.05s ease-out;
+}
+.add__btn:active
+{
+	background-color: $blue-text;
+}
+.add__btn:hover
+{
+	cursor: pointer;
+	filter: brightness(1.2);
 }
