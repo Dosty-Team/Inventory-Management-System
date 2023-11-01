@@ -22,7 +22,6 @@
 		}
 		.sales__by--date
 		{
-			z-index: -9999;
 			gap: 1rem;
 			transition: all 0.15s ease-in;
 			.sales__start, .sales__end
@@ -34,10 +33,14 @@
 					height: 45px;
 				}
 			}
-		}
-		.sales__by--date.active
-		{
-			z-index: 1;
+			.sales__end
+			{
+				display: none;
+			}
+			.sales__end.active
+			{
+				display: flex;
+			}
 		}
 		.add__sales
 		{
@@ -51,7 +54,13 @@
 	}
 	&__list
 	{
+		padding: 1rem;
 		border-radius: 10px;
 		background-color: white;
+		h2
+		{
+			text-align: left;
+			margin-bottom: 0.5rem;
+		}
 	}
 }
