@@ -2,6 +2,9 @@ import React from 'react'
 import "./style.scss"
 
 export default function InfoCard(props) {
+    if (!props.info || props.info.length === 0) {
+        return null; // Or display a message or default content if there's no data
+    }
     let InfoElem = props.info.map((data, index, array) =>{
         return (
             <div className="infocard__data flex__row">
