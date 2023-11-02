@@ -214,7 +214,7 @@ export default function SaleReport() {
 							}
 							else return false;
 						});
-						console.log(newData);
+						console.log("by date error checking",newData);
 						updatedTable.tableCalcInfo[0].value = total;				// Grand Total
 						updatedTable.tableCalcInfo[1].value = total - cp;			// Profit
 						console.log(newData);
