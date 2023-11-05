@@ -48,6 +48,8 @@ export default function SaleReport() {
 		if(selected === "monthly")
 		{
 			console.log("Handling Monthly Report");
+			dateEnd.current.classList.remove("active");
+			setPickerValue("month");
 			let year, month;
 			if(currentGraph[0].data.length === 0)
 			{
@@ -76,6 +78,8 @@ export default function SaleReport() {
 		else if(selected === "by__date")
 		{
 			console.log("Handling Report by Date");
+			dateEnd.current.classList.add("active");
+			setPickerValue("");
 			if(startIsSet.current && endIsSet.current)
 			{
 				console.log("Inside If");
@@ -109,6 +113,8 @@ export default function SaleReport() {
 		let year, month, day;
 		if(selected === "daily")
 		{
+			dateEnd.current.classList.remove("active");
+			setPickerValue("");
 			if(startIsSet.current)
 			{
 				year = startDate.getFullYear();
@@ -150,6 +156,8 @@ export default function SaleReport() {
 		else if(selected === "monthly")
 		{
 			console.log("Handling Monthly Table");
+			dateEnd.current.classList.remove("active");
+			setPickerValue("month");
 			if(startIsSet.current)
 			{
 				year = startDate.getFullYear();
@@ -189,6 +197,8 @@ export default function SaleReport() {
 		else if(selected === "by__date")
 		{
 			console.log("Handling Tabel by Date");
+			dateEnd.current.classList.add("active");
+			setPickerValue("");
 			if(startIsSet.current && endIsSet.current)
 			{
 				// Clone End-Date and Modify for Table
@@ -252,38 +262,38 @@ export default function SaleReport() {
     return <div className="report">
 		{contextHolder}
 		<div className="report__actions flex__row hard__shadow">
-			<select defaultValue="monthly" name="timeline" id="report__time" ref={selector}>
+			<select defaultValue="monthly" name="timeline" id="report__time" ref={selector} onChange={handleReport}>
 				{!showGraph && 
 				<option 
 					className="report__option" 
 					value="daily" 
-					onClick={()=>{
-						dateEnd.current.classList.remove("active");
-						setPickerValue("");
-						handleReport();
-					}} 
+					// onClick={()=>{
+					// 	dateEnd.current.classList.remove("active");
+					// 	setPickerValue("");
+					// 	handleReport();
+					// }} 
 				>
 				Daily report
 				</option>}
 				<option 
 					className="report__option" 
 					value="monthly"
-					onClick={()=>{
-						dateEnd.current.classList.remove("active");
-						setPickerValue("month");
-						handleReport();
-					}} 
+					// onClick={()=>{
+					// 	dateEnd.current.classList.remove("active");
+					// 	setPickerValue("month");
+					// 	handleReport();
+					// }} 
 				>
 				Monthly report
 				</option>
 				<option 
 					className="report__option" 
 					value="by__date"
-					onClick={()=>{
-						dateEnd.current.classList.add("active");
-						setPickerValue("");
-						handleReport();
-					}} 
+					// onClick={()=>{
+					// 	dateEnd.current.classList.add("active");
+					// 	setPickerValue("");
+					// 	handleReport();
+					// }} 
 				>
 				By Date
 				</option>

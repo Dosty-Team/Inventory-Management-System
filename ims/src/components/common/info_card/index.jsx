@@ -12,7 +12,7 @@ export default function InfoCard(props) {
 					<h2>{data.value}</h2>
 					<h3>{data.attribute}</h3>
 				</div>
-                {(index != array.length - 1) && <div className='v__line'></div>}
+                {(index !== array.length - 1) && <div className='v__line'></div>}
             </div>
         );
     });
