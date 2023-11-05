@@ -22,8 +22,6 @@ function generateDataForMonth(month, year) {
         data.push({
           key: key.toString(),
           productName,
-		  cp, 
-		  sp,
           qtySold,
           total,
           date,

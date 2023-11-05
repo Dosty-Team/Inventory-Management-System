@@ -267,33 +267,18 @@ export default function SaleReport() {
 				<option 
 					className="report__option" 
 					value="daily" 
-					// onClick={()=>{
-					// 	dateEnd.current.classList.remove("active");
-					// 	setPickerValue("");
-					// 	handleReport();
-					// }} 
 				>
 				Daily report
 				</option>}
 				<option 
 					className="report__option" 
 					value="monthly"
-					// onClick={()=>{
-					// 	dateEnd.current.classList.remove("active");
-					// 	setPickerValue("month");
-					// 	handleReport();
-					// }} 
 				>
 				Monthly report
 				</option>
 				<option 
 					className="report__option" 
 					value="by__date"
-					// onClick={()=>{
-					// 	dateEnd.current.classList.add("active");
-					// 	setPickerValue("");
-					// 	handleReport();
-					// }} 
 				>
 				By Date
 				</option>
