@@ -7,6 +7,7 @@ import Product from "./components/products";
 import Category from './components/category';
 import Sales from './components/sales';
 import SaleReport from './components/sale_report';
+import SalePredict from './components/sale_predict';
 import "./App.scss";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 					<Route path="/category" element={<Category/>}/>
 					<Route path="/sale" element={<Sales/>}/>
 					<Route path="/sale_report" element={<SaleReport/>}/>
+					<Route path="/sale_predict" element={<SalePredict/>}/>
 				</Routes>
 			</div>
 		</div>
