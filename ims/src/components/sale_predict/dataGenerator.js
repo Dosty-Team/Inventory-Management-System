@@ -20,7 +20,7 @@ function generateDataForMonth(month, year) {
         const date = `${year}/${month.toString().padStart(2, "0")}/${day.toString().padStart(2, "0")} ${getRandomInt(8, 20).toString().padStart(2, "0")}:${getRandomInt(0, 59).toString().padStart(2, "0")}:00 PM`;
 
         data.push({
-          key: key.toString(),
+          key: key,
           productName,
           qtySold,
           total,
