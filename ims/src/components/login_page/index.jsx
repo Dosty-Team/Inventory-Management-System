@@ -4,7 +4,8 @@ import { userActions } from "../../store/userSlice";
 
 export default function LoginPage() {
 	let dispatch = useDispatch();
-	// Use Login Form conditions to set user state
+	// This code automatically logs in everytime without validation
+	// Use Login Form conditions to set validate user
 	useEffect(() =>{
 		// dispatch(userActions.setNormal());			// Set normal role
 		dispatch(userActions.setAdmin());			// Set admin role

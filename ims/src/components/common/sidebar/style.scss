@@ -54,6 +54,15 @@
 				}
 			}
 		}
+		&--option:hover
+		{
+			background-color: $primary-transparent;
+			cursor: pointer;
+		}
+		&--option.selected
+		{
+			background-color: $primary-transparent;
+		}
 	}
 	&__logout
 	{
@@ -72,4 +81,17 @@
 			width: 100%;
 		}
 	}
+	&__logout:hover
+	{
+		background-color: $primary-transparent;
+		cursor: pointer;
+	}
+	&__logout.selected
+	{
+		background-color: $primary-transparent;
+	}
+}
+.linker
+{
+	text-decoration: none;
 }
