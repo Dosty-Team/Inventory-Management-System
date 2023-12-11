@@ -74,8 +74,8 @@ export default function SalePredict() {
 					dataTime.setTime(dataTime.getTime() + DAY)			// Increment by 1 day
 					console.log(dataTime.getTime());
 				}
-				return newData;
 				console.log(newData);
+				return newData;
 			});
 		}
 		else if(selected === "yearly")
@@ -83,31 +83,40 @@ export default function SalePredict() {
 			console.log("Handling predict by Year");
 			dateEnd.current.classList.add("active");
 			setPickerValue("year");
-			if(startIsSet.current && endIsSet.current)
+			let year, month, day;
+			if(!(startIsSet.current && endIsSet.current))
 			{
-				console.log("Inside If");
-				if(startDate <= endDate)
-				{
-					setCurrentGraph(prevGraph => {
-						// Filter main data, date wise
-						let newData = graphData[0].data.filter(value => {
-							// Create date object according to data and compare
-							let dataTime = new Date(`${value.x}T00:00:00`);
-							if(dataTime >= startDate && dataTime <= endDate) return true;
-							else return false;
-						});
-						console.log(newData);
-						return [{...prevGraph[0], data: newData}];
-					});
-				}
-				else
-				{
-					showMessage("Start Date must come before End Date");
-					setCurrentGraph([{data: [], id: "A"}]);
-				}
-
+				let today = new Date();
+				year = today.getFullYear();
+				month = today.getMonth();
+				day = today.getDate();
 			}
-			else setCurrentGraph([{data: [], id: "A"}]);
+			else
+			{
+				year = startDate.getFullYear();
+				month = startDate.getMonth();
+				day = startDate.getDate();
+			}
+			if(startDate <= endDate)
+			{
+				setCurrentGraph(prevGraph => {
+					// Filter main data, date wise
+					let newData = graphData[0].data.filter(value => {
+						// Create date object according to data and compare
+						let dataTime = new Date(`${value.x}T00:00:00`);
+						if(dataTime >= startDate && dataTime <= endDate) return true;
+						else return false;
+					});
+					console.log(newData);
+					return [{...prevGraph[0], data: newData}];
+				});
+			}
+			else
+			{
+				showMessage("Start Date must come before End Date");
+				setCurrentGraph([{data: [], id: "A"}]);
+			}			
+			// setCurrentGraph([{data: [], id: "A"}]);
 		}
 
 	}

@@ -7,8 +7,7 @@ ARIMAPromise.then(ARIMA => {
 	const arima = new ARIMA({ auto: true, verbose: false }).train(yValues)
 	const [pred, errors] = arima.predict(31)
 	console.log(pred);
-})
-
+});
 
 // Graph data in package specific format
 const graphData = [
