@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./style.scss";
+import {useDispatch} from "react-redux";
 import { DatePicker, message } from 'antd';
-import { graphData } from "./graphData";
 import {ResponsiveLine} from "@nivo/line";
 import InfoCard from "../common/info_card";
-import { predicted } from "./predictData";
+import { predictedSale, predictedCost, predictedOneYearSale, predictedOneYearCost } from "./predictData";
+import { predictedMultiYearSale, predictedMultiYearCost } from "./predictData";
+import { pageActions } from "../../store/pageSlice";
 
 
 export default function SalePredict() {
@@ -17,6 +19,13 @@ export default function SalePredict() {
 	let [endDate, setEndDate] = useState(new Date());
 	let [currentGraph, setCurrentGraph] = useState([{data: [], id: "A"}]);
 	let [pickerValue, setPickerValue] = useState("month");
+	let [graphX, setGraphX] = useState({
+		formatBottom: "%b %d",
+		tick: "every 4 days",
+		format: "time:%Y-%m-%d",
+		formatScale: "%Y-%m-%d",
+		precision: "day",
+	});
 	let [profitInfo, setProfitInfo] = useState([
 		{
 			value: 0,
@@ -28,9 +37,12 @@ export default function SalePredict() {
 	function showMessage(msg){
 		messageApi.info(msg);
 	};
+	let dispatch = useDispatch();
 	useEffect(()=>{
 		handlePredict();
+		dispatch((pageActions.setPredict()));
 	}, []);
+	
 	function handleGraph(selected)
 	{
 		if(selected === "monthly")
@@ -38,6 +50,13 @@ export default function SalePredict() {
 			console.log("Handling Monthly predict");
 			dateEnd.current.classList.remove("active");
 			setPickerValue("month");
+			setGraphX({
+				formatBottom: "%b %d",
+				tick: "every 4 days",
+				format: "time:%Y-%m-%d",
+				formatScale: "%Y-%m-%d",
+				precision: "day",
+			});
 			let year, month;
 			if(currentGraph[0].data.length === 0)
 			{
@@ -51,29 +70,33 @@ export default function SalePredict() {
 				month = startDate.getMonth();
 			}
 			setCurrentGraph(prevGraph => {
-				// let newData = graphData[0].data.filter(value => {
-				// 	let dataTime = new Date(`${value.x}T00:00:00`);
-				// 	let year = dataTime.getFullYear();
-				// 	let month = dataTime.getMonth();
-				// 	if(year === year && month === month) return true;
-				// 	else return false;
-				// });
 				// Empty graph data structure with respect to the package
 				let newData = [{data: [], id: "B"},{data: [], id: "C"},];
 				let dataTime = new Date(startDate.getTime());
+				dataTime.setDate(1);		// Goto start of the month			
+				let total = 0, cp = 0;
 				while(startDate.getMonth() === dataTime.getMonth())
 				{
 					let day = dataTime.getDate();
+					// eslint-disable-next-line no-loop-func
 					newData.forEach((currData, i) => {
 						if(i === 0){
-							currData.data.push({x: `${year}-${month + 1}-${day}`, y: predicted[day - 1]});
+							total += predictedSale[day - 1];
+							currData.data.push({x: `${year}-${month + 1}-${day}`, y: predictedSale[day - 1]});
 						}else {
-							currData.data.push({x: `${year}-${month + 1}-${day}`, y: predicted[day - 1] - 3});
+							cp += predictedCost[day - 1];
+							currData.data.push({x: `${year}-${month + 1}-${day}`, y: predictedCost[day - 1]});
 						}
 					});
 					dataTime.setTime(dataTime.getTime() + DAY)			// Increment by 1 day
 					console.log(dataTime.getTime());
 				}
+				// Calculate Expected Profit
+				setProfitInfo(prevInfo => {
+					let info = prevInfo;
+					info[0].value = Math.round(total - cp);
+					return info;
+				});
 				console.log(newData);
 				return newData;
 			});
@@ -83,40 +106,98 @@ export default function SalePredict() {
 			console.log("Handling predict by Year");
 			dateEnd.current.classList.add("active");
 			setPickerValue("year");
-			let year, month, day;
-			if(!(startIsSet.current && endIsSet.current))
+			let year;
+			if(startIsSet.current && endIsSet.current)
+			{
+				year = startDate.getFullYear();
+				setGraphX({
+					formatBottom: "%Y",
+					tick: "every 1 years",
+					format: "time:%Y",
+					formatScale: "%Y",
+					precision: "year",
+				});
+				if(startDate <= endDate)
+				{
+					setCurrentGraph(prevGraph => {
+						let newData = [{data: [], id: "B"},{data: [], id: "C"},];
+						let dataTime = new Date(startDate.getTime());
+						let total = 0, cp = 0, startIndex = 0;
+						while(dataTime.getFullYear() <= endDate.getFullYear())
+						{
+							year = dataTime.getFullYear();
+							// eslint-disable-next-line no-loop-func
+							newData.forEach((currData, i) => {
+								if(i === 0){
+									total += predictedMultiYearSale[startIndex];
+									currData.data.push({x: `${year}`, y: predictedMultiYearSale[startIndex]});
+								}else {
+									cp += predictedMultiYearCost[startIndex];
+									currData.data.push({x: `${year}`, y: predictedMultiYearCost[startIndex]});
+								}
+							});
+							startIndex++;
+							dataTime.setFullYear(dataTime.getFullYear() + 1);
+						}
+						// Calculate Expected Profit
+						setProfitInfo(prevInfo => {
+						let info = prevInfo;
+						info[0].value = Math.round(total - cp);
+						return info;
+					});
+					console.log(newData);
+					return newData;
+					});
+				}
+				else
+				{
+					showMessage("Start Date must come before End Date");
+					setCurrentGraph([{data: [], id: "A"}]);
+				}	
+			}
+			else
 			{
 				let today = new Date();
 				year = today.getFullYear();
-				month = today.getMonth();
-				day = today.getDate();
-			}
-			else
-			{
-				year = startDate.getFullYear();
-				month = startDate.getMonth();
-				day = startDate.getDate();
-			}
-			if(startDate <= endDate)
-			{
+				setGraphX({
+					formatBottom: "%Y %b",
+					tick: "every 1 months",
+					format: "time:%Y-%m",
+					formatScale: "%Y-%m",
+					precision: "month",
+				});
+				////////////////// Request 12 months data for current year ///////////////////
 				setCurrentGraph(prevGraph => {
-					// Filter main data, date wise
-					let newData = graphData[0].data.filter(value => {
-						// Create date object according to data and compare
-						let dataTime = new Date(`${value.x}T00:00:00`);
-						if(dataTime >= startDate && dataTime <= endDate) return true;
-						else return false;
+					let newData = [{data: [], id: "B"},{data: [], id: "C"},];
+					let dataTime = new Date(startDate.getTime());
+					dataTime.setMonth(0);		// Goto start of the year			
+					let total = 0, cp = 0;
+					while(startDate.getFullYear() === dataTime.getFullYear())
+					{
+						
+						let month = dataTime.getMonth();
+						// eslint-disable-next-line no-loop-func
+						newData.forEach((currData, i) => {
+							if(i === 0){
+								total += predictedOneYearSale[month];
+								currData.data.push({x: `${year}-${month + 1}`, y: predictedOneYearSale[month]});
+							}else {
+								cp += predictedOneYearCost[month];
+								currData.data.push({x: `${year}-${month + 1}`, y: predictedOneYearCost[month]});
+							}
+						});
+						dataTime.setMonth(dataTime.getMonth() + 1);
+					}
+					// Calculate Expected Profit
+					setProfitInfo(prevInfo => {
+						let info = prevInfo;
+						info[0].value = Math.round(total - cp);
+						return info;
 					});
 					console.log(newData);
-					return [{...prevGraph[0], data: newData}];
+					return newData;
 				});
 			}
-			else
-			{
-				showMessage("Start Date must come before End Date");
-				setCurrentGraph([{data: [], id: "A"}]);
-			}			
-			// setCurrentGraph([{data: [], id: "A"}]);
 		}
 
 	}
@@ -173,12 +254,12 @@ export default function SalePredict() {
 			<div className="predict__graph">
 				<ResponsiveLine
 					animate
-					colors={() => '#0ab3f9'}
+					colors={['#0ab3f9', '#f36204']}
 					axisBottom={{
-						format: '%b %d',
+						format: graphX.formatBottom,
 						legend: 'time',
 						legendOffset: -12,
-						tickValues: 'every 4 days'
+						tickValues: graphX.tick
 					}}
 					axisLeft={{
 						legend: 'amount',
@@ -208,10 +289,10 @@ export default function SalePredict() {
 					pointSymbol={function noRefCheck(){}}
 					useMesh
 					width={900}
-					xFormat="time:%Y-%m-%d"
+					xFormat={graphX.format}
 					xScale={{
-						format: '%Y-%m-%d',
-						precision: 'day',
+						format: graphX.formatScale,
+						precision: graphX.precision,
 						type: 'time',
 						useUTC: false
 					}}

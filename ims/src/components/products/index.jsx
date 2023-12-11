@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./style.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { pageActions } from "../../store/pageSlice";
@@ -9,7 +9,9 @@ import InfoCard from "../common/info_card";
 
 export default function Product() {
 	let dispatch = useDispatch();
-	dispatch((pageActions.setProducts()));
+	useEffect(()=>{
+		dispatch((pageActions.setProducts()));
+	}, []);
   return (
 	<div className='product'>
 		<div className="product__inventory flex__row hard__shadow">
