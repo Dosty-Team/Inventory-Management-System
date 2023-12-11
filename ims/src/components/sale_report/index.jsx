@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./style.scss";
 import { Table, DatePicker, message } from 'antd';
 import { reportJSON, reportCol } from "./tableData";
 import { graphData } from "./graphData";
 import {ResponsiveLine} from "@nivo/line";
 import InfoCard from "../common/info_card";
+import { pageActions } from "../../store/pageSlice";
 
 export default function SaleReport() {
 	let startIsSet = useRef(null);
@@ -35,8 +37,10 @@ export default function SaleReport() {
 	function showMessage(msg){
 		messageApi.info(msg);
 	};
+	let dispatch = useDispatch();
 	useEffect(()=>{
 		handleReport();
+		dispatch((pageActions.setReport()));
 	}, [showGraph]);
 	function toggleReport()
 	{

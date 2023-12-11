@@ -1,5 +1,6 @@
 import React from 'react'
 import "./style.scss"
+import {useSelector} from "react-redux"
 import logo from "../../../img/sidebar-img/vt-logo.png"
 import dashboardLogo from "../../../img/sidebar-img/dashboard.svg"
 import productLogo from "../../../img/sidebar-img/products.svg"
@@ -12,6 +13,7 @@ import shareLogo from "../../../img/sidebar-img/share.svg"
 import logoutLogo from "../../../img/sidebar-img/logout.svg"
 
 export default function Sidebar() {
+	let user = useSelector((state) => state.user.userRole);
   return (
 	<div className='sidebar flex__col'>
 		<div className="sidebar__logo flex__row"><img src={logo} alt="IMS Logo" /><h1>IMS</h1></div>
@@ -46,24 +48,30 @@ export default function Sidebar() {
 				</div>
 				<h3 className="option__name">Sales Report</h3>
 			</li>
-			<li className="sidebar__menu--option flex__row">
-				<div className="sidebar__iconbox">
-					<img src={predictionLogo} alt="" className="option__icon" />
-				</div>
-				<h3 className="option__name">Sales Prediction</h3>
-			</li>
-			<li className="sidebar__menu--option flex__row">
-				<div className="sidebar__iconbox">
-					<img src={userLogo} alt="" className="option__icon" />
-				</div>
-				<h3 className="option__name">Manage Users</h3>
-			</li>
-			<li className="sidebar__menu--option flex__row">
-				<div className="sidebar__iconbox">
-					<img src={shareLogo} alt="" className="option__icon" />
-				</div>
-				<h3 className="option__name">Share Distribution</h3>
-			</li>
+			{user === "admin" && 
+				<li className="sidebar__menu--option flex__row">
+					<div className="sidebar__iconbox">
+						<img src={predictionLogo} alt="" className="option__icon" />
+					</div>
+					<h3 className="option__name">Sales Prediction</h3>
+				</li>
+			}
+			{user === "admin" && 
+				<li className="sidebar__menu--option flex__row">
+					<div className="sidebar__iconbox">
+						<img src={userLogo} alt="" className="option__icon" />
+					</div>
+					<h3 className="option__name">Manage Users</h3>
+				</li>
+			}
+			{user === "admin" && 
+				<li className="sidebar__menu--option flex__row">
+					<div className="sidebar__iconbox">
+						<img src={shareLogo} alt="" className="option__icon" />
+					</div>
+					<h3 className="option__name">Share Distribution</h3>
+				</li>
+			}
 		</ul>
 		<div className="sidebar__logout  flex__row">
 			<div className="sidebar__iconbox">

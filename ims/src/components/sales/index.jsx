@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./style.scss";
+import {useDispatch} from "react-redux";
+import { pageActions } from "../../store/pageSlice";
 import { Table, DatePicker, message } from 'antd';
 import { saleJSON, saleCol } from "./tableData";
 
@@ -19,8 +21,10 @@ export default function Sales() {
 		messageApi.info(msg);
 	};
 	// Run sale handeling once
+	let dispatch = useDispatch();
 	useEffect(()=>{
 		handleSales();
+		dispatch((pageActions.setSales()));
 	}, []);
 	function handleSales()
 	{

@@ -10,7 +10,7 @@ const pageSlice = createSlice({
 		setSales(){return {pageName: "Sales"};},
 		setReport(){return {pageName: "Sales Report"};},
 		setPredict(){return {pageName: "Sales Prediction"};},
-		setUser(){return {pageName: "Mage Users"};},
+		setUser(){return {pageName: "Manage Users"};},
 		setShare(){return {pageName: "Share Distribution"};},
 	}
 });

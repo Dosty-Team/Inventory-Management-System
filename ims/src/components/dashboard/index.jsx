@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.scss";
 import {dashInfo, data1, data2, topSeller, topSellCol} from "./data"
 import {latestSell, latestSellCol, recentProduct, productCol} from "./data"
@@ -9,7 +9,9 @@ import {Table} from "antd";
 
 export default function Dashboard() {
 	let dispatch = useDispatch();
-	dispatch((pageActions.setDashboard()));
+	useEffect(()=>{
+		dispatch((pageActions.setDashboard()));
+	}, []);
 	let InfoList = dashInfo.map((card, i) => {
 		return (
 		<div className="dashcard__wrapper">
