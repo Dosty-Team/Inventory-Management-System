@@ -16,6 +16,10 @@
 			font-weight: 300;
 		}
 	}
+	&__user:hover
+	{
+		cursor: pointer;
+	}
 	&__user
 	{
 		align-items: center;

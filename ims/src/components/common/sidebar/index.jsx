@@ -25,7 +25,9 @@ export default function Sidebar() {
 	}
   return (
 	<div className='sidebar flex__col'>
-		<div className="sidebar__logo flex__row"><img src={logo} alt="IMS Logo" /><h1>IMS</h1></div>
+		<Link to={"/"} className='linker'>
+			<div className="sidebar__logo flex__row"><img src={logo} alt="IMS Logo" /><h1>IMS</h1></div>
+		</Link>
 		<ul className="sidebar__menu flex__col">
 			<Link to={"/"} className='linker'>
 				<li className={`sidebar__menu--option flex__row ${page === "Dashboard" && "selected"}`}>

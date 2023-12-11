@@ -29,6 +29,10 @@
 			color: $bg-color;
 		}
 	}
+	&__logo:hover
+	{
+		cursor: pointer;
+	}
 	&__menu
 	{
 		// padding-left: 2rem;
