@@ -20,6 +20,20 @@ export const dashInfo = [
 		attribute2: "Profit"
 	},
 	{
+		title: "Expense Overview",
+		icon1: purchaseIcon,
+		attribute1: "Expense",
+		icon2: costIcon,
+		attribute2: "Cost"
+	},
+	{
+		title: "Product Summary",
+		icon1: supplierIcon,
+		attribute1: "No of suppliers",
+		icon2: categoryIcon,
+		attribute2: "Categories"
+	},
+	{
 		title: "Total Users",
 		icon1: adminIcon,
 		attribute1: "Admin Users",
@@ -34,25 +48,11 @@ export const dashInfo = [
 		attribute2: "To be received"
 	},
 	{
-		title: "Product Summary",
-		icon1: supplierIcon,
-		attribute1: "No of suppliers",
-		icon2: categoryIcon,
-		attribute2: "Categories"
-	},
-	{
 		title: "Stakeholder Information",
 		icon1: customerIcon,
 		attribute1: "Customers",
 		icon2: shareholderIcon,
 		attribute2: "Shareholders"
-	},
-	{
-		title: "Expense Overview",
-		icon1: purchaseIcon,
-		attribute1: "Expense",
-		icon2: costIcon,
-		attribute2: "Cost"
 	},
 
 ];
