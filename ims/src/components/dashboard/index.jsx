@@ -12,7 +12,15 @@ export default function Dashboard() {
 	useEffect(()=>{
 		dispatch((pageActions.setDashboard()));
 	}, []);
-	let InfoList = dashInfo.map((card, i) => {
+	let user = useSelector((state) => state.user.userRole);
+	let InfoList = dashInfo.filter((elem, i) => {
+		// Only show 1st three data to normal user
+		if(user === "normal"){
+			if(i < 3) return true;
+			else return false;
+		}
+		else return true;
+	}).map((card, i) => {
 		return (
 		<div className="dashcard__wrapper">
 			<DashCard title={card.title} 
