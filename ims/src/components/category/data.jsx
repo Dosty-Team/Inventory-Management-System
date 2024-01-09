@@ -1,14 +1,5 @@
 import {Space} from 'antd';
-export const categoryInfo = [
-    {
-        value: 21,
-        attribute: "Total Categories"
-    },
-    {
-        value: 18,
-        attribute: "Active Categories"
-    }
-];
+
 export const categoryData=[
     {
         key: "1",
@@ -17,99 +8,15 @@ export const categoryData=[
     },
     {
         key: "2",
-        category: "Electronics",
+        category: "Clothings",
         products: 19
     },
     {
         key: "3",
-        category: "Electronics",
+        category: "Electrnoics Accessories",
         products: 19
     },
-    {
-        key: "4",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "5",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "6",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "7",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "8",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "9",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "10",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "11",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "12",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "13",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "14",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "15",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "16",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "17",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "18",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "19",
-        category: "Electronics",
-        products: 19
-    },
-    {
-        key: "20",
-        category: "Electronics",
-        products: 19
-    }
+
 ];
 export const categoryCol = [
     {

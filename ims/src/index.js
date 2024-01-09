@@ -7,7 +7,8 @@ import {BrowserRouter as Router} from "react-router-dom"
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store';
-
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer,toast} from 'react-toastify';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<Router>

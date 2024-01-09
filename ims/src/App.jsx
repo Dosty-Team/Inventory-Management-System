@@ -24,13 +24,16 @@ function App() {
 	let  user = useSelector((state) => state.user.userRole);
 	const StoredAuthToken = localStorage.getItem("authToken");
 	const StoredRoleType = localStorage.getItem("roleType");
+	let check;
 	console.log("storeeeeeeed",StoredRoleType)
-		if (StoredRoleType && StoredAuthToken) {
-			dispatch(setRole(StoredRoleType));
-		//   dispatch(userActions.setRole(StoredRoleType));
-		  dispatch(userActions.setValidity(true));
-		}
-		let lowercase = StoredRoleType.toLowerCase();
+	if (StoredRoleType && StoredAuthToken) {
+		dispatch(setRole(StoredRoleType));
+		// dispatch(userActions.setRole(StoredRoleType));
+		dispatch(userActions.setValidity(true));
+	
+		 check = (StoredRoleType || '').toLowerCase();
+		// Rest of your code
+	}
     return (
         <div className="App flex__row">
 			{StoredAuthToken ?  
@@ -46,9 +49,9 @@ function App() {
 								<Route path="/category" element={<Category />} />
 								<Route path="/sale" element={<Sales />} />
 								<Route path="/sale_report" element={<SaleReport />} />
-								{lowercase == "admin" && <Route path="/sale_predict" element={<SalePredict />} />}
-								{lowercase == "admin" && <Route path="/user_manage" element={<UserManage />} />}
-								{lowercase == "admin" && <Route path="/share_dist" element={<ShareDistribution />} />}
+								{check == "admin" && <Route path="/sale_predict" element={<SalePredict />} />}
+								{check == "admin" && <Route path="/user_manage" element={<UserManage />} />}
+								{check == "admin" && <Route path="/share_dist" element={<ShareDistribution />} />}
 							</Routes>
 						</div>
 					</div>
