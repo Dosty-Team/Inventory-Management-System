@@ -5,9 +5,9 @@ const jwt = require('jsonwebtoken');
  
 let serverRole='';
 let refresh = true;
-
+let key;
 app.post('/register', async (req, res) => {
-    let key = Math.random();
+    key = Math.random();
     const newUser = new User({
         key: key,
         username: req.body.username,
@@ -31,7 +31,7 @@ app.get('/getdetails', async (req, res) => {
         try {
             // Fetch all documents from the "user" collection
         
-            productData
+            
                 const allUsers = await User.find();
                 // Process the data to create userInfo
                 const userInfo = {
@@ -73,10 +73,7 @@ app.post('/login', async (req, res) => {
             console.log("serverRole",serverRole)
             console.log('Password matched');
             return res.status(200).json({ message: `Login successful as ${namecompare.role}`, role:namecompare.role, token:token });
-        } else {
-            console.log('Invalid password');
-            return res.status(401).json({ message: "Invalid password" });
-        }
+        }  
     } catch (err) {
         console.log(err);
         return res.status(500).json({ message: "Internal server error" });
@@ -110,13 +107,12 @@ app.put('/updateUser/:key', async (req, res) => {
   
       if (updatedUser) {
         return res.status(200).json({ message: 'User updated successfully', user: updatedUser });
-      } else {
-        return res.status(404).json({ message: 'User not found' });
-      }
+      } 
     } catch (error) {
       console.error(error);
       return res.status(500).json({ message: 'Internal server error' });
     }
+   
   });
   
 module.exports = app;
