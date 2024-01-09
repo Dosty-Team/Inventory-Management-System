@@ -1,0 +1,80 @@
+@import "./variables";
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Inter";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+}
+.App {
+	min-height: 100vh;
+    text-align: center;
+	background-color: $bg-color;
+	padding: 0.5rem;
+	gap: 0.5rem
+}
+
+/* Style for a good shadow */
+.hard__shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.soft__shadow {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(64, 64, 64, 0.4);
+}
+
+.blue__shadow {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4);
+}
+
+// Flex Box Style
+.flex__row
+{
+	display: flex;
+}
+.flex__col
+{
+	display: flex;
+	flex-direction: column;
+}
+.flex__center
+{
+	justify-content: center;
+	align-items: center;
+}
+
+// Borders for Debugging
+.r{
+	border: 2px solid red;
+}
+.g{
+	border: 2px solid green;
+}
+.b{
+	border: 2px solid blue;
+}
+// Line
+.v__line
+{
+	height: 100%;
+	width: 1px;
+	background-color: $line-color;
+}
+.h__line
+{
+	width: 100%;
+	height: 1px;
+	background-color: $line-color;
+}
+// Button Style
+.add__btn
+{
+	border-radius: 5px;
+	padding: 1rem;
+	background-color: $primary;
+	color: white;
+	border: 0px solid transparent;
+}
