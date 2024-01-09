@@ -18,7 +18,6 @@ import "./App.scss";
 import LogoutPage from "./components/logout";
 // import { StoredAuthToken } from "./components/token";
 function App() {
-	// phasse 1 ko code merge testing to the main branch
 	const dispatch = useDispatch();
 	let validUser = useSelector((state) => state.user.isValidUser);	
 	let  user = useSelector((state) => state.user.userRole);
@@ -35,6 +34,13 @@ function App() {
 		 check = (StoredRoleType || '').toLowerCase();
 		// Rest of your code
 	}
+	console.log("storeeeeeeed",StoredRoleType)
+		if (StoredRoleType && StoredAuthToken) {
+			dispatch(setRole(StoredRoleType));
+		//   dispatch(userActions.setRole(StoredRoleType));
+		  dispatch(userActions.setValidity(true));
+		}
+		let lowercase = StoredRoleType.toLowerCase();
     return (
         <div className="App flex__row">
 			{StoredAuthToken ?  
@@ -53,12 +59,13 @@ function App() {
 								{check == "admin" && <Route path="/sale_predict" element={<SalePredict />} />}
 								{check == "admin" && <Route path="/user_manage" element={<UserManage />} />}
 								{check == "admin" && <Route path="/share_dist" element={<ShareDistribution />} />}
+	 
 							</Routes>
 						</div>
 					</div>
 				</> :
 				<>
-				{/* <Topbar /> */}
+				<Topbar />
 					<LoginPage/>
 				</>
 			}

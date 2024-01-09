@@ -18,9 +18,9 @@ import LogoutPage from '../../logout'
 
 export default function Sidebar() {
 	let dispatch = useDispatch();
-let user = (localStorage.getItem("roleType") || '').toLowerCase();
-console.log("useeeeer", user);
-let page = useSelector(state => state.page.pageName);
+	let user = localStorage.getItem("roleType").toLowerCase();
+	console.log("useeeeer",user);
+	let page = useSelector(state => state.page.pageName);
 	 
   return (
 	<div className='sidebar flex__col'>
