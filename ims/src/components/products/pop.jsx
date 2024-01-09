@@ -3,11 +3,16 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import "./style.scss";
 import axios from "axios";
-import { productCol, productData, productOverview} from './data';
 
 export default function Pop() {
+	const [productName, setProductName] = useState("");
+	const [productID, setProductID] = useState("");
+	const [category, setCategory] = useState("Electronics");
 	const [quantity, setQuantity] = useState(1);
-	let productData;
+	const [costPrice, setCostPrice] = useState("");
+	const [sellingPrice, setSellingPrice] = useState("");
+	const [inStock, setInStock] = useState(true);
+	const [addedDate, setAddedDate] = useState("");
 
 	const incrementQuantity = () => {
 		setQuantity(quantity + 1);
@@ -18,19 +23,38 @@ export default function Pop() {
 			setQuantity(quantity - 1);
 		}
 	};
-	const  handleProductInsert=async()=>{
+
+	const handleProductInsert = async () => {
 		try {
-			const response = await axios.get('http://localhost:5000/v1/productin', products);
-			productData = response.data.products
+			const newProduct = {
+				productName,
+				productID,
+				qty: quantity,
+				category,
+				inStock,
+				costPrice,
+				sellingPrice,
+				addedDate,
+			};
+
+			const response = await axios.post(
+				'http://localhost:5000/v1/addProduct',
+				newProduct
+			);
+
 			console.log(response.data);
-		  } catch (error) {
+		} catch (error) {
 			console.error('Error sending data to MongoDB:', error.message);
-		  }
-	}
+		}
+	};
+
 	return (
 		<div className="product">
-			<Popup trigger={<button className="add__product add__btn">Add Product</button>
-} position="bottom center" modal>
+			<Popup
+				trigger={<button className="add__product add__btn">Add Product</button>}
+				position="bottom center"
+				modal
+			>
 				{(close) => (
 					<div className="popp__container">
 						<div className="popp__box">
@@ -41,33 +65,39 @@ export default function Pop() {
 							<div className="boxlist">
 								<div className="popp__inputname flex__row">
 									Product Name:
-									<input type="text" placeholder="Product Name" />
+									<input
+										type="text"
+										placeholder="Product Name"
+										value={productName}
+										onChange={(e) => setProductName(e.target.value)}
+									/>
+								</div>
+								<div className="popp__inputname flex__row">
+									Product ID:
+									<input
+										type="text"
+										placeholder="Product ID"
+										value={productID}
+										onChange={(e) => setProductID(e.target.value)}
+									/>
 								</div>
 								<div className="popp__inputname flex__row">
 									Category:
-									<select>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
+									<select value={category} onChange={(e) => setCategory(e.target.value)}>
+										<option value="Electronics">Electronics</option>
+										<option value="Clothing">Clothing</option>
 										{/* Add more options as needed */}
 									</select>
 								</div>
 								<div className="popp__inputname flex__row">
 									Quantity:
 									<div className="allquat">
-
 										<div className="quantity-control">
-											<button
-												className="decrement-button"
-												onClick={decrementQuantity}
-											>
+											<button className="decrement-button" onClick={decrementQuantity}>
 												-
 											</button>
 											<input type="text" value={quantity} readOnly />
-											<button
-												className="increment-button"
-												onClick={incrementQuantity}
-											>
+											<button className="increment-button" onClick={incrementQuantity}>
 												+
 											</button>
 										</div>
@@ -75,28 +105,46 @@ export default function Pop() {
 									<br />
 								</div>
 								<div className="popp__inputname flex__row">
-									Buying Price:
-									<input type="text" placeholder="Buying Price" />
+									Cost Price:
+									<input
+										type="text"
+										placeholder="Cost Price"
+										value={costPrice}
+										onChange={(e) => setCostPrice(e.target.value)}
+									/>
 								</div>
 								<div className="popp__inputname flex__row">
-									Marked Price:
-									<input type="text" placeholder="Marked Price" />
+									Selling Price:
+									<input
+										type="text"
+										placeholder="Selling Price"
+										value={sellingPrice}
+										onChange={(e) => setSellingPrice(e.target.value)}
+									/>
 								</div>
 								<div className="popp__inputname flex__row">
-									Marked Price:
-									<input type="text" placeholder="Marked Price" />
+									In Stock:
+									<select value={inStock} onChange={(e) => setInStock(e.target.value === "true")}>
+										<option value="true">Yes</option>
+										<option value="false">No</option>
+									</select>
 								</div>
-								
+								<div className="popp__inputname flex__row">
+									Added Date:
+									<input
+										type="text"
+										placeholder="YYYY/MM/DD"
+										value={addedDate}
+										onChange={(e) => setAddedDate(e.target.value)}
+									/>
+								</div>
 							</div>
-							<button
-								className="popp__box__button__discard"
-								onClick={close}
-							>
-								Sign In
+							<button className="popp__box__button__discard" onClick={close}>
+								Cancel
 							</button>
-							<button className="popp__box__button"  onClick={handleProductInsert}>Sign In</button>
-
-
+							<button className="popp__box__button" onClick={handleProductInsert}>
+								Add Product
+							</button>
 						</div>
 					</div>
 				)}
