@@ -12,7 +12,9 @@ import shareLogo from "../../../img/sidebar-img/share.svg"
 import logoutLogo from "../../../img/sidebar-img/logout.svg"
 import { Link } from 'react-router-dom'
 import Login from '../../login'
+
 export default function Sidebar() {
+
   return (
 	<div className='sidebar flex__col'>
 		<div className="sidebar__logo flex__row"><img src={logo} alt="IMS Logo" /><h1>IMS</h1></div>
