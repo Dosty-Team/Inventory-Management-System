@@ -13,16 +13,15 @@ import userLogo from "../../../img/sidebar-img/manage-user.svg"
 import shareLogo from "../../../img/sidebar-img/share.svg"
 import logoutLogo from "../../../img/sidebar-img/logout.svg"
 import { HashLink as Link } from "react-router-hash-link";
+// logout
+import LogoutPage from '../../logout'
 
 export default function Sidebar() {
 	let dispatch = useDispatch();
-	let user = useSelector((state) => state.user.userRole);
+	let user = localStorage.getItem("roleType").toLowerCase();
+	console.log("useeeeer",user);
 	let page = useSelector(state => state.page.pageName);
-	function handleLogOut()
-	{
-		console.log("Logged Out");
-		dispatch(userActions.setValidity(false));
-	}
+	 
   return (
 	<div className='sidebar flex__col'>
 		<Link to={"/"} className='linker'>
@@ -100,12 +99,15 @@ export default function Sidebar() {
 			</Link>
 			}
 		</ul>
-		<div className="sidebar__logout  flex__row" onClick={handleLogOut}>
+		<Link to="/logout">
+
+		<div className="sidebar__logout  flex__row" >
 			<div className="sidebar__iconbox">
 				<img src={logoutLogo} alt="" className="sidebar__logout--icon" />
 			</div>
 			<h3 className="sidebar__logout--name">Log Out</h3>
 		</div>
+		</Link>
 	</div>
   )
 }

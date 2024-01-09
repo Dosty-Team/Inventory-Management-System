@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import { pageActions } from "../../store/pageSlice";
 import { Table, DatePicker, message } from 'antd';
 import { saleJSON, saleCol } from "./tableData";
-
+import PopSales from "./popSales";
 export default function Sales() {
 	let startIsSet = useRef(null);
 	let endIsSet = useRef(null);
@@ -178,7 +178,7 @@ export default function Sales() {
 				</div>
 				<button className="sales__okay add__btn" onClick={handleSales}>OK</button>
 			</div>
-			<div className="add__sales add__btn flex__row flex__center">Add Sales</div>
+			<PopSales/>
 		</div>
 		<div className="sales__list hard__shadow">
 			<h2>Sales</h2>

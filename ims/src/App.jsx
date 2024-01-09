@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Dashboard from "./components/dashboard";
 import Sidebar from "./components/common/sidebar";
 import Topbar from "./components/common/topbar";
@@ -12,34 +12,49 @@ import SalePredict from "./components/sale_predict";
 import UserManage from "./components/user_manage";
 import LoginPage from "./components/login_page";
 import ShareDistribution from "./components/share_dist";
+import { userActions } from "./store/userSlice";
+import { setRole } from "./store/userSlice";
 import "./App.scss";
-
+import LogoutPage from "./components/logout";
+// import { StoredAuthToken } from "./components/token";
 function App() {
 	// phasse 1 ko code merge testing to the main branch
-	let user = useSelector((state) => state.user.userRole);
-	let validUser = useSelector((state) => state.user.isValidUser);
+	const dispatch = useDispatch();
+	let validUser = useSelector((state) => state.user.isValidUser);	
+	let  user = useSelector((state) => state.user.userRole);
+	const StoredAuthToken = localStorage.getItem("authToken");
+	const StoredRoleType = localStorage.getItem("roleType");
+	console.log("storeeeeeeed",StoredRoleType)
+		if (StoredRoleType && StoredAuthToken) {
+			dispatch(setRole(StoredRoleType));
+		//   dispatch(userActions.setRole(StoredRoleType));
+		  dispatch(userActions.setValidity(true));
+		}
+		let lowercase = StoredRoleType.toLowerCase();
     return (
         <div className="App flex__row">
-			{validUser ? 
+			{StoredAuthToken ?  
 				<>
 					<Sidebar />
 					<div className="page__wrapper flex__col">
 						<Topbar />
 						<div className="page__content">
-							<Routes>
+							<Routes>					
+								<Route path='/logout' element={<LogoutPage/>}/>
 								<Route path="/" element={<Dashboard />} />
 								<Route path="/product" element={<Product />} />
 								<Route path="/category" element={<Category />} />
 								<Route path="/sale" element={<Sales />} />
 								<Route path="/sale_report" element={<SaleReport />} />
-								{user === "admin" && <Route path="/sale_predict" element={<SalePredict />} />}
-								{user === "admin" && <Route path="/user_manage" element={<UserManage />} />}
-								{user === "admin" && <Route path="/share_dist" element={<ShareDistribution />} />}
+								{lowercase == "admin" && <Route path="/sale_predict" element={<SalePredict />} />}
+								{lowercase == "admin" && <Route path="/user_manage" element={<UserManage />} />}
+								{lowercase == "admin" && <Route path="/share_dist" element={<ShareDistribution />} />}
 							</Routes>
 						</div>
 					</div>
 				</> :
 				<>
+				<Topbar />
 					<LoginPage/>
 				</>
 			}

@@ -65,3 +65,248 @@
 		}
 	}
 }
+
+
+
+// pop sales scss modifications to the entire app and the internal css is required.
+// careful while handeling the package. paste the entire scss down from here for the pop sales scss
+//if you want to change the package, docuement it well. 
+
+
+.popup-content {
+    // background: rgb(0, 0, 0);
+
+    // background-color: #cf3f3fde !important;
+    width: 0px !important;
+    padding: 0 !important;
+    border: 0px !important;
+
+}
+[role='tooltip'].popup-content {
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+    background: rgba(0, 0, 0, 0.391);
+}
+
+[data-popup='tooltip'].popup-overlay {
+    background: transparent;
+}
+
+.popp {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #02020200; // Set your desired background color
+    }
+
+    &__box {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 29px;
+        box-shadow: inset -4px -12px 9px 4px rgba(0, 0, 0, 0.1);
+        text-align: right;
+        width: 461px;
+        height: -moz-fit-content;
+        height: fit-content;
+        margin: -3vh 6vh 22vh 37vh;
+
+        h1 {
+            font-size: 24px;
+            color: $dark-text;
+        }
+
+        .button {
+            margin-top: 2%;
+
+            text-align: right;
+
+        }
+
+        p {
+            font-size: 13px;
+            color: $grey-text;
+        }
+
+        .boxlist {
+            display: flex;
+            flex-direction: column;
+
+            // justify-content: center;
+            align-items: center;
+
+            .popp__inputname {
+                margin: 16px 0 0 0;
+                font-size: 14px;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                // border: 2px solid red;
+            }
+        }
+
+        // .login__inputname {
+        //   text-align: left; // Add any desired spacing or styling
+        // }
+
+        input {
+            text-align: center;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            height: 2rem;
+            
+
+        }
+        .quantity-control {
+            display: flex;
+           
+            justify-content: center;
+            align-items: center;
+            
+            border-radius: 3px;
+            padding: 5px 0 0 45%;
+          margin-right:  0  25% 0 0;
+            button {
+              background: #080808;
+              color: #fff;
+              border: none;
+              
+              border-radius: 3px;
+              padding: 5px 10px;
+              cursor: pointer;
+              font-size: 1rem;
+              transition: background-color 0.3s;
+          
+              &:hover {
+                color: black;
+                background-color: #ffffff;
+              }
+            }
+          
+            input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+        
+         
+       
+    
+          }
+          
+          /* Add any additional styling as needed */
+          
+          
+        select {
+            text-align: center;
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+          
+            /* Style the individual options */
+            option {
+              padding: 10px;
+              border: 1px solid #e7e7e7;
+              border-radius: 3px;
+              font-size: 15px;
+            }
+          }
+       
+           
+        &__button {
+
+            background-color: #0074d9; // Set your desired button color
+            color: #fff;
+            padding: 10px 12px;
+            border: none;
+            margin: 2% 0 0 3%;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 25%;
+
+            &__discard {
+                background-color: $mid-dark-text;
+                color: #fff;
+                padding: 10px 12px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 25%;
+
+                &:hover {
+                    background-color: $light-text; // Set your desired hover color
+                }
+            }
+
+            &:hover {
+                background-color: #0056b3; // Set your desired hover color
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 45px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: $dark-text;
+        }
+    }
+}
+.ripple {
+    position: relative;
+    overflow: hidden;
+  
+    &:after {
+      content: "";
+      position: absolute;
+      background: rgb(188, 43, 43);
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple 0.6s linear;
+    }
+  
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  }
+  
+.quantity-control button::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(218, 0, 0);
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+  }
+  
+  .quantity-control button:active::after {
+    transform: scale(2);
+    opacity: 0;
+  }
+  .add__btn {
+    cursor: pointer;
+  }
