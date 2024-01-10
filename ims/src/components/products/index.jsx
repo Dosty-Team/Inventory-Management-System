@@ -1,30 +1,39 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { pageActions } from "../../store/pageSlice";
-import { productCol, productData, productOverview} from './data';
+import { productCol,productOverview} from './data';
 import { Table, Space } from 'antd';
 import InfoCard from "../common/info_card";
 import Pop from './pop';
 import "./style.scss";
+import axios from 'axios';
 
 export default function Product() {
 	let dispatch = useDispatch();
-	useEffect(()=>{
-		dispatch((pageActions.setProducts()));
-	},[]);
-	const  handleProductInsert=async()=>{
-		try {
-			const response = await axios.get('http://localhost:5000/v1/productin', products);
-			productData = response.data.products
-			console.log(response.data);
-		  } catch (error) {
-			console.error('Error sending data to MongoDB:', error.message);
-		  }
-	}
+	const [productData, setProductData] = useState(null);
+	const [productOverviewd, setProductOverviewd] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/v1/productin');
+        setProductData(response.data.products);
+		setProductOverviewd(response.data.productOverview);
+        console.log(response.data);
+      } catch (error) {
+        console.error('Error fetching data from server:', error.message);
+      }
+    };
+
+    fetchData();
+    dispatch(pageActions.setProducts());
+  }, [dispatch]);
+
+  console.log('productpage productOverviewdproductOverviewdproductOverviewdproductOverviewdproductOverviewdproductOverviewdproductOverviewd', productOverviewd);
+	
   return (
 	<div className='product'>
 		<div className="product__inventory flex__row hard__shadow">
-			<InfoCard info={productOverview}/>
+			<InfoCard info={productOverviewd}/>
 			<Pop/>
 			</div>
 		<div className="product__list hard__shadow">
