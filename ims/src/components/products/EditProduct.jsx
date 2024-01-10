@@ -9,10 +9,11 @@ import { useDispatch } from 'react-redux';
 import { renderActions } from '../../store/renderSlice';
 
 export default function EditProduct({ product, updateProductName }) {
-  const [newProductName, setNewProductName] = useState(product.productName);
-  const [newQuantity, setNewQuantity] = useState(product.qty);
-  const [newCostPrice, setNewCostPrice] = useState(product.costPrice);
-  const [newSellingPrice, setNewSellingPrice] = useState(product.sellingPrice);
+    let productObj = product;
+  const [newProductName, setNewProductName] = useState(productObj.productName);
+  const [newQuantity, setNewQuantity] = useState(productObj.qty);
+  const [newCostPrice, setNewCostPrice] = useState(productObj.costPrice);
+  const [newSellingPrice, setNewSellingPrice] = useState(productObj.sellingPrice);
 
   const dispatch = useDispatch();
 
@@ -39,10 +40,13 @@ export default function EditProduct({ product, updateProductName }) {
       toast.error('Failed to update product. Please try again.');
     }
   };
+  const handleButton = ()=>{
+    console.log("button click huda yo print vaerako xa",productObj.productName ,productObj);
+  }
 
   return (
     <div className="editProduct">
-      <Popup trigger={<a>Edit</a>} position="bottom center" modal>
+      <Popup trigger={<a >Edit</a>} position="bottom center" modal>
         {(close) => (
           <div className="popp__container">
             <div className="popp__box">
@@ -88,7 +92,7 @@ export default function EditProduct({ product, updateProductName }) {
                   />
                 </div>
               </div>
-              <button className="popp__box__button__discard" onClick={close}>
+              <button className="popp__box__button__discard"  onClick={handleButton}>
                 Discard
               </button>
               <button className="popp__box__button" onClick={handleSaveChanges}>

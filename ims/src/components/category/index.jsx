@@ -83,14 +83,17 @@ export default function Category() {
     {
       title: 'Action',
       key: 'action',
-      render: (_, record) => (
+      render: (_, record) =>{ 
+        console.log("category checking record",record)
+        return(
+        
         <Space size="middle">
           {/* <a onClick={() => handleEdit(record)}><EditCategory/></a> */}
           <EditCategory category={record} updateCategoryName={handleEditSuccess} />
           <a onClick={() => handleDelete(record)}>Delete</a>
         </Space>
        
-      ),
+      )},
     },
   ];
  
