@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { pageActions } from '../../store/pageSlice';
 import InfoCard from '../common/info_card';
 import './style.scss';
@@ -9,8 +9,13 @@ import Popcategory from './popcategory';
 import axios from 'axios';
 import EditCategory from './editCategory';
 import { ToastContainer, toast } from 'react-toastify';
+import { UseSelector } from 'react-redux';
+import { renderActions } from '../../store/renderSlice';
+
 export default function Category() {
   const dispatch = useDispatch();
+  //to pass the vlaue of the input box of the index.jsx to the popbox useRef is used here
+  const commoncategoryname = useRef(null);
   const [cateinfo, setCateinfo] = useState(null);
   const [categoryData, setCategoryData] = useState(null);
   const [categorydataforactive, setCategorydataforactive] = useState(null);
@@ -18,6 +23,9 @@ export default function Category() {
   const [selectedCategory, setSelectedCategory] = useState(null);  // Track selected category for deletion
   const [openDialog, setOpenDialog] = useState(false);  // State to control the visibility of the delete confirmation dialog
   dispatch(pageActions.setCategory());
+
+  //listen for re-rendering from other components:
+  let shouldRender = useSelector((state)=>state.render.shouldRender);
 
   useEffect(() => {
     try {
@@ -28,13 +36,20 @@ export default function Category() {
         setCategorydataforactive(req.data.CateInfo.activeCategory);
       };
       getCategory();
+
+      // Check if shouldRender is true before fetching data again
+      if (shouldRender) {
+        getCategory();
+
+        // After re-fetching data, reset shouldRender to false
+        dispatch(renderActions.triggerRender());
+      }
     } catch (err) {
       console.log('error while retrieving data in the category component', err);
     }
-  }, []);
+  }, [shouldRender]);
   const handleEditSuccess = (newName) => {
     setCategoryName(newName);
-    toast.success('Category edited successfully!', { position: 'top-right' });
   };
 
 
@@ -91,14 +106,12 @@ export default function Category() {
       // Perform the deletion logic (make a DELETE request to the server)
       await axios.delete(`http://localhost:5000/v1/deleteCategory/${selectedCategory.key}`);
       
-      // Fetch updated data after deletion
-      const req = await axios.get('http://localhost:5000/v1/getcats');
-      setCategoryData(req.data.allCategory);
-      setCateinfo(req.data.CateInfo.totalCategory);
-      setCategorydataforactive(req.data.CateInfo.activeCategory);
-
+      
       // Close the confirmation dialog
       setOpenDialog(false);
+      //re-render table after deletion
+      dispatch(renderActions.triggerRender());
+
     } catch (error) {
       console.error('Error deleting category:', error.response ? error.response.data : error.message);
       // Handle error, show notification, etc.
@@ -119,11 +132,12 @@ export default function Category() {
             type="text"
             placeholder="Category Name"
             className="r"
+            ref={commoncategoryname}
             value={categoryName}
             onChange={(e) => setCategoryName(e.target.value)}
           />
           <Popcategory
-            temp={categoryName}
+            inputRef={commoncategoryname}
             updateCategoryName={(newCategoryName) => setCategoryName(newCategoryName)}
           />
         </div>

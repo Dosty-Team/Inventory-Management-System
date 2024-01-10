@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Popup from 'reactjs-popup';
 import { Button } from 'antd';
 import { toast, ToastContainer } from 'react-toastify';
@@ -6,10 +6,25 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import logo from '../../img/sidebar-img/vt-logo.png';
 import './style.scss';
+import { useDispatch } from 'react-redux';
+import { renderActions } from '../../store/renderSlice';
 
-export default function Popcategory({ temp }) {
-  const [categoryName, setCategoryName] = useState('');
+export default function Popcategory({ inputRef }) {
+  //for reredering using redux:
+  const dispatch = useDispatch();
+
+  // Ensure inputRef.current is not null or undefined
+  const val = (inputRef && inputRef.current) ? inputRef.current.value : '';
+  const [categoryName, setCategoryName] = useState(val);
   const [quantity, setQuantity] = useState(1);
+
+  // Update the state when the inputRef value changes
+  useEffect(() => {
+    // Ensure inputRef.current is not null or undefined
+    if (inputRef && inputRef.current) {
+      setCategoryName(inputRef.current.value);
+    }
+  }, [val]);
 
   const incrementQuantity = () => {
     setQuantity(quantity + 1);
@@ -23,24 +38,24 @@ export default function Popcategory({ temp }) {
 
   const handleAddCategory = async () => {
     try {
-      // Check if temp is not null before using it
-      if (temp !== null) {
-		setCategoryName(temp)
-        // Use temp value
-        console.log('Category Name from parent component:', temp);
+      // Check if categoryName is not an empty string
+      if (categoryName.trim() !== '') {
+        const response = await axios.post('http://localhost:5000/v1/newcat', {
+          category: categoryName,
+          products: quantity,
+        });
+
+        // Show success message using react-toastify
+        toast.success(response.data.message);
+        dispatch(renderActions.triggerRender());//true
+
+        // Reset form state
+        setCategoryName('');
+        setQuantity(1);
+      } else {
+        // Show a message indicating that the category name is required
+        toast.error('Category Name is required.');
       }
-
-      const response = await axios.post('http://localhost:5000/v1/newcat', {
-        category: categoryName,
-        products: quantity,
-      });
-
-      // Show success message using react-toastify
-      toast.success(response.data.message);
-
-      // Reset form state
-      setCategoryName('');
-      setQuantity(1);
     } catch (error) {
       // Show error message using react-toastify
       toast.error('Error adding category');
@@ -49,7 +64,7 @@ export default function Popcategory({ temp }) {
 
   return (
     <div className="category">
-      <Popup trigger={<button className="add__btn r">Add Category</button>} position="bottom center" modal>
+      <Popup trigger={<button className="add__btn r" >Add Category</button>} position="bottom center" modal>
         {(close) => (
           <div className="popp__container">
             <div className="popp__box">

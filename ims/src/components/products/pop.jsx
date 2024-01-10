@@ -3,17 +3,23 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import "./style.scss";
 import axios from "axios";
+import { renderActions } from '../../store/renderSlice'; //for re redering through dependecies.
+import Datebox from "./datebox";
+import { useDispatch } from "react-redux";
+import dayjs from 'dayjs';
+import { toast,ToastContainer } from "react-toastify";
 
 export default function Pop() {
+	const [addedDate, setAddedDate] = useState(dayjs().format('DD/MM/YYYY'));
 	const [productName, setProductName] = useState("");
-	const [productID, setProductID] = useState("");
 	const [category, setCategory] = useState("Electronics");
 	const [quantity, setQuantity] = useState(1);
 	const [costPrice, setCostPrice] = useState("");
 	const [sellingPrice, setSellingPrice] = useState("");
 	const [inStock, setInStock] = useState(true);
-	const [addedDate, setAddedDate] = useState("");
-
+	const [manufacturer, setManufacturer] = useState("sony");
+	// redux
+	const dispatch = useDispatch();
 	const incrementQuantity = () => {
 		setQuantity(quantity + 1);
 	};
@@ -28,9 +34,9 @@ export default function Pop() {
 		try {
 			const newProduct = {
 				productName,
-				productID,
 				qty: quantity,
 				category,
+				manufacturer,
 				inStock,
 				costPrice,
 				sellingPrice,
@@ -42,19 +48,26 @@ export default function Pop() {
 				newProduct
 			);
 
+
+			toast.success(response.data.message);
 			console.log(response.data);
+			dispatch(renderActions.triggerProductPageRender());
+
 		} catch (error) {
 			console.error('Error sending data to MongoDB:', error.message);
+			toast.error("Error sending data.");
 		}
 	};
 
 	return (
+
 		<div className="product">
 			<Popup
 				trigger={<button className="add__product add__btn">Add Product</button>}
 				position="bottom center"
 				modal
 			>
+
 				{(close) => (
 					<div className="popp__container">
 						<div className="popp__box">
@@ -72,20 +85,20 @@ export default function Pop() {
 										onChange={(e) => setProductName(e.target.value)}
 									/>
 								</div>
-								<div className="popp__inputname flex__row">
-									Product ID:
-									<input
-										type="text"
-										placeholder="Product ID"
-										value={productID}
-										onChange={(e) => setProductID(e.target.value)}
-									/>
-								</div>
+
 								<div className="popp__inputname flex__row">
 									Category:
 									<select value={category} onChange={(e) => setCategory(e.target.value)}>
 										<option value="Electronics">Electronics</option>
 										<option value="Clothing">Clothing</option>
+										{/* Add more options as needed */}
+									</select>
+								</div>
+								<div className="popp__inputname flex__row">
+									Manufacturer:
+									<select value={manufacturer} onChange={(e) => setManufacturer(e.target.value)}>
+										<option value="sony">sony</option>
+										<option value="nike">nike</option>
 										{/* Add more options as needed */}
 									</select>
 								</div>
@@ -131,12 +144,19 @@ export default function Pop() {
 								</div>
 								<div className="popp__inputname flex__row">
 									Added Date:
+																	
+
 									<input
 										type="text"
 										placeholder="YYYY/MM/DD"
 										value={addedDate}
-										onChange={(e) => setAddedDate(e.target.value)}
+										onChange={(newValue) => {
+											setAddedDate(newValue);
+										}}
+										
 									/>
+
+
 								</div>
 							</div>
 							<button className="popp__box__button__discard" onClick={close}>
@@ -145,10 +165,12 @@ export default function Pop() {
 							<button className="popp__box__button" onClick={handleProductInsert}>
 								Add Product
 							</button>
+							<ToastContainer/>
 						</div>
 					</div>
 				)}
 			</Popup>
 		</div>
+
 	);
 }
