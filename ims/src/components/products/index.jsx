@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./style.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { pageActions } from "../../store/pageSlice";
@@ -12,6 +12,8 @@ export default function Product() {
 	useEffect(()=>{
 		dispatch((pageActions.setProducts()));
 	}, []);
+	let [page, setPage] = useState(1);
+	console.log(page);
   return (
 	<div className='product'>
 		<div className="product__inventory flex__row hard__shadow">
@@ -20,7 +22,14 @@ export default function Product() {
 		</div>
 		<div className="product__list hard__shadow">
 			<h2>Products</h2>
-			<Table columns={productCol} dataSource={productData}/>
+			<Table 
+			columns={productCol} 
+			dataSource={productData} 
+			pagination={{
+					onChange(current) {
+					setPage(current);
+				}
+    		}}/>
 		</div>
 	</div>
   )

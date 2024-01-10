@@ -266,7 +266,7 @@ export const productCol = [
     {
         title: 'Action',
         key: 'action',
-        render: (_, record) => (
+        render: (_, record, index) => (
           <Space size="middle">
             <a>Edit</a>
             <a>Delete</a>
