@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     height:fit-content;
+	margin: auto;
   }
 
   &__box {
@@ -16,7 +17,7 @@
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 41vh; /* Set the desired width */
+    width: 50vh; /* Set the desired width */
     margin: 8% 0 0 0; /* Center the box horizontally */
 
     h1 {
