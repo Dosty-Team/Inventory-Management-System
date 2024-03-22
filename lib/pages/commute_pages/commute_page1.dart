@@ -1,10 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:taskes/main.dart';
 import 'commute_page2.dart';
 
 class CommutePage1 extends StatefulWidget {
   @override
   _CommutePage1State createState() => _CommutePage1State();
 }
+
+// All Commute Pages Data Structure
+class TaskInfo
+{
+  String? taskName;
+  String? startTime;
+  String? endTime;
+}
+class CommutePageData {
+  String? homeLocation;
+  String? destinationLocation;
+  String? departureTime;
+  String? arrivalTime;
+  String? leaveTime;
+  String? returnTime;
+  Set <String>? activeDays;
+  String? notificationBefore;
+
+  List<TaskInfo>? taskList;
+}
+CommutePageData userCommute = CommutePageData();
+// List of commutes added by user
 
 class _CommutePage1State extends State<CommutePage1> {
   final _formKey = GlobalKey<FormState>(); // For form validation
@@ -14,6 +37,11 @@ class _CommutePage1State extends State<CommutePage1> {
   void _validateAndNavigate() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
+
+      // **************** Add Home and Destination to commute ****************
+      userCommute.homeLocation = _from;
+      userCommute.destinationLocation = _to;
+      // *********** Navigate to next route **************
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => CommutePage2()),

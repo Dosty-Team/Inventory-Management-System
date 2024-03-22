@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:taskes/pages/commute_pages/commute_page1.dart';
 import 'commute_page3.dart';
 
 class CommutePage2 extends StatefulWidget {
   @override
   _CommutePage2State createState() => _CommutePage2State();
 }
+  // This function creates a reusable circular checkbox with text
+  Set<String> _selectedDays = {};
 
 class _CommutePage2State extends State<CommutePage2> {
   final _formKey = GlobalKey<FormState>(); // For form validation
@@ -37,6 +40,15 @@ class _CommutePage2State extends State<CommutePage2> {
             _field3 != "" &&
             _field4 != "") {
       _formKey.currentState!.save();
+      // **************** Add day and time data to commute ****************
+      userCommute.departureTime = _field1;
+      userCommute.arrivalTime = _field2;
+      userCommute.returnTime = _field3;
+      userCommute.leaveTime = _field4;
+
+      userCommute.activeDays = _selectedDays;
+      userCommute.notificationBefore = _selectedDuration;
+      
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => CommutePage3()),
@@ -336,9 +348,6 @@ class _CommutePage2State extends State<CommutePage2> {
     );
   }
 }
-
-// This function creates a reusable circular checkbox with text
-Set<String> _selectedDays = {};
 
 Widget _buildCheckbox(String text, bool value, Function(bool) onChanged) {
   return InkWell(

@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:taskes/pages/commute_pages/commute_page1.dart';
+import 'package:taskes/pages/home.dart';
 
 class CommutePage3 extends StatefulWidget {
   @override
   _CommutePage3State createState() => _CommutePage3State();
 }
+List<CommuteForm> forms = [CommuteForm()]; // Initial form list
+List<TaskInfo> taskInfoList = [TaskInfo()]; // Initial form list
 
 class _CommutePage3State extends State<CommutePage3> {
-  List<CommuteForm> forms = [CommuteForm()]; // Initial form list
 
   void addNewForm() {
+    taskInfoList.add(TaskInfo());
     setState(() {
       forms.add(CommuteForm());
     });
@@ -16,6 +20,7 @@ class _CommutePage3State extends State<CommutePage3> {
 
   void deleteForm() {
     if (forms.length > 1) {
+      taskInfoList.removeLast();
       setState(() {
         forms.removeLast();
       });
@@ -102,7 +107,7 @@ class _CommutePage3State extends State<CommutePage3> {
           children: [
             // SizedBox(width: 10.0),
             ElevatedButton(
-              onPressed: () => handleSkip(),
+              onPressed: () => handleSkip(context),
               child: Text('Skip'),
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.46, 50),
@@ -113,7 +118,7 @@ class _CommutePage3State extends State<CommutePage3> {
               ),
             ),
             ElevatedButton(
-              onPressed: () => handleNext(),
+              onPressed: () => handleNext(context),
               child: Text('Next'),
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(MediaQuery.of(context).size.width * 0.46, 50),
@@ -204,12 +209,44 @@ class CommuteForm {
   final TextEditingController textFieldController3 = TextEditingController();
 }
 
-void handleSkip()
+void handleSkip(BuildContext context)
 {
   print("Skipped");
+   Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => HomePage()),
+    );
 }
 
-void handleNext()
+void handleNext(BuildContext context)
 {
+  // Store the 
+  int i = 0;
+  for (var form in forms)
+  {
+    taskInfoList[i].taskName = form.textFieldController1.text;
+    taskInfoList[i].startTime = form.textFieldController2.text;
+    taskInfoList[i].endTime = form.textFieldController3.text;
+  }
+  userCommute.taskList = taskInfoList;
   print("Next");
+  print(userCommute.homeLocation);
+  print(userCommute.destinationLocation);
+  print(userCommute.departureTime);
+  print(userCommute.arrivalTime);
+  print(userCommute.leaveTime);
+  print(userCommute.activeDays);
+  print(userCommute.notificationBefore);
+  i = 0;
+  for (var tasks in taskInfoList)
+  {
+    print(userCommute.taskList![i].taskName);
+    print(userCommute.taskList![i].startTime);
+    print(userCommute.taskList![i].endTime);
+  }
+  // print(userCommute.taskList);
+   Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => HomePage()),
+    );
 }
