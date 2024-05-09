@@ -15,6 +15,7 @@ import ShareDistribution from "./components/share_dist";
 import "./App.scss";
 
 function App() {
+	// phasse 1 ko code merge testing to the main branch
 	let user = useSelector((state) => state.user.userRole);
 	let validUser = useSelector((state) => state.user.isValidUser);
     return (
