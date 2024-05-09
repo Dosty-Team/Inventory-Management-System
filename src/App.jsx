@@ -11,6 +11,7 @@ import Login from './components/login';
 function App() {
   return (
     <div className="App flex__row">
+		{/* i am from the maain branch testing hte merge thing. */}
 		<Sidebar/>
 		<div className="page__wrapper flex__col">
 			<Topbar/>
