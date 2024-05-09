@@ -29,6 +29,7 @@ function App() {
 	if (StoredRoleType && StoredAuthToken) {
 		dispatch(setRole(StoredRoleType));
 		// dispatch(userActions.setRole(StoredRoleType));
+		//tyuivgbhnjvgbhnjmfcvghbjnmfgvhbjngvhbjnvygbhnjvghb
 		dispatch(userActions.setValidity(true));
 	
 		 check = (StoredRoleType || '').toLowerCase();
