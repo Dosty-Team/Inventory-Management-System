@@ -13,6 +13,7 @@ function App() {
     <div className="App flex__row">
 		{/* i am from the maain branch testing hte merge thing.sss */}
 		{/* iwant to apply the frontend changes to the frontend-1  branchsssss34567890876543 */}
+		{/* i am from the maain branch testing hte merge thing. */}
 		<Sidebar/>
 		<div className="page__wrapper flex__col">
 			<Topbar/>
