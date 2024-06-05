@@ -1,0 +1,58 @@
+.semester-list-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.semester-list-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.semester-list-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.semester-list-container li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.semester-list-container li:hover {
+    background-color: #f1f1f1;
+}
+
+.semester-list-container li:last-child {
+    margin-bottom: 0;
+}
+
+.semester-list-container li span {
+    color: #666;
+}
+
+.semester-list-container li span.label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.semester-list-container li .faculty {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.semester-list-container li .dates {
+    color: #2980b9;
+}

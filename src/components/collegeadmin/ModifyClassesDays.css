@@ -1,0 +1,24 @@
+.calendar-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rbc-calendar {
+    height: 100%;
+}
+
+.rbc-event {
+    background-color: #f44336;
+    color: white;
+}
+
+.rbc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}

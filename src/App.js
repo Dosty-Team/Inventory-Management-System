@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import AddSemester from './components/collegeadmin/AddSemester';
+import SemesterView from './components/collegeadmin/SemesterView';
+import ModifyClassesDays from './components/collegeadmin/ModifyClassesDays';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/addsemester" element={<AddSemester />} />
+          <Route path="/listsemester" element={<SemesterView/>} />
+          <Route path="/modifyclassesdays" element={<ModifyClassesDays/>} />
+          <Route path="/" element={<p>Hello</p>} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
