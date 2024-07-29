@@ -3,8 +3,14 @@ const app = express();
 const Product = require("../models/Productmodel");
 let fordatacount; // Consider moving this into a shared module or using a database for better data sharing
 const Category = require("../models/CategoryModel");
+const mongoose = require('mongoose');
+const sequenceSchema = new mongoose.Schema({
+  _id: { type: String, required: true },
+  sequence_value: { type: Number, default: 0 }
+});
 
-
+// Create the Sequence model
+const Sequence = mongoose.model('Sequence', sequenceSchema);
 
 app.get('/productin', async (req, res) => {
   try {
@@ -38,20 +44,87 @@ app.get('/productin', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+// app.post('/addProduct', async (req, res) => {
+//   const newProduct = req.body;
+
+ 
+//   try {
+//       // Find the maximum key value in the existing categories
+//       const maxKeyDocument = await Product.findOne().sort({ key: -1 }).select('key');
+//   const minKeyDocument = await Product.findOne().sort({ key: 1 }).select('key');
+  
+//   // Extract the key values or default to 0 if documents are null
+//   const maxKey = maxKeyDocument ? maxKeyDocument.key : 0;
+//   const minKey = minKeyDocument ? minKeyDocument.key : 0;
+  
+//   // Function to find a unique key between the min and max keys
+//   const findUniqueKey = async (min, max) => {
+//  ``   for (let i = min + 1; i <= max; i++) {
+//       const existingProduct = await Product.findOne({ key: i });
+//       if (!existingProduct) {
+//         return i;
+//       }
+//     }
+//     return null;
+//   };
+  
+//   // Generate a new key by finding a unique key between the min and max keys or use maxKey + 1
+//   const newKey = await findUniqueKey(minKey, maxKey) || maxKey + 1;
+//       const productInstance  = new Product({
+//         key: newKey,
+//         ...newProduct,
+//       });
+  
+//        await productInstance.save();
+  
+//       return res.status(200).json({ message: 'Product  insertion successful', success: true });
+//     } catch (error) {
+//       console.error('Error adding product:', error.message);
+//       res.status(500).json({ success: false, message: 'Internal Server Error' });
+//     }});
 app.post('/addProduct', async (req, res) => {
+  const newProduct = req.body;
+
   try {
-     
-    const newProduct = req.body;
+    // Find the next available key using a sequence collection
+    const sequenceDoc = await Sequence.findOneAndUpdate(
+      { _id: "productKey" },
+      { $inc: { sequence_value: 1 } },
+      { new: true, upsert: true }
+    );
+    const newKey = sequenceDoc.sequence_value;
 
-    
-    const product = new Product(newProduct);
+    // Create a new product instance
+    const productInstance = new Product({
+      key: newKey,
+      ...newProduct
+    });
 
-    // Save the product to the database
-    await product.save();
+    // Save the product instance
+    await productInstance.save();
 
-    res.status(201).json({ success: true, message: 'Product added successfully' });
+    return res.status(200).json({ message: 'Product insertion successful', success: true });
   } catch (error) {
     console.error('Error adding product:', error.message);
+    return res.status(500).json({ success: false, message: 'Internal Server Error' });
+  }
+});
+app.delete('/deleteProduct/:key', async (req, res) => {
+  try {
+    const { key } = req.params;
+
+    // Find the product by key in the database and delete it
+    const deletedProduct = await Product.findOneAndDelete({ key });
+
+    // If the product is not found, return a 404 Not Found response
+    if (!deletedProduct) {
+      return res.status(404).json({ success: false, message: 'Product not found' });
+    }
+
+    // Respond with a success message
+    res.status(200).json({ success: true, message: 'Product deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting product:', error.message);
     res.status(500).json({ success: false, message: 'Internal Server Error' });
   }
 });

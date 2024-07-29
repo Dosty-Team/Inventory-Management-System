@@ -43,4 +43,4 @@ const productSchema = new mongoose.Schema({
   // Add more attributes as needed
 });
 
-module.exports = mongoose.model("Products", productSchema);
+module.exports = mongoose.model("Sales", productSchema);

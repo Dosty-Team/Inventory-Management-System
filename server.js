@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const authRoute = require("./routers/auth");
 const productRoute = require("./routers/product");
 const categoriesRoute = require("./routers/categories");
+const salesRoute = require("./routers/sales");
 const cors = require("cors");
 
 app.use(cors());
@@ -27,8 +28,9 @@ function startServer() {
   app.use("/v1", authRoute);
   app.use("/v1", productRoute);
   app.use("/v1",categoriesRoute);
-
-  app.listen(5000, () => {
+  app.use("/v1",salesRoute);
+  const port = process.env.PORT || 5000; 
+  app.listen(port, () => {
     console.log("Backend running on port 5000");
   });
 }

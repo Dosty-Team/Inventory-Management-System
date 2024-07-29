@@ -84,17 +84,17 @@ app.post('/login', async (req, res) => {
 
 // Update user by key
 app.put('/updateUser/:key', async (req, res) => {
-    const { username, password } = req.body;
+    const { username, password ,role} = req.body;
      refresh = req.body.refresh;
      console.log("refffffffressh",refresh);
     const { key } = req.params;
   
     try {
       // Check if the new username is already taken
-      const existingUser = await User.findOne({ username });
-      if (existingUser && existingUser.key !== key) {
-        return res.status(400).json({ message: 'Username already exists' });
-      }
+    //   const existingUser = await User.findOne({ username });
+    //   if (existingUser && existingUser.key !== key) {
+    //     return res.status(400).json({ message: 'Username already exists' });
+    //   }
   
       // Check if the new key is already taken
       const existingKey = await User.findOne({ key });
@@ -103,9 +103,10 @@ app.put('/updateUser/:key', async (req, res) => {
       }
   
       // Assuming "key" is a unique identifier in your User model
-      const updatedUser = await User.findOneAndUpdate({ key }, { username, password }, { new: true });
+      const updatedUser = await User.findOneAndUpdate({ key }, { username, password,role }, { new: true });
   
       if (updatedUser) {
+        console.log(role);
         return res.status(200).json({ message: 'User updated successfully', user: updatedUser });
       } 
     } catch (error) {
@@ -114,5 +115,24 @@ app.put('/updateUser/:key', async (req, res) => {
     }
    
   });
-  
+  app.delete('/deleteuser/:key', async (req, res) => {
+    try {
+        const { key } = req.params;
+    
+        // Find the User by key in the database and delete it
+        const deletedUser = await User.findOneAndDelete({"key": key.toString() });
+    
+        // If the User is not found, return a 404 Not Found response
+        if (!deletedUser) {
+          return res.status(404).json({ success: false, message: 'User not found' });
+        }
+    
+        // Respond with a success message
+        res.status(200).json({ success: true, message: 'User deleted successfully' });
+      } catch (error) {
+        console.error('Error deleting User:', error.message);
+        res.status(500).json({ success: false, message: 'Internal Server Error' });
+      }
+   
+  });
 module.exports = app;
