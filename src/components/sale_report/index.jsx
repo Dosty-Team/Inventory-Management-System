@@ -266,7 +266,7 @@ export default function SaleReport() {
     return <div className="report">
 		{contextHolder}
 		<div className="report__actions flex__row hard__shadow">
-			<select defaultValue="monthly" name="timeline" id="report__time" ref={selector} onChange={handleReport}>
+			<select defaultValue="daily" name="timeline" id="report__time" ref={selector} onChange={handleReport}>
 				{!showGraph && 
 				<option 
 					className="report__option" 
@@ -274,17 +274,18 @@ export default function SaleReport() {
 				>
 				Daily report
 				</option>}
-				<option 
-					className="report__option" 
-					value="monthly"
-				>
-				Monthly report
-				</option>
+				
 				<option 
 					className="report__option" 
 					value="by__date"
 				>
 				By Date
+				</option>
+				<option 
+					className="report__option" 
+					value="monthly"
+				>
+				Monthly report
 				</option>
 			</select>
 			<div className="report__by--date flex__row" >

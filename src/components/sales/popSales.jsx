@@ -7,10 +7,10 @@ import "./style.scss";
 import { renderActions } from '../../store/renderSlice'; //for re redering through dependecies.
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-
 import { toast,ToastContainer } from "react-toastify";
 
 import dayjs from 'dayjs'; 
+const { apiBaseUrl } = require('../../../package.json').config;
 export default function PopSales() {
 	const [quantity, setQuantity] = useState(1);
 	const [addedDate, setAddedDate] = useState(dayjs().format('DD/MM/YYYY'));
@@ -46,7 +46,7 @@ export default function PopSales() {
 			};
 
 			const response = await axios.post(
-				'http://localhost:5000/v1/addSale',
+				`${apiBaseUrl}/v1/addSale`,
 				newProduct
 			);
 

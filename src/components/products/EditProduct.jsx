@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
 
 import { renderActions } from '../../store/renderSlice';
-
+const { apiBaseUrl } = require('../../../package.json').config;
 export default function EditProduct({ product, updateProductName }) {
     let productObj = product;
   const [newProductName, setNewProductName] = useState(productObj.productName);
@@ -19,7 +19,7 @@ export default function EditProduct({ product, updateProductName }) {
 
   const handleSaveChanges = async () => {
     try {
-      const res = await axios.put(`http://localhost:5000/v1/updateProduct/${product.key}`, {
+      const res = await axios.put(`${apiBaseUrl}/v1/updateProduct/${product.key}`, {
         productName: newProductName,
         qty: newQuantity,
         costPrice: newCostPrice,

@@ -8,7 +8,7 @@ import logo from '../../img/sidebar-img/vt-logo.png';
 import './style.scss';
 import { useDispatch } from 'react-redux';
 import { renderActions } from '../../store/renderSlice';
-
+const { apiBaseUrl } = require('../../../package.json').config;
 export default function Popcategory({ inputRef }) {
   //for reredering using redux:
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ export default function Popcategory({ inputRef }) {
     try {
       // Check if categoryName is not an empty string
       if (categoryName.trim() !== '') {
-        const response = await axios.post('http://localhost:5000/v1/newcat', {
+        const response = await axios.post(`${apiBaseUrl}/v1/newcat`, {
           category: categoryName,
           products: quantity,
         });

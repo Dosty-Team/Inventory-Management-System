@@ -5,11 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import axios from 'axios';
 import { renderActions } from '../../store/renderSlice';
 export const userCol = [
-    {
-        title: 'SN',
-        dataIndex: 'key',
-        key: 'sn',
-    },
+ 
     {
         title: 'User Name',
         dataIndex: 'username',

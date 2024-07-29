@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import {dashInfo, data1, data2, topSeller, topSellCol} from "./data"
 import {latestSell, latestSellCol, recentProduct, productCol} from "./data"
@@ -6,12 +6,41 @@ import { useDispatch, useSelector } from "react-redux";
 import { pageActions } from "../../store/pageSlice";
 import DashCard from "../common/dash_card";
 import {Table} from "antd";
+import {  getAdminCount, getNormalCount } from "../user_manage/index";
+import axios from "axios";
+const { apiBaseUrl } = require('../../../package.json').config;
 
-export default function Dashboard() {
-	let dispatch = useDispatch();
-	useEffect(()=>{
-		dispatch((pageActions.setDashboard()));
-	}, []);
+export default  function Dashboard() {
+	const dispatch = useDispatch();
+    let [dataLoaded, setDataLoaded] = useState(false);
+    let [adminCount, setAdminCount] = useState(0);
+    let [normalCount, setNormalCount] = useState(0);
+
+    useEffect(() => {
+		dispatch(pageActions.setDashboard());
+
+		const fetchData = async () => {
+			try {
+				dispatch(pageActions.setDashboard());
+				const responseinfo = await axios.get(`${apiBaseUrl}/v1/getdetails`);
+				const allUsers = responseinfo.data.allUsers;
+	
+				const adminCount = allUsers.filter(user => user.role === 'admin').length;
+				const normalCount = allUsers.filter(user => user.role === 'normal').length;
+				getAdminCount= () =>adminCount;
+				getNormalCount= () =>normalCount;
+				setAdminCount(adminCount);
+				setNormalCount(normalCount);
+				
+	
+				setDataLoaded(true);
+			} catch (error) {
+				console.error(error);
+			}
+		};
+	
+		fetchData();
+	}, [dispatch]);
 	let user = useSelector((state) => state.user.userRole);
 	let InfoList = dashInfo.filter((elem, i) => {
 		// Only show 1st three data to normal user

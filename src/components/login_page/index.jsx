@@ -44,6 +44,7 @@ import "./style.scss";
 import { collapseClasses } from "@mui/material";
 import { setRole } from '../../store/userSlice';
 import { useSelector } from 'react-redux';
+const { apiBaseUrl } = require('../../../package.json').config;
 export default function LoginPage() {
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
@@ -55,7 +56,7 @@ export default function LoginPage() {
     const handleLogin = async () => {
         try {
             // Replace the URL with your actual login endpoint
-            const response = await axios.post("http://localhost:5000/v1/login", {
+            const response = await axios.post(`${apiBaseUrl}/v1/login`, {
                 username: email,
                 password: password,
                 

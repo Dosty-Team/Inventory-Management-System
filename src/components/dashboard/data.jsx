@@ -10,7 +10,25 @@ import customerIcon from "../../img/dashboard-img/customer.svg";
 import shareholderIcon from "../../img/dashboard-img/share.svg";
 import purchaseIcon from "../../img/dashboard-img/purchase.svg";
 import costIcon from "../../img/dashboard-img/cost.svg";
+import {getAdminCount,getNormalCount} from "../user_manage/index"
+import { useEffect } from "react";
+import axios from "axios";
+// let adminCount;
+// let normalCount;
+ 
+// useEffect(async (e)=>{
+// 	e.preventDefault();
+	 
+// 	const responseinfo = await axios.get(`${apiBaseUrl}/v1/getdetails`);
+// 	const allUsers = responseinfo.data.allUsers;
+   
+// 			   // Count users based on roles
+// 				 adminCount = allUsers.filter(user => user.role === 'admin').length;
+// 				 normalCount = allUsers.filter(user => user.role === 'normal').length;
+			 
+// },[]);
 
+	
 export const dashInfo = [
 	{
 		title: "Sales Overview",
@@ -59,8 +77,8 @@ export const dashInfo = [
 // Sample Data for Dashboard in given order: 
 // Here, data1 = [sales, admin, product, supplier, customer, purchase]
 // Here, data2 = [profit, normal, receive, category, shareholder, cost]
-export const data1 = [832, 868, 49, 10, 300, 106]; 
-export const data2 = [204, 24, 10, 4, 2110, 4320]; 
+export const data1 = [832, 868, 49, 1, 300, 106];
+export const data2 = [204, 24, 8, 1, 2110, 4320];
 
 // Top Seller Table Data
 export const topSeller = [

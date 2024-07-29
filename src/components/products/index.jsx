@@ -6,30 +6,35 @@ import { Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText } 
 import InfoCard from "../common/info_card";
 import Pop from './pop';
 import { toast, ToastContainer } from 'react-toastify';
-
 import axios from 'axios';
 import { renderActions } from '../../store/renderSlice';
 import EditProduct from './EditProduct';
+const { apiBaseUrl } = require('../../../package.json').config;
 
 export default function Product() {
-  const dispatch = useDispatch();
+   
   const [productData, setProductData] = useState([]);
   const [productOverview, setProductOverview] = useState(null);
   
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [deleteModalVisible, setDeleteModalVisible] = useState(false);
   const shouldProductRender = useSelector((state) => state.render.shouldProductRender);
+  let dispatch = useDispatch();
 
   useEffect(() => {
+	 
+		dispatch((pageActions.setProducts()));
+	  
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/v1/productin');
+        const response = await axios.get(`${apiBaseUrl}/v1/productin`);
         setProductData(response.data.products);
         setProductOverview(response.data.productOverview);
       } catch (error) {
         console.error('Error fetching data from server:', error.message);
       }
     };
+
 
     fetchData(); // Fetch data on component mount
 
@@ -56,7 +61,7 @@ export default function Product() {
   const handleConfirmDeleteProducts = async () => {
     try {
       // Perform the deletion logic
-      let resp = await axios.delete(`http://localhost:5000/v1/deleteProduct/${selectedProduct.key}`);
+      let resp = await axios.delete(`${apiBaseUrl}/v1/deleteProduct/${selectedProduct.key}`);
       setDeleteModalVisible(false)
       toast.success(resp.data.message)
       
@@ -73,7 +78,7 @@ export default function Product() {
   };
 
   const productColumns = [
-    { title: 'SN', dataIndex: 'key', key: 'sn' },
+    // { title: 'SN', dataIndex: 'key', key: 'sn' },
     { title: 'Product Name', dataIndex: 'productName', key: 'productName' },
     { title: 'Quantity', dataIndex: 'qty', key: 'qty' },
     { title: 'Category', dataIndex: 'category', key: 'category' },

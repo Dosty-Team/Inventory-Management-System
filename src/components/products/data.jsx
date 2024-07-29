@@ -2,11 +2,7 @@ import {Space} from "antd";
 // Product Table Data 
 // Product Table Structure
  const productCol = [
-    {
-        title: 'SN',
-        dataIndex: 'key',
-        key: 'sn',
-    },
+     
     {
         title: 'Product Name',
         dataIndex: 'productName',

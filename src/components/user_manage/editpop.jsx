@@ -4,7 +4,7 @@ import "reactjs-popup/dist/index.css";
 import axios from "axios";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
-
+const { apiBaseUrl } = require('../../../package.json').config;
 export default function Editpop({ props, name, password, keyed, role }) {
   const [newUsername, setNewUsername] = useState(name);
   const [newPassword, setNewPassword] = useState(password);
@@ -13,7 +13,7 @@ export default function Editpop({ props, name, password, keyed, role }) {
 
   const handleSaveChanges = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/v1/updateUser/${keyed}`, {
+      const response = await axios.put(`${apiBaseUrl}/v1/updateUser/${keyed}`, {
         username: newUsername,
         password: newPassword,
         role: newRole,

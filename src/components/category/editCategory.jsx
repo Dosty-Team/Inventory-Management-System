@@ -5,8 +5,8 @@ import axios from 'axios';
 import { toast ,ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
-
 import { renderActions } from '../../store/renderSlice';
+const { apiBaseUrl } = require('../../../package.json').config;
 
 export default function EditCategory({ category, updateCategoryName }) {
   const [newCategoryName, setNewCategoryName] = useState(category.category);
@@ -18,7 +18,7 @@ export default function EditCategory({ category, updateCategoryName }) {
       
   const handleSaveChanges = async () => {
     try {
-      const res = await axios.put(`http://localhost:5000/v1/updateCategory/${category.key}`, {
+      const res = await axios.put(`${apiBaseUrl}/v1/updateCategory/${category.key}`, {
         category: newCategoryName,
       });
 
@@ -64,7 +64,7 @@ export default function EditCategory({ category, updateCategoryName }) {
                 Discard
               </button>
               <button className="popp__box__button" onClick={handleSaveChanges}>
-                SAVE CHANGES
+                SAVE
               </button>
               {/* ToastContainer need to be called here, to override the upper layer notification */}
               <ToastContainer/>

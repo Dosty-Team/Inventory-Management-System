@@ -8,17 +8,18 @@ import Datebox from "./datebox";
 import { useDispatch, useSelector } from "react-redux";
 import dayjs from 'dayjs';
 import { toast,ToastContainer } from "react-toastify";
-
+const { apiBaseUrl } = require('../../../package.json').config;
 export default function Pop() {
  
 	const [addedDate, setAddedDate] = useState(dayjs().format('DD/MM/YYYY'));
 	const [productName, setProductName] = useState("");
 	const [category, setCategory] = useState("Electronics");
 	const [quantity, setQuantity] = useState(1);
-	const [costPrice, setCostPrice] = useState("");
-	const [sellingPrice, setSellingPrice] = useState("");
+	const [costPrice, setCostPrice] = useState();
+	const [sellingPrice, setSellingPrice] = useState();
 	const [inStock, setInStock] = useState(true);
 	const [manufacturer, setManufacturer] = useState("sony");
+	const [datetosend, setDatetosend]= useState(dayjs(addedDate, 'DD/MM/YYYY').set('hour', 18).set('minute', 15).set('second', 0).set('millisecond', 0).toISOString())
 	// redux
 	const dispatch = useDispatch();
 	const incrementQuantity = () => {
@@ -30,9 +31,16 @@ export default function Pop() {
 			setQuantity(quantity - 1);
 		}
 	};
-
+	// const setSpecificDate = (dateString) => {
+		
+		// const isoDate = 
+		// setAddedDate(isoDate);
+	//   }; 
+	//   setSpecificDate(addedDate.toString())
+// let val =  dayjs(addedDate).toISOString();
 	const handleProductInsert = async () => {
 		try {
+
 			const newProduct = {
 				productName,
 				qty: quantity,
@@ -41,11 +49,11 @@ export default function Pop() {
 				inStock,
 				costPrice,
 				sellingPrice,
-				addedDate,
+				datetosend
 			};
 
 			const response = await axios.post(
-				'http://localhost:5000/v1/addProduct',
+				`${apiBaseUrl}/v1/addProduct`,
 				newProduct
 			);
 

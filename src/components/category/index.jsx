@@ -11,7 +11,7 @@ import EditCategory from './editCategory';
 import { ToastContainer, toast } from 'react-toastify';
 import { UseSelector } from 'react-redux';
 import { renderActions } from '../../store/renderSlice';
-
+const { apiBaseUrl } = require('../../../package.json').config;
 export default function Category() {
   const dispatch = useDispatch();
   //to pass the vlaue of the input box of the index.jsx to the popbox useRef is used here
@@ -30,7 +30,7 @@ export default function Category() {
   useEffect(() => {
     try {
       const getCategory = async () => {
-        const req = await axios.get('http://localhost:5000/v1/getcats');
+        const req = await axios.get(`${apiBaseUrl}/v1/getcats`);
         setCategoryData(req.data.allCategory);
         setCateinfo(req.data.CateInfo.totalCategory);
         setCategorydataforactive(req.data.CateInfo.activeCategory);
@@ -110,7 +110,7 @@ export default function Category() {
   const handleConfirmDelete = async () => {
     try {
       // Perform the deletion logic (make a DELETE request to the server)
-      await axios.delete(`http://localhost:5000/v1/deleteCategory/${selectedCategory.key}`);
+      await axios.delete(`${apiBaseUrl}/v1/deleteCategory/${selectedCategory.key}`);
       
       
       // Close the confirmation dialog
