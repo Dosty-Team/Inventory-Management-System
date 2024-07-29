@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidy Application Form</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px; /* Adjust maximum width as needed */
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+            padding: 20px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Ensure the form is above the background image */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <table >
+    <tr>
+        <td colspan="4" class="header">SUBSIDY APPLICATION FORM FOR SMALL/SOLAR HOME SYSTEM</td>
+    </tr>
+    <tr>
+        <td colspan="2">To be filled in by AEPC</td>
+        <td colspan="2" class="right-align">Compnay ID: <input type="text"></td>
+    </tr>
+    <tr>
+        <td colspan="2">To be filled in by Company</td>
+        <td>Remote Area Class: A <input type="checkbox"> B <input type="checkbox"> C <input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td colspan="4" class="section-title">GENERAL INFORMATION</td>
+    </tr>
+    <tr>
+        <td>System's Owner Name</td>
+        <td><input type="text" value="ऋषि शर्मा"></td>
+        <td>Mobileno </td>
+        <td>
+         <input type="text" value="9847106343"></td>
+    </tr>
+    <tr>
+        <td>Owner's Age
+        <input type="text" value="४७"></td>
+        
+        <td>Male <input type="checkbox"> Female <input type="checkbox"></td>
+        <td>ETHNICITY </td>
+        <td>
+      <input type="text"></td> 
+    </tr>
+    <tr>
+        <td>HUSBAND/FATHER</td>
+        <td><input type="text" ></td>
+        <td>Mobileno </td>
+        <td>
+         <input type="text" value="9847106343"></td>
+    </tr>
+    <td>Citizenship No. </td>
+    <td><input type="text" value="५६-२०६८/२०५६"></td>
+    <td>Citizenship  District</td>
+    <td><input type="text" value="RAPTI"></td>
+    <tr>
+        <td>System's Owner Name</td>
+        <td><input type="text" value="ऋषि शर्मा"></td>
+        <td>Mobileno </td>
+        <td>
+         <input type="text" value="9847106343"></td>
+    </tr>
+     
+</table>
+    </div>
+
+    <div class="background-image">
+        <img src="./picture.jpg" alt="Background Image">
+    </div>
+</body>
+</html>

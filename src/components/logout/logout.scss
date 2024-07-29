@@ -1,0 +1,76 @@
+@import "../../sass/variables";
+
+.logout {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  &__box {
+    background-color: #fff; // Set your desired background color for the logout box
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 41vh; /* Set the desired width */
+    margin: 8% 0 0 0; /* Center the box horizontally */
+
+    h1 {
+      font-size: 24px;
+      color: $dark-text;
+    }
+    p {
+      font-size: 13px;
+      color: $grey-text;
+    }
+    .logout__inputname {
+      text-align: left; // Add any desired spacing
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    &__button {
+      @extend .logout__button;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    padding: 1rem 0 1rem 0;
+    gap: 0.5rem;
+    align-items: center;
+
+    img {
+      width: 45px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: $dark-text;
+    }
+  }
+
+  &__button {
+    background-color: #0074d9; // Set your desired button color
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3; // Set your desired hover color
+    }
+  }
+}

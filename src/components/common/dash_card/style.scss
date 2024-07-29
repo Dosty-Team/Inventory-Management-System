@@ -1,0 +1,48 @@
+@import "../../../sass/variables";
+.dashcard
+{
+	width: 100%;
+	border-radius: 10px;
+	background-color: white;
+	padding: 1rem;
+	&__title
+	{
+		text-align: left;
+		margin-bottom: 1rem;
+		color: $dark-text;
+	}
+	&__info
+	{
+		justify-content: space-around;
+		align-items: center;
+		&--one, &--two
+		{
+			min-width: 120px;
+		}
+		.info__icon
+		{
+			width: 35px;
+			height: 35px;
+			img
+			{
+				width: 100%;
+			}
+		}
+		.info__value
+		{
+			line-height: 2rem;
+			color: $mid-dark-text;
+		}
+		.info__attribute
+		{
+			width: 100%;
+			text-align: center;
+			color: $grey-text;
+			line-height: 1.5rem;
+		}
+	}
+	.v__line
+	{
+		height: 100px;
+	}
+}

@@ -1,0 +1,4701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidy Application Form</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Prevent scrolling */
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #2575fc, #6a11cb);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:active {
+            transform: translateY(2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-clear {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        }
+
+        .button-clear:hover {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+        }
+        td {
+            color: white;
+            font-weight: 884;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow-y: scroll;
+            /* Enable vertical scrolling */
+        }
+
+        .background-image img {
+            width: 100%;
+            height: auto;
+            /* Allow the image to maintain its aspect ratio */
+            object-fit: cover;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 1258px;
+            /* Adjust maximum width as needed */
+            height: 80%;
+            max-height: 800px;
+            /* Adjust maximum height as needed */
+            background-color: rgba(62, 68, 153, 0.24);
+            /* Transparent white background */
+            padding: 20px;
+            border: 1px solid #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            /* Ensure the form is above the background image */
+            overflow: auto;
+            /* Allow scrolling if content overflows */
+            transition: all 0.3s ease;
+            /* Smooth transition for scaling */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #2c2c2c21;
+            color: white;
+        }
+
+        input[disabled] {
+            padding: 5px;
+            font-size: 1em;
+            border: 2px solid #a61f2c;
+            border-radius: 4px;
+            background-color: #fff0;
+            color: #bdbdbddb;
+        }
+
+        input[type="number"] {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #2c2c2c21;
+            color: white;
+        }
+
+
+        .scale-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #2c2c2c21;
+            color: white;
+        }
+
+        option {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #2c2c2c21;
+            color: white;
+        }
+
+        .scale-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onmouseover="startScrolling();" onmouseout="stopScrolling();">
+
+
+    <!-- naya photo change garne thau -->
+    <div class="background-image" id="backgroundImageContainer">
+        <img src="./picture.jpg" alt="Background Image" id="backgroundImage">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- yo chai nachaluanu -->
+
+
+    <div class="container">
+        <form id="subsidyForm">
+
+
+            <table>
+                <tr>
+                    <td colspan="4" class="header">SUBSIDY APPLICATION FORM FOR SMALL/SOLAR HOME SYSTEM</td>
+                </tr>
+                <tr>
+                    <td colspan="2">To be filled in by AEPC</td>
+                    <td colspan="2" class="right-align">Compnay ID: <input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">To be filled in by Company</td>
+                    <td>Remote Area Class: A <input type="checkbox" value="A area"> B <input type="checkbox"
+                            value=" B area"> C <input type="checkbox" value="C area">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="section-title">GENERAL INFORMATION</td>
+                </tr>
+                <tr>
+                    <td>System's Owner Name</td>
+                    <td><input type="text" ></td>
+                    <td>Mobileno </td>
+                    <td>
+                        <input type="text" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>Owner's Age
+                        <input type="text"  >
+                    </td>
+
+                    <td>Male <input type="checkbox" value="male"> Female <input type="checkbox" value="female"></td>
+                    <td>ETHNICITY </td>
+                    <td>
+                        <select>
+                            <option value="1">ब्रहण / छेत्री / ठकुरी</option>
+                            <option value="2">जनजाति</option>
+                            <option value="3">दलित</option>
+                            <option value="4">मुस्लिम</option>
+                            <option value="5">मधेशी</option>
+                            <option value="6">अन्य</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>HUSBAND/FATHER</td>
+                    <td><input type="text"></td>
+                    <td>Mobileno </td>
+                    <td>
+                        <input type="text" >
+                    </td>
+                </tr>
+                <td>Citizenship No. </td>
+                <td><input type="text" ></td>
+                <td>Citizenship District</td>
+                <td><select>
+                        <option value="68">Achham</option>
+                        <option value="44">Arghakhanchi</option>
+                        <option value="50">Baglung</option>
+                        <option value="73">Baitadi</option>
+                        <option value="69">Bajhang</option>
+                        <option value="67">Bajura</option>
+                        <option value="65">Banke</option>
+                        <option value="33">Bara</option>
+                        <option value="66">Bardiya</option>
+                        <option value="27">Bhaktapur</option>
+                        <option value="7">Bhojpur</option>
+                        <option value="35">Chitwan</option>
+                        <option value="74">Dadeldhura</option>
+                        <option value="63">Dailekh</option>
+                        <option value="56">Dang</option>
+                        <option value="72">Darchula</option>
+                        <option value="24">Dhading</option>
+                        <option value="8">Dhankuta</option>
+                        <option value="20">Dhanusha</option>
+                        <option value="17">Dolakha</option>
+                        <option value="57">Dolpa</option>
+                        <option value="70">Doti</option>
+                        <option value="36">Gorkha</option>
+                        <option value="42">Gulmi</option>
+                        <option value="61">Humla</option>
+                        <option value="3">Illam</option>
+                        <option value="62">Jajarkot</option>
+                        <option value="4">Jhapa</option>
+                        <option value="59">Jumla</option>
+                        <option value="71">Kailali</option>
+                        <option value="60">Kalikot</option>
+                        <option value="75">Kanchanpur</option>
+                        <option value="47">Kapilwastu</option>
+                        <option value="39">Kaski</option>
+                        <option value="26">Kathmandu</option>
+                        <option value="29">Kavrepalanchowk</option>
+                        <option value="12">Khotang</option>
+                        <option value="28">Lalitpur</option>
+                        <option value="38">Lamjung</option>
+                        <option value="21">Mahottari</option>
+                        <option value="31">Makwanpur</option>
+                        <option value="37">Manang</option>
+                        <option value="9">Morang</option>
+                        <option value="58">Mugu</option>
+                        <option value="48">Mustang</option>
+                        <option value="49">Myagdi</option>
+                        <option value="76">Nawalparasi(bardaghat susta pashchim)</option>
+                        <option value="45">Nawalparasi(bardaghat susta purba)</option>
+                        <option value="25">Nuwakot</option>
+                        <option value="13">Okhaldhunga</option>
+                        <option value="43">Palpa</option>
+                        <option value="2">Panchthar</option>
+                        <option value="51">Parbat</option>
+                        <option value="34">Parsa</option>
+                        <option value="54">Pyuthan</option>
+                        <option value="18">Ramechhap</option>
+                        <option value="23">Rasuwa</option>
+                        <option value="32">Rautahat</option>
+                        <option value="53">Rolpa</option>
+                        <option value="77">Rukum(paschim)</option>
+                        <option value="52">Rukum(purba)</option>
+                        <option value="46">Rupandehi</option>
+                        <option value="55">Salyan</option>
+                        <option value="5">Sankhuwasabha</option>
+                        <option value="15">Saptari</option>
+                        <option value="22">Sarlahi</option>
+                        <option value="19">Sindhuli</option>
+                        <option value="30">Sindhupalchowk</option>
+                        <option value="16">Siraha</option>
+                        <option value="11">Solukhumbu</option>
+                        <option value="10">Sunsari</option>
+                        <option value="64">Surkhet</option>
+                        <option value="41">Syangja</option>
+                        <option value="40">Tanahun</option>
+                        <option value="1">Taplejung</option>
+                        <option value="6">Terhathum</option>
+                        <option value="14">Udayapur</option>
+                    </select></td>
+                <tr>
+                    <td>neighbor's Name</td>
+                    <td><input type="text" ></td>
+                    <td>Mobileno </td>
+                    <td>
+                        <input type="text" >
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="header">Installation address
+                    <td colspan="3"> </td>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>Present Address </td>
+                    <td></td>
+
+                    <td>Old Address </td>
+                </tr>
+                <tr>
+                    <td>Pradesh <input type="text" value="chahidaina" disabled></td>
+                    <td>District Name
+                        
+                        <select id="district" onchange="updateLocalMuniciaplity()">
+                            <option value="68">Achham</option>
+                            <option value="52"> Rukum (purba) </option> 
+                            <option value="76">Nawalparasi(bardaghat susta pashchim) </option> 
+                            <option value="45">Nawalparasi(bardaghat susta purba) </option> 
+                            <option value="44">Arghakhanchi</option>
+                            <option value="50">Baglung</option>
+                            <option value="73">Baitadi</option>
+                            <option value="69">Bajhang</option>
+                            <option value="67">Bajura</option>
+                            <option value="65">Banke</option>
+                            <option value="33">Bara</option>
+                            <option value="66">Bardiya</option>
+                            <option value="27">Bhaktapur</option>
+                            <option value="7">Bhojpur</option>
+                            <option value="35">Chitwan</option>
+                            <option value="74">Dadeldhura</option>
+                            <option value="63">Dailekh</option>
+                            <option value="56">Dang</option>
+                            <option value="72">Darchula</option>
+                            <option value="24">Dhading</option>
+                            <option value="8">Dhankuta</option>
+                            <option value="20">Dhanusha</option>
+                            <option value="17">Dolakha</option>
+                            <option value="57">Dolpa</option>
+                            <option value="70">Doti</option>
+                            <option value="36">Gorkha</option>
+                            <option value="42">Gulmi</option>
+                            <option value="61">Humla</option>
+                            <option value="3">Illam</option>
+                            <option value="62">Jajarkot</option>
+                            <option value="4">Jhapa</option>
+                            <option value="59">Jumla</option>
+                            <option value="71">Kailali</option>
+                            <option value="60">Kalikot</option>
+                            <option value="75">Kanchanpur</option>
+                            <option value="47">Kapilwastu</option>
+                            <option value="39">Kaski</option>
+                            <option value="26">Kathmandu</option>
+                            <option value="29">Kavrepalanchowk</option>
+                            <option value="12">Khotang</option>
+                            <option value="28">Lalitpur</option>
+                            <option value="38">Lamjung</option>
+                            <option value="21">Mahottari</option>
+                            <option value="31">Makwanpur</option>
+                            <option value="37">Manang</option>
+                            <option value="9">Morang</option>
+                            <option value="58">Mugu</option>
+                            <option value="48">Mustang</option>
+                            <option value="49">Myagdi</option>
+                            <option value="76">Nawalparasi(bardaghat susta pashchim)</option>
+                            <option value="45">Nawalparasi(bardaghat susta purba)</option>
+                            <option value="25">Nuwakot</option>
+                            <option value="13">Okhaldhunga</option>
+                            <option value="43">Palpa</option>
+                            <option value="2">Panchthar</option>
+                            <option value="51">Parbat</option>
+                            <option value="34">Parsa</option>
+                            <option value="54">Pyuthan</option>
+                            <option value="18">Ramechhap</option>
+                            <option value="23">Rasuwa</option>
+                            <option value="32">Rautahat</option>
+                            <option value="53">Rolpa</option>
+                            <option value="77">Rukum(paschim)</option>
+                            <option value="52">Rukum(purba)</option>
+                            <option value="46">Rupandehi</option>
+                            <option value="55">Salyan</option>
+                            <option value="5">Sankhuwasabha</option>
+                            <option value="15">Saptari</option>
+                            <option value="22">Sarlahi</option>
+                            <option value="19">Sindhuli</option>
+                            <option value="30">Sindhupalchowk</option>
+                            <option value="16">Siraha</option>
+                            <option value="11">Solukhumbu</option>
+                            <option value="10">Sunsari</option>
+                            <option value="64">Surkhet</option>
+                            <option value="41">Syangja</option>
+                            <option value="40">Tanahun</option>
+                            <option value="1">Taplejung</option>
+                            <option value="6">Terhathum</option>
+                            <option value="14">Udayapur</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td>older Municipality <input type="text" value="chahidaina" disabled></td>
+                </tr>
+                <tr>
+                    <td>Municipality Name</td>
+                    <td colspan="3">
+                        <select id="municipality">
+                            <option value="">-Select Municipality-</option>
+                        </select>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>Ward No. <input type="text"></td>
+
+                    <td>present Village <input type="text"></td>
+                    <td></td>
+                    <td>older Village Name <input type="text" value="chahidaina" disabled></td>
+                </tr>
+                <tr>
+                    <td>Technical Specification Heading</td>
+                    <td colspan="3"> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Date of Installation (Nepali) <input type="text" id="nepaliDate" placeholder="day-month-year">
+                    </td>
+                    <td></td>
+                    <td>system Capacity<input type="text" id="systemcap" placeholder="system Capacity"></td>
+                </tr>
+                <tr>
+                    <td>Installer Company Name</td>
+                    <td colspan="3"><input type="text" value="chahidaina" disabled></td>
+                </tr>
+                <tr>
+                    <td>Address of Installer Company</td>
+                    <td colspan="3"><input type="text" value="chahidaina" disabled></td>
+                </tr>
+                <tr>
+                    <td>Branch Dealer Option</td>
+                    <td></td>
+                    <td colspan="2">Branch <input type="checkbox" name="asstype" value="branch"> Dealer <input
+                            type="checkbox" checked name="asstype" value="dealer"></td>
+                </tr>
+                <tr>
+                    <td>After Sales Company Name <select>
+                            <option value="">-Select-</option>
+                            <option value="87">dhaulagiri q.r power solution </option>
+                            <option value="88">dadabaag kirana stores </option>
+                            <option value="89">P.R electricals </option>
+                            <option value="90">Barda Devi Electricals </option>
+                            <option value="91">J.B enterprises </option>
+                            <option value="92">sunnima solar suppliers </option>
+                            <option value="93">rapti solar tatha baikalpik urja kendra
+                            </option>
+                            <option value="94">Bishna Kirana Pasal </option>
+                            <option value="95">Acharya traders &amp; Suppliers</option>
+                            <option value="96">Manisha Electronics</option>
+                            <option value="97">Badimalika Solar and Nirajan Order
+                                Suppliers</option>
+                            <option value="98">Bheri Karnali Stationary &amp;
+                                Electronics General order suppli</option>
+                            <option value="99">Biplove solar &amp; eloctornik senter
+                            </option>
+                            <option value="100">Manisha Electronics</option>
+                            <option value="101">Acharya teredars and adar saplayarsa
+                            </option>
+                            <option value="102">Dhaulagiri Solar And Electronices Centre
+                            </option>
+                            <option value="103">bharat electronics </option>
+                            <option value="624">bhattarai traders center</option>
+                            <option value="625">New Kabiram Traders &amp; Suppliers
+                            </option>
+                            <option value="626">Baral Enterprises</option>
+                            <option value="627">Rajesh solar Electronic pvt.ltd</option>
+                            <option value="628">Saamudayik Urja Bikash Sewa Kendra
+                            </option>
+                            <option value="629">Ma Kamala Devi electronics </option>
+                            <option value="890">Acharya Electrical &amp; Electronical
+                            </option>
+                            <option value="891">G.S Byaparik Kendra </option>
+                            <option value="892">Hamal Solar Interprises</option>
+                            <option value="893">NEW HAMAL SOLAR AND ELECTRONICS
+                                SUPPLIERS </option>
+                            <option value="954">SAMBODHAN ELECTRICAL &amp; ELECTRONICS
+                            </option>
+                            <option value="955">SULAP ELECTONICS</option>
+
+                        </select></td>
+                    <td>District <input type="text" value="chchidaina" disabled disabled></td>
+                </tr>
+                <tr>
+                    <td>Municipality <input type="text" value="chchidaina" disabled disabled></td>
+                    <td>Village <input type="text" value="chchidaina" disabled disabled></td>
+                    <td colspan="3">Telephone Number
+                        <input type="text" value="chchidaina" disabled disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Installer Technician Name
+                        <select>
+                            <option value="328">mahesh nath subedi</option>
+                            <option value="329">yak raj bhandari</option>
+                            <option value="330">kulman batala </option>
+                            <option value="331">til bahadur gharti magar </option>
+                            <option value="332">Nain Singh Airi</option>
+                            <option value="333">Suresh Kumar Rai </option>
+                            <option value="334">Laxmi Prasad Gautam </option>
+                            <option value="335">Thaman Raj Pun Magar </option>
+                            <option value="336">Binod Poudyal</option>
+                            <option value="337">Nanda Ram Adhikari</option>
+                            <option value="338">Man Bahadur Lama</option>
+                            <option value="339">Man bahadur Lama</option>
+                            <option value="340">Ganesh Bahadur Shahi</option>
+                            <option value="341">Puspa Raj Neupane</option>
+                            <option value="342">Bal bdr sijapati</option>
+                            <option value="343">Sudip stherasta</option>
+                            <option value="344">Bam Bahadur b c</option>
+                            <option value="345">Dil Bahadur Gharti </option>
+                            <option value="346">Indra Bahadur Gharti </option>
+                            <option value="347">khum bahadur khatri </option>
+                            <option value="348">Tej Bahadudr Budha </option>
+                            <option value="349">Hari panthi</option>
+                            <option value="350">Naresh batala</option>
+                            <option value="351">lok raj koirala</option>
+                            <option value="352">gyan bahadur batala</option>
+                            <option value="353">Rabin Regmi </option>
+                            <option value="354">Balbhadra Rout</option>
+                            <option value="355">shree shyamlal acharya</option>
+                            <option value="356">dhan bahadur pun magar</option>
+                            <option value="357">naresh batala</option>
+                            <option value="358">Durga Nepali</option>
+                            <option value="359">durga nepali</option>
+                            <option value="360">Indra prasad gautam</option>
+                            <option value="361">baburam adhikari</option>
+                            <option value="362">umesh budha magar</option>
+                            <option value="363">Rajesh Bahadur Rawal</option>
+                            <option value="364">binti ram chaudhary</option>
+                            <option value="365">hikmat shai</option>
+                            <option value="366">Lok Bahadur Hamal</option>
+                            <option value="367">Naya Ram khadka</option>
+                            <option value="368">Dip Bahadur Shahi</option>
+                            <option value="369">Padam bahadur Shahi</option>
+                            <option value="370">Ram Prasad Sanjal</option>
+                            <option value="371">Chudamani Budhathoki</option>
+                            <option value="372">jagat bdr. shahi</option>
+                            <option value="373">Jagat bahadur shahi</option>
+                            <option value="374">Jhalak Dhami</option>
+                            <option value="375">Tej Bahadur Shrestha</option>
+                            <option value="376">Loknath Mishra</option>
+                            <option value="377">Amar Singh Thapa</option>
+                            <option value="378">Dinesh Raj Joshi</option>
+                            <option value="379">NIRAK HAMAL</option>
+                            <option value="380">RAJU CHAUDHARY</option>
+                            <option value="381">YAMAN KUMAR MALLA</option>
+                            <option value="382">ARJUN B.K</option>
+                            <option value="383">nim bahadur k.c</option>
+                            <option value="1949">Mahendra Hamal</option>
+                            <option value="1951">JAYA KRISHNA ACHARYA</option>
+                            <option value="1952">Arjun BK</option>
+                            <option value="1954">DEV BAHADUR KAMI</option>
+                            <option value="1957">Dilip Kumar Sunar</option>
+                            <option value="1964">Sarjan B.K</option>
+                            <option value="1965">Naresh Bista</option>
+                            <option value="1966">Birendra B.K</option>
+
+                        </select>
+
+                    </td>
+                    <td>Phone Number <input type="text" value="chahidaina" disabled></td>
+                    <td>Annual Income</td>
+                    <td> <input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Installer Registration Number</td>
+                    <td><input type="text" value="chahidaina" disabled></td>
+                    <td>Source of Income</td>
+
+                    <td> <input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">New System <input type="checkbox" checked name="system" value="new"> Upgrade <input
+                            type="checkbox" name="system" value="upgrade"></td>
+                </tr>
+                <tr>
+                    <td>Panel Manufacturer Name</td>
+                    <td colspan="3">
+
+                      <select id="panel" onchange="updateModels()">
+                        <option value="">-Select Panel-</option>
+                         <option value="11">BP Solar</option> 
+                        <option value="23">DG New technology I & E Co. Ltd</option> 
+                            <option value="29"> Canadian Solar Inc</option> 
+                        <option value="31">G. E. Energy</option> 
+                        <option value="32">HHV Solar Technilogies Pvt. Ltd.</option> 
+                        <option value="45">KD new Energy pvt. ltd</option> 
+                            <option value="48">KL Solar Company Pvt. Ltd.</option> 
+                        <option value="49">KL Solar Company Pvt. Ltd.</option> 
+                        <option value="53">Ldk Solar Co ltd</option> 
+                        <option value="54">LS Solar Pte Ltd</option> 
+                        <option value="55">LS Solar Pte Ltd.</option> 
+                        <option value="58">ML Solar LLC</option> 
+                        <option value="70">No Sticker ( Torn due to weather or by user)</option> 
+                        <option value="110">Sun Technics Energy System Pvt. Ltd.</option> 
+                        <option value="117">Su-Kam Power System Ltd</option> 
+                           
+                            <option value="130">Sun Technics</option> 
+                        <option value="131">Sun Link</option> 
+                        <option value="132">Sun N Sand Exim (India) Pvt. Ltd.</option> 
+                        <option value="137">Sun Technic</option> 
+                            <option value="140">TATA BP SOLAR</option> 
+                            <option value="423">Test Manu</option> 
+                            <option value="424">Test Manu</option> 
+                        <option value="1">Andromedia Energy Technologies Pvt. Ltd.  </option>     <option value="2">Alpex Exports Pvt. Ltd.  </option> 
+                        <option value="3">Andromeda Energy Technology Pvt. LTd  </option> 
+                        <option value="4">Anhui Ren. Zho. SC Dev Co. Ltd(QJP)  </option> 
+                        <option value="5">Auxin Solar Corp  </option> 
+                        <option value="6">Access Solar limited  </option> 
+                        <option value="7">Astro Power - Photowatt  </option> 
+                        <option value="8">Atone New Energy Limitd topsun enrgy pvt ltd  </option> 
+                        <option value="9">Atone New Energy Limitd for SSHS topsun enrgy pvt ltd  </option> 
+                        <option value="10">Auxin Solar LLC  </option> 
+                        <option value="12">Canadian Solar inc  </option> 
+                        <option value="13">Central Electronics Ltd.  </option> 
+                        <option value="14">Changhou Nesl Solartech Co. Ltd.  </option> 
+                        <option value="15">China Machinery Engineering wuxi Co .ltd  </option> 
+                        <option value="16">CNPV Dongying Photovoltaic Power Co. Ltd.  </option> 
+                        <option value="17">Changzhou NESL Solartech Co. Ltd.  </option> 
+                        <option value="19">china sunergy (nanjing) co. ltd.  </option> 
+                        <option value="20"> Chinaland Solar Energy Co. Ltd.  </option> 
+                        <option value="22">Chaohu Venus Solar Technology Co., Ltd.  </option> 
+                        <option value="24">Dongying Photovoltaic Power Company Limited. China  </option> 
+                        <option value="25">EVEREXCEED CORPORATION  </option> 
+                        <option value="26">Emmvee Photovoltaic Power Pvt. Ltd.  </option> 
+                        <option value="27">Emmvee PV Power Pvt Ltd  </option> 
+                        <option value="28">Energiebau Solarsystemie GmbH  </option> 
+                        <option value="30">Everexceed Solar crop .Pte. ltd smart Power pvt .ltd  </option> 
+                        <option value="33">Hilight Solar Pvt. Ltd  </option> 
+                        <option value="34">Hooray Energy Pte. Ltd.  </option> 
+                        <option value="35">isofton s.a.  </option> 
+                        <option value="37">jhejing Sun energy co.ltd  </option> 
+                        <option value="38">JIANGSU JIASHENG Photovoltaic Tecnology Co. Ltd.  </option> 
+                        <option value="39">Jinhua Dokio Technology Co. Ltd  </option> 
+                        <option value="40">Jinhua dokio . suntech energy  </option> 
+                        <option value="41">Jinhua Dokio Technology Co. Ltd.  </option> 
+                        <option value="42">JJPV Solar Pvt. Ltd.  </option> 
+                        <option value="43">JUst Solar Co limited  </option> 
+                        <option value="44">Just Solar  </option> 
+                        <option value="46">Kaneka Corporation  </option> 
+                        <option value="47">Kirloskar Integrated Technologies  </option> 
+                        <option value="50">Kotak Urja pvt.ltd  </option> 
+                        <option value="51">Kyocera Asia Pte. Ltd.  </option> 
+                        <option value="52">Kyocera Corporation  </option> 
+                        <option value="56">Moser Baer Photovoltaic Ltd.  </option> 
+                        <option value="57">MITSUBISHI Electric Corparation  </option> 
+                        <option value="60">Nesl Solartech Co. Ltd  </option> 
+                        <option value="61">Ningbo Fufan Import & Export Co. Ltd.  </option> 
+                        <option value="63">Neety International India  </option> 
+                        <option value="64">Ningbo Komes  </option> 
+                        <option value="65">Ningbo Reneld Electrical Appliance Co. Ltd.  </option> 
+                        <option value="66">Ningbo Best solar  </option> 
+                        <option value="67">Ningbo Qixin Solar  </option> 
+                        <option value="68">Ningbo South New Energy Technology Co. ltd  </option> 
+                        <option value="69">Ningbo Komaes technology Co. Ltd.  </option> 
+                        <option value="71"> Ningbo Qixin Solar Electrical Appliance Co.,Ltd  </option> 
+                        <option value="72">Ningo Zhonghong Photovoltaic Technology Co. Ltd.  </option> 
+                        <option value="73">Ningbo Osda Solar Co.Ltd  </option> 
+                        <option value="74">Shenzen Topray Solar Co. Ltd.  </option> 
+                        <option value="75">Suzhou Resun Solar Energy Co. Ltd.  </option> 
+                        <option value="76">Ningbo Dauchuan Solar Energy  </option> 
+                        <option value="77">Neosol Technologies Pvt. Ltd.  </option> 
+                        <option value="78">Everexceed Industrial Co. Ltd.  </option> 
+                        <option value="79">Zhejiang Era Solar Technology Co. Ltd.  </option> 
+                        <option value="80">Ritika Systems Pvt. Ltd.  </option> 
+                        <option value="81">Dongguan Sunworth Solar En. Co. Ltd.  </option> 
+                        <option value="82">Jiangsu Wanfeng PV Company Ltd.  </option> 
+                        <option value="83">Tapan Solar Energy Pvt. Ltd.  </option> 
+                        <option value="84">Nigbo Reneled New Energy Co. Ltd  </option> 
+                        <option value="85">Resun Solar Energy Co. Ltd.  </option> 
+                        <option value="86">Xihe Solar Co. Ltd.  </option> 
+                        <option value="87">Ningbo Qixin Solar Elect Appliance Co,Ltd.  </option> 
+                        <option value="88">Ningbo Polycrown Solar Energy Technology Co.,Ltd.  </option> 
+                        <option value="89">Hangzhou Solar Photoelecticity Co. Ltd.  </option> 
+                        <option value="90">Precision Clean-Tech  </option> 
+                        <option value="91">Philips Electronics India Ltd.  </option> 
+                        <option value="92">Photon Energy System Ltd (Conergy)  </option> 
+                        <option value="93">Photonix Solar Pvt. LTd.  </option> 
+                        <option value="94">Photonix Solar Pvt. Ltd.  </option> 
+                        <option value="95">Premier Solar System Pvt. Ltd.  </option> 
+                        <option value="96">Perlight Solar Co. Ltd  </option> 
+                        <option value="97">Premier Solar System Pvt.LTd  </option> 
+                        <option value="98">Premier Solar Systems (P) Ltd.  </option> 
+                        <option value="99">Qinhuangdan Rayking Solar Company pvt  </option> 
+                        <option value="100">Rahimafrooz Renewable Energy Ltd.  </option> 
+                        <option value="101">Rayking Industry Limited  </option> 
+                        <option value="102">Rajasthan Electronics & Instruments Limited  </option> 
+                        <option value="103">Reliance Industries Ltd  </option> 
+                        <option value="104">Rayking Industry Limited  </option> 
+                        <option value="106">Sunera Distribution Pte. Ltd.  </option> 
+                        <option value="107">Solar Electricity Company Pvt. Ltd.  </option> 
+                        <option value="108">Senso Technologie co. ltd  </option> 
+                        <option value="109">Solex Energy (P) Ltd.  </option> 
+                        <option value="111">Shangang High Light Solar Pvt.Ltd.  </option> 
+                        <option value="112">Sharp Cooperation  </option> 
+                        <option value="113">Shinew Ptotoelectronic  </option> 
+                        <option value="115">Sinodev New Energy  </option> 
+                        <option value="116">Sunny International Power Corp.  </option> 
+                        <option value="118">Solar Leading Group  </option> 
+                        <option value="119">Sinodeu New Energy Co. Ltd.  </option> 
+                        <option value="122">Solar World (AG)  </option> 
+                        <option value="123">solar power inc  </option> 
+                        <option value="124">Sova Power Limited  </option> 
+                        <option value="129">Sticker torn  </option> 
+                        <option value="133">Sunny Intertional Power Corporation  </option> 
+                        <option value="134">Sunrise Energy  </option> 
+                        <option value="135">Suntech  </option> 
+                        <option value="136">Suntech Power Company Ltd.  </option> 
+                        <option value="138">Surana Telecom and Power Ltd.  </option> 
+                        <option value="139">Surana Ventures Limited  </option> 
+                        <option value="141">Tata BP Solar  </option> 
+                        <option value="142">Today Deals Inc  </option> 
+                        <option value="143">Topsun Energy Limited  </option> 
+                        <option value="144">Tamrag Green Solutions (India) P. Ltd.  </option> 
+                        <option value="145">Udhaya Semiconductors Ltd.  </option> 
+                        <option value="146">Vikram Solar pvt ltd  </option> 
+                        <option value="147">Vikram Solar pvt .ltd  </option> 
+                        <option value="148">Vikram Solar Pvt. Ltd  </option> 
+                        <option value="149">Waaree energiessunray  </option> 
+                        <option value="150">Wuxi C.A.N. Import & Export Co.Ltd.  </option> 
+                        <option value="151">Waree Energies Pvt. Ltd.  </option> 
+                        <option value="152">Wuxi Machinary And Equipment Import and Export Co. Ltd  </option> 
+                        <option value="153">Wuxi Sunket New Energy Technology Co. Ltd  </option> 
+                        <option value="154">xiamen universe solar technology co. ltd  </option> 
+                        <option value="156">Yangzhou K.D New Energy Technology Co. Ltd.  </option> 
+                        <option value="157">Yunnan Tianda photovoltaic Co. Ltd.  </option> 
+                        <option value="158">Zhangjiagang Fortunes Solar Tech co., Ltd.  </option> 
+                        <option value="159">Zhejiang G&F Trading Co. Ltd.  </option> 
+                        <option value="161">Zhejiang G&P New Energy Technology Co. Ltd.  </option> 
+                        <option value="162">Zhejiang Koly Energy Co. Ltd  </option> 
+                        <option value="163">Zhejiang Macro Solar Technology  </option> 
+                        <option value="164">Zhejiang sunenergy co. ltd.  </option> 
+                        <option value="165">Zhejiang Macro-solar Technology Co. Ltd.  </option> 
+                        <option value="166">Zhejiang Macro-Solar technology Co. Ltd.  </option> 
+                        <option value="167">Zhejiang Sun Energy Co. Ltd  </option> 
+                        <option value="169">Zhejiang Shangcheng Solar Technology Co. Ltd.  </option> 
+                      </select>
+                    </td>
+                </tr>
+                 
+                <tr>
+                    <td>Panel Manufacturer SN</td>
+                    <td colspan="3"><input type="text"></td>
+
+                </tr>
+                <tr>
+                    <td>Panel Model Number</td>
+                    <td colspan="3">
+                        <select id="model">
+                            <option value="">-Select Model-</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Battery Manufacturer Name </td>
+                    <td>
+                    <select id="battery" onchange="updateBatteryModels()">
+                      <option value="">-Select Battery-</option>
+                        1 option value="171"> Abdhulah Battery Co. Pvt. Ltd.</option>
+                        <option value="203"> Abdhulah Battery Co. Pvt. Ltd.</option> 
+                        <option value="170"> Abdullah Battery Co. Pvt. Ltd.</option> 
+                        <option value="174"> Amalgamated Metal Corporation</option> 
+                        <option value="173"> Amtek Batteries, India</option> 
+                        <option value="175"> Asian Batteries Pvt. Ltd.</option> 
+                        <option value="189"> Bharat Accumulators Ltd. (Urja Battries Limited)</option> 
+                        <option value="182"> Bindal PowerTech Pvt Ltd, India</option> 
+                        <option value="191"> Bindal Technopolymer Pvt. Ltd.</option> 
+                        <option value="188"> Bisha Developers Pvt. Ltd</option> 
+                        <option value="190"> Bisha Developers pvt. ltd (smart)</option> 
+                        <option value="192"> Castwell Metal Industries</option> 
+                        <option value="181"> China Machinery Engineering Wuxi Co. Ltd.</option> 
+                        <option value="193"> Daramic Battery Separator India Pvt Ltd</option> 
+                        <option value="194"> Deepak power storages</option> 
+                        <option value="195"> Deepak International Limited, India</option> 
+                        <option value="186"> Delco Battery Udhyog Pvt. Ltd</option> 
+                        <option value="196"> Eastman Auto & Power Ltd</option> 
+                        <option value="172"> Eastman Auto & Power Ltd.</option> 
+                        <option value="198"> Excide Industries Ltd.</option> 
+                        <option value="197"> Exide Industries Limited</option> 
+                        <option value="200"> Far East First New Energy Co. Ltd.</option> 
+                        <option value="199"> First Power Battery Ltd.</option> 
+                        <option value="179"> FNS Power Technology Inc.</option> 
+                        <option value="184"> Gem Accumulators Nepal Pvt Ltd</option> 
+                        <option value="201"> Gem Batteries Pvt. Ltd</option> 
+                        <option value="202"> Gem Batteries Pvt. Ltd.</option> 
+                        <option value="204"> HBL Power Systems Ltd.</option> 
+                        <option value="205"> HNS Tech Enterprise</option> 
+                        <option value="206"> Hollandai</option> 
+                        <option value="446"> Hygen Energy Ltd.</option> 
+                        <option value="207"> Incoe Battery</option> 
+                        <option value="208"> Inzen Power Solution PVt ltd</option> 
+                        <option value="209"> Inzen Power Solutions Pvt. Ltd.</option> 
+                        <option value="177"> Jagadamba Battery Udhyog</option> 
+                        <option value="445"> Jagadamba Corporation (P). Ltd.</option> 
+                        <option value="210"> Kulayan Batteries Industry</option> 
+                        <option value="211"> Kulayan Battery Industry Pvt. Ltd.</option> 
+                        <option value="212"> Leadstone Energy Limited</option> 
+                        <option value="214"> luminious Power Technologies Pvt. ltd.</option> 
+                        <option value="223"> Luminious Power Technologies Pvt. Ltd.</option> 
+                        <option value="215"> Luminous Power Technology Pvt. Ltd.</option> 
+                        <option value="180"> Marathon Batteries Pvt. Ltd.</option> 
+                        <option value="217"> Metafield Trade Pte Ltd</option> 
+                        <option value="216"> Mn&T Sdn Bhd</option> 
+                        <option value="451"> Power Tech Industries Pvt. Ltd.</option> 
+                        <option value="187"> Powertech Industries Pvt. Ltd</option> 
+                        <option value="218"> Racily udyog</option> 
+                        <option value="219"> Rahimafrooz Accumlaters limited (VOLTA)</option> 
+                        <option value="220"> Rahimafrooz Accumulators Ltd</option> 
+                        <option value="185"> Saif Powertec Limited, Bangladesh</option> 
+                        <option value="222"> shandong sacredusn power sources co.ltd</option> 
+                        <option value="213"> Shenzhen Leoch Battery Technology Co.Ltd.</option> 
+                        <option value="176"> Shree Jagdamba Battery Udhyog (P) Ltd.</option> 
+                        <option value="221"> Solar Frontier Ltd. Japan</option> 
+                        <option value="224"> Solarland Solar Technology & Solution</option> 
+                        <option value="225"> Southern Batteries Pvt. ltd</option> 
+                        <option value="226"> Sparco batteries Pvt. Ltd.</option> 
+                        <option value="227"> Star Battery Limited</option> 
+                        <option value="228"> Sundaya</option> 
+                        <option value="229"> SUNERA Battery/Kulyan</option> 
+                        <option value="230"> Taken for Repair</option> 
+                        <option value="183"> Tamrag Green Solutions (India) Pvt Ltd</option> 
+                        <option value="452"> testsss</option> 
+                        <option value="453"> testsss</option> 
+                        <option value="231"> Trident Metal Energy Pvt. Ltd.</option> 
+                        <option value="232"> Trojan Battery</option> 
+                        <option value="233"> Unikor Battery Company Pvt. Ltd.(MX Volta)</option> 
+                        <option value="178"> Urja Batteries Limited</option> 
+                    </select>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>Battery Manufacturer SN</td>
+                    <td colspan="3"><input type="text"></td>
+                    
+                </tr>
+                <tr>
+                    <td>Battery Model Number</td>
+                    <td>
+                        
+                        <select id="Bmodel">
+                            <option value="">-Select Model-</option>
+                        </select> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>battery type</td>
+                    <td>Flooded <input type="checkbox" name="battery" value="flooded" checked> Lithium Ion <input
+                            type="checkbox" value="Lithium" name="battery"></td>
+                    <td colspan="2">Battery Capacity
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>Charge Controller Name</td>
+                    <td> 
+                        <select>
+                            <option value="306">Unified Electronics India LT d</option>
+                            <option value="291">Solar Zone</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">controller Brand <input type="text" value="chahidaina" disabled></td>
+
+                    <td colspan="2">controller Model
+                        <select>
+                            <option value="1327">SCC12V/8A</option>
+                            <option value="1115">SZ/SZ08A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>lamp Name</td>
+                    <td colspan="3">
+                        <select>
+                            <option value="385">China machinary</option>
+                            <option value="319">Everexceed Solr Corp Pte. Ltd</option>
+                            <option value="369">shenzhen xing long</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td> lamp Model</td>
+                    <td>
+                        <select colspan="3">
+                            <option value="1388">SLL-L2402D</option>
+                            <option value="312">ESC-2L</option>
+                            <option value="1074">UNIQUE-2</option>
+                            <option value="313">ESC-4L</option>
+                            <option value="1389">SLL-L2403D</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>Total cost</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>subsidy cost</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>user amount</td>
+                    <td><input type="text"> 
+                     
+                        <button type="submit" class="button">Submit</button>
+                        <br>
+                       </td>
+                </tr>
+                 
+                
+                <tr>
+                    <td>
+                        <label for="num_of_bulbs">No. of Bulbs</label>
+                    </td>
+                    <td>
+                        <input type="number" id="num_of_bulbs">
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="type_of_bulb">Type of Bulb</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="type_of_bulb" value="W-LED" checked>
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Mobile Charge Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="mobile_charge_option" value="1">Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="mobile_charge_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Radio charge Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="radio_charge_option" value="1">Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="radio_charge_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Radio Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="radio_option" value="1">Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="radio_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Television Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="tv_option" value="1">Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="tv_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+                
+                
+                <button id="clearButton" class="button button-clear">Clear All Values</button>
+                
+                
+                
+                
+                
+                
+            </table>
+            
+
+        </form>
+    </div>
+
+
+    <div class="controls">
+        <button class="button" id="prevButton">Back</button>
+        <button class="button" id="nextButton">Next</button>
+    </div>
+
+    <div class="scale-buttons">
+        <button onclick="scaleUpWidth()">Scale Up photo</button>
+        <button onclick="scaleDownWidth()">Scale Down photo</button>
+        <button onclick="scaleUpHeight()">height Up photo</button>
+        <button onclick="scaleDownHeight()">Scale Down form</button>
+
+    </div>
+
+    <script>
+
+function updateLocalMuniciaplity() {
+      const panelSelect = document.getElementById('district');
+      const modelSelect = document.getElementById('municipality');
+      const selectedPanelValue = panelSelect.value;
+
+      // Clear previous options
+      modelSelect.innerHTML = '<option value="">-Select Model-</option>';
+
+      // Add options based on the selected panel
+      switch (selectedPanelValue) {
+
+        case "68":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5671"> Bannigadhi Jayagadh Rural Municipality   </option> 
+  <option value="5667"> Chaurpati Rural Municipality   </option> 
+  <option value="5668"> Dhakari Rural Municipality   </option> 
+  <option value="5666"> Kamalbazar Municipality   </option> 
+  <option value="5672"> Mangalsen Municipality   </option> 
+  <option value="5673"> Mellekh Rural Municipality   </option> 
+  <option value="5670"> Panchadewal Binayak Municipality   </option> 
+  <option value="5674"> Ramaroshan Rural Municipality   </option> 
+  <option value="5675"> Sanphebagar Municipality   </option> 
+  <option value="5669"> Turmakhad Rural Municipality   </option> 
+`;
+break;
+   
+   case "44":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5460"> Sitganga Municipality   </option> 
+`;
+break;
+   
+   case "50":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5521"> Badigad Rural Municipality   </option> 
+  <option value="5522"> Bareng Rural Municipality   </option> 
+  <option value="5516"> Dhorpatan Municipality   </option> 
+  <option value="5514"> Galkot Municipality   </option> 
+  <option value="5515"> Jaimuni Municipality   </option> 
+  <option value="5519"> Nisikhola Rural Municipality   </option> 
+  <option value="5517"> Taman Khola Rural Municipality   </option> 
+  <option value="5518"> Tara Khola Rural Municipality   </option> 
+`;
+break;
+   
+   case "73":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5720"> Dasharathchanda Municipality   </option> 
+  <option value="5719"> Dilasaini Rural Municipality   </option> 
+  <option value="5721"> Dogadakedar Rural Municipality   </option> 
+  <option value="5725"> Melauli Municipality   </option> 
+  <option value="5722"> Pancheshwar Rural Municipality   </option> 
+  <option value="5723"> Patan Municipality   </option> 
+  <option value="5724"> Purchaudi Municipality   </option> 
+  <option value="5726"> Shivanath Rural Municipality   </option> 
+  <option value="5727"> Sigas Rural Municipality   </option> 
+  <option value="5728"> Surnaya Rural Municipality   </option> 
+`;
+break;
+   
+   case "69":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5686"> Bithadchir Rural Municipality   </option> 
+  <option value="5684"> Bungal Municipality   </option> 
+  <option value="5679"> Chabispathivera Rural Municipality   </option> 
+  <option value="5683"> Durgathali Rural Municipality   </option> 
+  <option value="5680"> Jayaprithivi Municipality   </option> 
+  <option value="5677"> Kedarseu Rural Municipality   </option> 
+  <option value="5678"> Khaptadchhanna Rural Municipality   </option> 
+  <option value="5685"> Masta Rural Municipality   </option> 
+  <option value="5676"> Saipal Rural Municipality   </option> 
+  <option value="5687"> Surma Rural Municipality   </option> 
+  <option value="5681"> Talkot Rural Municipality   </option> 
+  <option value="5682"> Thalara Rural Municipality   </option> 
+`;
+break;
+   
+   case "67":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5661"> Badimalika Municipality   </option> 
+  <option value="5662"> Budhiganga Municipality   </option> 
+  <option value="5663"> Budhinanda Municipality   </option> 
+  <option value="5657"> Gaumul Rural Municipality   </option> 
+  <option value="5665"> Himali Rural Municipality   </option> 
+  <option value="5660"> Jagannath Rural Municipality   </option> 
+  <option value="5658"> Khaptad Chhededaha Rural Municipality   </option> 
+  <option value="5664"> Swami Kartik Rural Municipality   </option> 
+  <option value="5659"> Tribeni Municipality   </option> 
+`;
+break;
+   
+   case "65":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5644"> Duduwa Rural Municipality   </option> 
+  <option value="5643"> Janaki Rural Municipality   </option> 
+  <option value="5642"> Khajura Rural Municipality   </option> 
+  <option value="5645"> Narainapur Rural Municipality   </option> 
+  <option value="5648"> Raptisonari Rural Municipality   </option> 
+`;
+break;
+   
+   case "33":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5349"> Adarshkotwal Rural Municipality   </option> 
+  <option value="5880"> Bisrampur Rural Municipality   </option> 
+   Jitpur Simara Sub Metropolitan  <option value="5353"> </option> 
+  <option value="5352"> Kolhabi Municipality   </option> 
+  <option value="5361"> Mahagadhimai Municipality   </option> 
+  <option value="5876"> Pacharauta Municipality   </option> 
+  <option value="5362"> Simraungadh Municipality   </option> 
+`;
+break;
+   
+   case "66":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5654"> Bansagadhi Municipality   </option> 
+  <option value="5653"> Barbardiya Municipality   </option> 
+`;
+break;
+   
+   case "27":
+   modelSelect.innerHTML += `
+   Bhojpur  <option value="7"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5060"> Aamchowk Rural Municipality   </option> 
+  <option value="5059"> Arun Rural Municipality   </option> 
+  <option value="5063"> Bhojpur Municipality   </option> 
+  <option value="5067"> Hatuwagadhi Rural Municipality   </option> 
+  <option value="5062"> Pauwadungma Rural Municipality   </option> 
+  <option value="5064"> Ramprasad Rai Rural Municipality   </option> 
+  <option value="5066"> Salpasilichho Rural Municipality   </option> 
+  <option value="5065"> Shadananda Municipality   </option> 
+  <option value="5061"> Tyamkemaiyung Rural Municipality   </option> 
+`;
+break;
+   
+   case "35":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5377"> Ichchhyakamana Rural Municipality   </option> 
+  <option value="5378"> Kalika Municipality   </option> 
+  <option value="5379"> Khairahani Municipality   </option> 
+  <option value="5381"> Madi Municipality   </option> 
+  <option value="5383"> Rapti Municipality   </option> 
+`;
+break;
+   
+   case "74":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5729"> Ajaymeru Rural Municipality   </option> 
+  <option value="5731"> Alital Rural Municipality   </option> 
+  <option value="5730"> Amargadhi Municipality   </option> 
+  <option value="5735"> Bhageshwar Rural Municipality   </option> 
+  <option value="5732"> Ganayapdhura Rural Municipality   </option> 
+  <option value="5733"> Nawadurga Rural Municipality   </option> 
+  <option value="5734"> Parashuram Municipality   </option> 
+`;
+break;
+   
+   case "63":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5621"> Aathabis Municipality   </option> 
+  <option value="5629"> Bhagawatimai Rural Municipality   </option> 
+  <option value="5630"> Bhairabi Rural Municipality   </option> 
+  <option value="5623"> Chamunda Bindrasaini Municipality   </option> 
+  <option value="5626"> Dullu Municipality   </option> 
+  <option value="5625"> Dungeshwor Rural Municipality   </option> 
+  <option value="5622"> Gurans Rural Municipality   </option> 
+  <option value="5631"> Mahabu Rural Municipality   </option> 
+  <option value="5627"> Narayan Municipality   </option> 
+  <option value="5628"> Naumule Rural Municipality   </option> 
+  <option value="5624"> Thantikandh Rural Municipality   </option> 
+`;
+break;
+   
+   case "56":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5573"> Babai Rural Municipality   </option> 
+  <option value="5572"> Banglachuli Rural Municipality   </option> 
+  <option value="5571"> Dangisharan Rural Municipality   </option> 
+  <option value="5568"> Gadhawa Rural Municipality   </option> 
+   Ghorahi Sub Metropolitan  <option value="5569"> </option> 
+  <option value="5576"> Lamahi Municipality   </option> 
+  <option value="5574"> Rajpur Rural Municipality   </option> 
+  <option value="5575"> Rapti Rural Municipality   </option> 
+  <option value="5577"> Shantinagar Rural Municipality   </option> 
+   Tulsipur Sub Metropolitan  <option value="5570"> </option> 
+`;
+break;
+   
+   case "72":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5710"> Apihimal Rural Municipality   </option> 
+  <option value="5713"> Byas Rural Municipality   </option> 
+  <option value="5711"> Dunhu Rural Municipality   </option> 
+  <option value="5717"> Lakam Rural Municipality   </option> 
+  <option value="5714"> Mahakali Municipality   </option> 
+  <option value="5716"> Malikarjun Rural Municipality   </option> 
+  <option value="5715"> Marma Rural Municipality   </option> 
+  <option value="5712"> Naugad Rural Municipality   </option> 
+  <option value="5718"> Shailyashikhar Municipality   </option> 
+`;
+break;
+   
+   case "24":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5262"> Benighat Rorang Rural Municipality   </option> 
+  <option value="5259"> Dhunibesi Municipality   </option> 
+  <option value="5254"> Gajuri Rural Municipality   </option> 
+  <option value="5255"> Galchi Rural Municipality   </option> 
+  <option value="5253"> Gangajamuna Rural Municipality   </option> 
+  <option value="5256"> Jwalamukhi Rural Municipality   </option> 
+  <option value="5252"> Khaniyabash Rural Municipality   </option> 
+  <option value="5260"> Nilakantha Municipality   </option> 
+  <option value="5263"> Rubi Valley Rural Municipality   </option> 
+  <option value="5258"> Thakre Rural Municipality   </option> 
+  <option value="5257"> Tripura Sundari Rural Municipality   </option> 
+`;
+break;
+   
+   case "8":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5069"> Chaubise Rural Municipality   </option> 
+  <option value="5070"> Chhathar Jorpati Rural Municipality   </option> 
+  <option value="5071"> Dhankuta Municipality   </option> 
+  <option value="5073"> Mahalaxmi Municipality   </option> 
+  <option value="5072"> Pakhribas Municipality   </option> 
+  <option value="5068"> Sahidbhumi Rural Municipality   </option> 
+  <option value="5074"> Sangurigadhi Rural Municipality   </option> 
+`;
+break;
+   
+   case "20":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5829"> Bateshwor Rural Municipality   </option> 
+  <option value="5834"> Bideha Municipality   </option> 
+  <option value="5827"> Dhanauji Rural Municipality   </option> 
+  <option value="5823"> Ganeshman Charnath Municipality   </option> 
+  <option value="5837"> Hansapiur Municipality   </option> 
+  <option value="5824"> Janaknandani Rural Municipality   </option> 
+  <option value="5821"> Kamala Municipality   </option> 
+  <option value="5831"> Mithila Bihari Municipality   </option> 
+  <option value="5832"> Mukhiyapatti Musarmiya Rural Municipality   </option> 
+  <option value="5836"> Sabaila Municipality   </option> 
+  <option value="5835"> Sahidnagar Municipality   </option> 
+`;
+break;
+   
+   case "17":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5178"> Bigu Rural Municipality   </option> 
+  <option value="5173"> Gaurishankar Rural Municipality   </option> 
+`;
+break;
+   
+   case "57":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5579"> Chharka Tangsong Rural Municipality   </option> 
+  <option value="5582"> Dolpo Buddha Rural Municipality   </option> 
+  <option value="5580"> Jagadulla Rural Municipality   </option> 
+  <option value="5578"> Kaike Rural Municipality   </option> 
+  <option value="5584"> Mudkechula Rural Municipality   </option> 
+  <option value="5585"> Shey Phoksundo Rural Municipality   </option> 
+  <option value="5581"> Thuli Bheri Municipality   </option> 
+  <option value="5583"> Tripurasundari Municipality   </option> 
+`;
+break;
+   
+   case "70":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5688"> Adharsha Rural Municipality   </option> 
+  <option value="5693"> Badikedar Rural Municipality   </option> 
+  <option value="5694"> Bogtan Rural Municipality   </option> 
+  <option value="5691"> Dipayal Silgadi Municipality   </option> 
+  <option value="5690"> Jorayal Rural Municipality   </option> 
+  <option value="5689"> K I Singh Rural Municipality   </option> 
+  <option value="5692"> Purbichauki Rural Municipality   </option> 
+  <option value="5696"> Sayal Rural Municipality   </option> 
+  <option value="5695"> Shikhar Municipality   </option> 
+`;
+break;
+   
+   case "36":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5384"> Ajirkot Rural Municipality   </option> 
+  <option value="5394"> Barpak Sulikot Rural Municipality   </option> 
+  <option value="5388"> Chum Nubri Rural Municipality   </option> 
+  <option value="5389"> Dharche Rural Municipality   </option> 
+`;
+break;
+   
+   case "42":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5438"> Dhurkot Rural Municipality   </option> 
+  <option value="5433"> Isma Rural Municipality   </option> 
+  <option value="5439"> Madane Rural Municipality   </option> 
+  <option value="5440"> Malika Rural Municipality   </option> 
+  <option value="5441"> Musikot Municipality   </option> 
+`;
+break;
+   
+   case "61":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5607"> Adanchuli Rural Municipality   </option> 
+  <option value="5609"> Chankheli Rural Municipality   </option> 
+  <option value="5608"> Kharpunath Rural Municipality   </option> 
+  <option value="5611"> Namkha Rural Municipality   </option> 
+  <option value="5612"> Sarkegad Rural Municipality   </option> 
+  <option value="5613"> Simkot Rural Municipality   </option> 
+  <option value="5610"> Tanjakot Rural Municipality   </option> 
+`;
+break;
+   
+   case "3":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5019"> Chulachuli Rural Municipality   </option> 
+  <option value="5020"> Deumai Municipality   </option> 
+  <option value="5021"> Fakphokthum Rural Municipality   </option> 
+  <option value="5018"> Illam Municipality   </option> 
+  <option value="5022"> Mai Municipality   </option> 
+  <option value="5023"> Maijogmai Rural Municipality   </option> 
+  <option value="5024"> Mangsebung Rural Municipality   </option> 
+  <option value="5025"> Rong Rural Municipality   </option> 
+  <option value="5026"> Sandakpur Rural Municipality   </option> 
+  <option value="5027"> Suryodata Municipality   </option> 
+`;
+break;
+   
+   case "62":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5618"> Barekot Rural Municipality   </option> 
+  <option value="5619"> Bheri Municipality   </option> 
+  <option value="5615"> Chhedagad Municipality   </option> 
+  <option value="5616"> Junichande Rural Municipality   </option> 
+  <option value="5614"> Kuse Rural Municipality   </option> 
+  <option value="5617"> Nalagad Municipality   </option> 
+  <option value="5620"> Shiwalaya Rural Municipality   </option> 
+`;
+break;
+   
+   case "4":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5028"> Arjundhara Municipality   </option> 
+  <option value="5036"> Barhadashi Rural Municipality   </option> 
+  <option value="5038"> Bhadrapur Municipality   </option> 
+  <option value="5040"> Birtamod Municipality   </option> 
+  <option value="5037"> Buddhashanti Rural Municipality   </option> 
+  <option value="5035"> Damak Municipality   </option> 
+  <option value="5032"> Gauradhaha Municipality   </option> 
+  <option value="5033"> Gauriganj Rural Municipality   </option> 
+  <option value="5042"> Haldibari Rural Municipality   </option> 
+  <option value="5029"> Kachankawal Rural Municipality   </option> 
+  <option value="5031"> Kamal Rural Municipality   </option> 
+  <option value="5030"> Kankai Municipality   </option> 
+  <option value="5039"> Mechinagar Municipality   </option> 
+  <option value="5041"> Shivasataxi Municipality   </option> 
+`;
+break;
+   
+   case "59":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5592"> Chandannath Municipality   </option> 
+  <option value="5591"> Guthichaur Rural Municipality   </option> 
+  <option value="5597"> Hima Rural Municipality   </option> 
+  <option value="5590"> Kanakasundari Rural Municipality   </option> 
+  <option value="5595"> Patarasi Rural Municipality   </option> 
+  <option value="5596"> Sinja Rural Municipality   </option> 
+  <option value="5593"> Tatopani Rural Municipality   </option> 
+  <option value="5594"> Tila Rural Municipality   </option> 
+`;
+break;
+   
+   case "71":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5706"> Bardagoriya Rural Municipality   </option> 
+  <option value="5701"> Chure Rural Municipality   </option> 
+   Dhangadhi Sub Metropolitan  <option value="5705"> </option> 
+  <option value="5699"> Gauriganga Municipality   </option> 
+  <option value="5698"> Godawari Municipality   </option> 
+  <option value="5702"> Janaki Rural Municipality   </option> 
+  <option value="5697"> Kailari Rural Municipality   </option> 
+  <option value="5708"> Mohanyal Rural Municipality   </option> 
+`;
+break;
+   
+   case "60":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5599"> Khandachakra Municipality   </option> 
+  <option value="5604"> Mahawai Rural Municipality   </option> 
+  <option value="5601"> Naraharinath Rural Municipality   </option> 
+  <option value="5602"> Pachaljharana Rural Municipality   </option> 
+  <option value="5603"> Palata Rural Municipality   </option> 
+  <option value="5605"> Raskot Municipality   </option> 
+  <option value="5606"> Sanni Tribeni Rural Municipality   </option> 
+  <option value="5598"> Subha Kalika Rural Municipality   </option> 
+  <option value="5600"> Tilagufa Municipality   </option> 
+`;
+break;
+   
+   case "75":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5743"> Bedkot Municipality   </option> 
+  <option value="5738"> Beldandi Rural Municipality   </option> 
+  <option value="5740"> Bhimdatta Municipality   </option> 
+  <option value="5741"> Dodhara Chandani Municipality   </option> 
+  <option value="5736"> Krishnapur Municipality   </option> 
+  <option value="5742"> Laljhadi Rural Municipality   </option> 
+  <option value="5744"> Shuklaphanta Municipality   </option> 
+`;
+break;
+   
+   case "47":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5499"> Bijayanagar Rural Municipality   </option> 
+  <option value="5495"> Buddhabhumi Municipality   </option> 
+  <option value="5493"> Krishnanagar Municipality   </option> 
+  <option value="5496"> Maharajgunj Municipality   </option> 
+  <option value="5500"> Shivaraj Municipality   </option> 
+`;
+break;
+   
+   case "39":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5407"> Annapurna Rural Municipality   </option> 
+  <option value="5409"> Machhapuchchhre Rural Municipality   </option> 
+`;
+break;
+   
+   case "26":
+   modelSelect.innerHTML += `
+   Kavrepalanchowk  <option value="29"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5305"> Banepa Municipality   </option> 
+  <option value="5306"> Bethanchowk Rural Municipality   </option> 
+  <option value="5307"> Bhumlu Rural Municipality   </option> 
+  <option value="5299"> Chaurideurali Rural Municipality   </option> 
+  <option value="5301"> Dhulikhel Municipality   </option> 
+  <option value="5298"> Khanikhola Rural Municipality   </option> 
+  <option value="5309"> Mahabharat Rural Municipality   </option> 
+  <option value="5308"> Mandandeupur Municipality   </option> 
+  <option value="5302"> Namobuddha Municipality   </option> 
+  <option value="5303"> Panauti Municipality   </option> 
+  <option value="5304"> Panchkhal Municipality   </option> 
+  <option value="5310"> Roshi Rural Municipality   </option> 
+  <option value="5300"> Temal Rural Municipality   </option> 
+`;
+break;
+   
+   case "12":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5112"> Ainselukhark Rural Municipality   </option> 
+  <option value="5117"> Barahapokhari Rural Municipality   </option> 
+  <option value="5116"> Diprung Rural Municipality   </option> 
+  <option value="5121"> Halesi Tuwachung Municipality   </option> 
+  <option value="5115"> Jantedhunga Rural Municipality   </option> 
+  <option value="5113"> Kepilasagadhi Rural Municipality   </option> 
+  <option value="5114"> Khotehang Rural Municipality   </option> 
+  <option value="5119"> Rawabesi Rural Municipality   </option> 
+  <option value="5118"> Rupakot Majhuwagadhi Municipality   </option> 
+  <option value="5120"> Sakela Rural Municipality   </option> 
+`;
+break;
+   
+   case "28":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5294"> Bagmati Rural Municipality   </option> 
+  <option value="5292"> Konjyosom Rural Municipality   </option> 
+  <option value="5295"> Mahankal Rural Municipality   </option> 
+`;
+break;
+   
+   case "38":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5400"> Dudhpokhari Rural Municipality   </option> 
+  <option value="5399"> Kwholasothar Rural Municipality   </option> 
+  <option value="5404"> Marsyangdi Rural Municipality   </option> 
+`;
+break;
+   
+   case "21":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5841"> Balawa Municipality   </option> 
+  <option value="5842"> Bhangaha Municipality   </option> 
+  <option value="5838"> Ekdanra Rural Municipality   </option> 
+  <option value="5218"> Jaleswor Municipality   </option> 
+  <option value="5846"> Loharpatti Municipality   </option> 
+  <option value="5225"> Mahottari Rural Municipality   </option> 
+  <option value="5844"> Manara Sisawa Municipality   </option> 
+  <option value="5843"> Matihani Municipality   </option> 
+  <option value="5219"> Pipra Rural Municipality   </option> 
+  <option value="5845"> Ramgopalpur Municipality   </option> 
+  <option value="5228"> Samsi Rural Municipality   </option> 
+  <option value="5229"> Sonama Rural Municipality   </option> 
+`;
+break;
+   
+   case "31":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5327"> Bagmati Rural Municipality   </option> 
+  <option value="5326"> Bakaiya Rural Municipality   </option> 
+  <option value="5328"> Bhimphedi Rural Municipality   </option> 
+   Hetauda Sub Metropolitan  <option value="5332"> </option> 
+  <option value="5323"> Indrasarowar Rural Municipality   </option> 
+  <option value="5324"> Kailash Rural Municipality   </option> 
+  <option value="5329"> Makawanpurgadhi Rural Municipality   </option> 
+  <option value="5330"> Manahari Rural Municipality   </option> 
+  <option value="5331"> Raksirang Rural Municipality   </option> 
+  <option value="5325"> Thaha Municipality   </option> 
+`;
+break;
+   
+   case "37":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5395"> Chame Rural Municipality   </option> 
+  <option value="5398"> Manang Jhang Rural Municipality   </option> 
+  <option value="5396"> Narpa Bhumi Rural Municipality   </option> 
+  <option value="5397"> Nashong Rural Municipality   </option> 
+`;
+break;
+   
+   case "9":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5084"> Belbari Municipality   </option> 
+  <option value="5083"> Budhiganga Rural Municipality   </option> 
+  <option value="5081"> Dhanpalthan Rural Municipality   </option> 
+  <option value="5079"> Gramthan Rural Municipality   </option> 
+  <option value="5080"> Jahada Rural Municipality   </option> 
+  <option value="5077"> Kanepokhari Rural Municipality   </option> 
+  <option value="5076"> Katahari Rural Municipality   </option> 
+  <option value="5078"> Kerabari Rural Municipality   </option> 
+  <option value="5088"> Letang Municipality   </option> 
+  <option value="5085"> Milkajunga Rural Municipality   </option> 
+  <option value="5082"> Pathari Shanishchare Municipality   </option> 
+  <option value="5086"> Rangeli Municipality   </option> 
+  <option value="5087"> Ratuwamai Municipality   </option> 
+  <option value="5091"> Sundarharaicha Municipality   </option> 
+  <option value="5090"> Sunwarshi Municipality   </option> 
+  <option value="5075"> Uralabari Municipality   </option> 
+`;
+break;
+   
+   case "58":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5587"> Chhayanath Rara Municipality   </option> 
+  <option value="5586"> Khatyad Rural Municipality   </option> 
+  <option value="5588"> Mugum Karmarong Rural Municipality   </option> 
+  <option value="5589"> Soru Rural Municipality   </option> 
+`;
+break;
+   
+   case "48":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5504"> Lo-ghekar damodarkunda Rural Municipality   </option> 
+`;
+break;
+   
+   case "49":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5507"> Annapurna Rural Municipality   </option> 
+  <option value="5509"> Beni Municipality   </option> 
+  <option value="5508"> Dhaulagiri Rural Municipality   </option> 
+  <option value="5511"> Malika Rural Municipality   </option> 
+  <option value="5510"> Mangala Rural Municipality   </option> 
+  <option value="5512"> Raghuganga Rural Municipality   </option> 
+`;
+break;
+ 
+   case "76":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5467"> Bardaghat Municipality   </option> 
+  <option value="5463"> Susta Rural Municipality   </option> 
+`;
+break;
+  
+   
+   case "45":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5468"> Baudikali Rural Municipality   </option> 
+  <option value="5472"> Binayee Tribeni Rural Municipality   </option> 
+  <option value="5469"> Bulingtar Rural Municipality   </option> 
+  <option value="5464"> Devchuli Municipality   </option> 
+  <option value="5462"> Gaidakot Municipality   </option> 
+  <option value="5475"> Hupsekot Rural Municipality   </option> 
+  <option value="5461"> Kawasoti Municipality   </option> 
+  <option value="5470"> Madhyabindu Municipality   </option> 
+`;
+break;
+   
+   case "25":
+   modelSelect.innerHTML += `
+   Okhaldhunga  <option value="13"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5123"> Champadevi Rural Municipality   </option> 
+  <option value="5124"> Chisankhugadhi Rural Municipality   </option> 
+  <option value="5122"> Khijidemba Rural Municipality   </option> 
+  <option value="5127"> Likhu Rural Municipality   </option> 
+  <option value="5125"> Manebhanjyang Rural Municipality   </option> 
+  <option value="5126"> Molung Rural Municipality   </option> 
+  <option value="5128"> Siddhicharan Municipality   </option> 
+  <option value="5129"> Sunkoshi Rural Municipality   </option> 
+`;
+break;
+   
+   case "43":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5449"> Bagnaskali Rural Municipality   </option> 
+  <option value="5450"> Mathagadhi Rural Municipality   </option> 
+  <option value="5447"> Nisdi Rural Municipality   </option> 
+  <option value="5448"> Purbakhola Rural Municipality   </option> 
+  <option value="5454"> Rainadevi Chhahara Rural Municipality   </option> 
+  <option value="5451"> Rambha Rural Municipality   </option> 
+  <option value="5452"> Rampur Municipality   </option> 
+  <option value="5453"> Ribdikot Rural Municipality   </option> 
+  <option value="5445"> Tansen Municipality   </option> 
+  <option value="5446"> Tinau Rural Municipality   </option> 
+`;
+break;
+   
+   case "2":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5012"> Falelung Rural Municipality   </option> 
+  <option value="5013"> Falgunanda Rural Municipality   </option> 
+  <option value="5017"> Hilihang Rural Municipality   </option> 
+  <option value="5015"> Miklajung Rural Municipality   </option> 
+  <option value="5014"> Phidim Municipality   </option> 
+  <option value="5011"> Tumbewa Rural Municipality   </option> 
+  <option value="5016"> Yangwarak Rural Municipality   </option> 
+`;
+break;
+   
+   case "51":
+   modelSelect.innerHTML += `
+   Parsa  <option value="34"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5887"> Bahudramai Municipality   </option> 
+  <option value="5372"> Bindabasini Rural Municipality   </option> 
+  <option value="5364"> Chhipaharmai Rural Municipality   </option> 
+  <option value="5366"> Dhobini Rural Municipality   </option> 
+  <option value="5365"> Jagarnathpur Rural Municipality   </option> 
+  <option value="5882"> Jirabhawani Rural Municipality   </option> 
+  <option value="5881"> Kalikamai Rural Municipality   </option> 
+  <option value="5367"> Pakahamainpur Rural Municipality   </option> 
+  <option value="5885"> Parsagadi Municipality   </option> 
+  <option value="5884"> Paterwasugauli Rural Municipality   </option> 
+  <option value="5375"> Sakhuwaprasauni Rural Municipality   </option> 
+  <option value="5883"> Thori Rural Municipality   </option> 
+`;
+break;
+   
+   case "54":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5550"> Gaumukhi Rural Municipality   </option> 
+  <option value="5554"> Mallarani Rural Municipality   </option> 
+  <option value="5552"> Naubahini Rural Municipality   </option> 
+  <option value="5556"> Sarumarani Rural Municipality   </option> 
+  <option value="5557"> Sworgadwary Municipality   </option> 
+`;
+break;
+   
+   case "18":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5181"> Umakunda Rural Municipality   </option> 
+`;
+break;
+   
+   case "23":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5251"> Aama Chhodingmo Rural Municipality   </option> 
+  <option value="5249"> Gosaikunda Rural Municipality   </option> 
+  <option value="5248"> Kalika Rural Municipality   </option> 
+  <option value="5250"> Naukunda Rural Municipality   </option> 
+  <option value="5247"> Uttargaya Rural Municipality   </option> 
+`;
+break;
+   
+   case "32":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5875"> Brindawan Municipality   </option> 
+  <option value="5866"> Dewahi Gonahi   Municipality   </option> 
+  <option value="5865"> Durga Bhagwati Rural Municipality   </option> 
+  <option value="5862"> Gadimai Municipality   </option> 
+  <option value="5336"> Garuda Municipality   </option> 
+  <option value="5863"> Gujara Municipality   </option> 
+  <option value="5860"> Ishnath Municipality   </option> 
+  <option value="5861"> Katahariya Municipality   </option> 
+  <option value="5870"> Madhav Narayan Municipality   </option> 
+  <option value="5867"> Paroha Municipality   </option> 
+  <option value="5868"> Phatuwa Bijayapur Municipality   </option> 
+  <option value="5872"> Yamunamai  Rural Municipality   </option> 
+`;
+break;
+   
+   case "53":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+   Gangadev Rural Muncipality  <option value="5546"> </option> 
+  <option value="5545"> Lungri Rural Municipality   </option> 
+  <option value="5542"> Madi Rural Municipality   </option> 
+  <option value="5541"> Paribartan Rural Municipality   </option> 
+  <option value="5544"> Rolpa Municipality   </option> 
+  <option value="5543"> Runtigadi Rural Municipality   </option> 
+  <option value="5547"> Sunchhahari Rural Municipality   </option> 
+  <option value="5548"> Sunil Smriti Rural Municipality   </option> 
+  <option value="5540"> Thawang Rural Municipality   </option> 
+  <option value="5539"> Tribeni Rural Municipality   </option> 
+`;
+break;
+   
+   case "77":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5530"> Aathbiskot Municipality   </option> 
+  <option value="5534"> Banfikot Rural Municipality   </option> 
+  <option value="5531"> Chaurjahari Municipality   </option> 
+  <option value="5536"> Musikot Municipality   </option> 
+  <option value="5537"> Sani Bheri Rural Municipality   </option> 
+  <option value="5532"> Tribeni Rural Municipality   </option> 
+`;
+break;
+ 
+   case "52": 
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5535"> Bhume Rural Municipality   </option> 
+  <option value="5533"> Putha Uttarganga Rural Municipality   </option> 
+  <option value="5538"> Sisne Rural Municipality   </option> 
+`;
+break;
+   
+   case "46":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5479"> Gaidahawa Rural Municipality   </option> 
+  <option value="5477"> Kanchan Rural Municipality   </option> 
+  <option value="5478"> Kotahimai Rural Municipality   </option> 
+  <option value="5486"> Lumbini Sanskritik Municipality   </option> 
+  <option value="5483"> Marchawari Rural Municipality   </option> 
+  <option value="5484"> Mayadevi Rural Municipality   </option> 
+  <option value="5476"> Omsatiya Rural Municipality   </option> 
+  <option value="5488"> Sammarimai Rural Municipality   </option> 
+`;
+break;
+   
+   case "55":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5566"> Bagchaur Municipality   </option> 
+  <option value="5565"> Bangad Kupinde Municipality   </option> 
+  <option value="5561"> Chhatreshwori Rural Municipality   </option> 
+  <option value="5564"> Darma Rural Municipality   </option> 
+  <option value="5559"> Kalimati Rural Municipality   </option> 
+  <option value="5558"> Kapurkot Rural Municipality   </option> 
+   Kumakh Rural Municipalilty  <option value="5560"> </option> 
+  <option value="5567"> Sharada Municipality   </option> 
+   Siddha Kumakh Rural Municipalilty  <option value="5562"> </option> 
+  <option value="5563"> Tribeni Rural Municipality   </option> 
+`;
+break;
+   
+   case "5":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5048"> Bhotkhola Rural Municipality   </option> 
+  <option value="5045"> Chainpur Municipality   </option> 
+  <option value="5044"> Chichila Rural Municipality   </option> 
+  <option value="5046"> Dharmadevi Municipality   </option> 
+  <option value="5043"> Khandbari Municipality   </option> 
+  <option value="5050"> Madi Municipality   </option> 
+  <option value="5049"> Makalu Rural Municipality   </option> 
+  <option value="5047"> Panchkhapan Municipality   </option> 
+  <option value="5051"> Sabhapokhari Rural Municipality   </option> 
+  <option value="5052"> Silichong Rural Municipality   </option> 
+`;
+break;
+   
+   case "15":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5801"> Aagrasaiyar Krishnasawaran Rural Municipality   </option> 
+  <option value="5814"> Bishnupur Rural Municipality   </option> 
+  <option value="5804"> Chhinnamasta Rural Municipality   </option> 
+  <option value="5805"> Dakneshwori Municipality   </option> 
+  <option value="5818"> Hanumanpur Kankalini Municipality   </option> 
+  <option value="5803"> Khadak Municipality   </option> 
+  <option value="5810"> Mahadev Rural Municipality   </option> 
+  <option value="5811"> Rajbiraj Municipality   </option> 
+  <option value="5808"> Rajgadh Rural Municipality   </option> 
+  <option value="5812"> Rupani Rural Municipality   </option> 
+  <option value="5815"> Sambhunath  Municipality   </option> 
+  <option value="5816"> Saptakoshi  Municipality   </option> 
+  <option value="5817"> Surunga Municipality   </option> 
+  <option value="5807"> Tilathi Koiladi Rural Municipality   </option> 
+  <option value="5813"> Walan-Bihul Rural Municipality   </option> 
+`;
+break;
+   
+   case "22":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5238"> Bagmati Municipality   </option> 
+  <option value="5853"> Balara Municipality   </option> 
+  <option value="5854"> Basbariya Rural Municipality   </option> 
+  <option value="5857"> Bishnu Rural Municipality   </option> 
+  <option value="5855"> Brahmapuri  Rural Municipality   </option> 
+  <option value="5850"> Chakraghatta  Rural Municipality   </option> 
+  <option value="5234"> Chandranagar Rural Municipality   </option> 
+  <option value="5851"> Dhankaul Rural Municipality   </option> 
+  <option value="5849"> Godaita  Municipality   </option> 
+  <option value="5858"> Haripur Municipality   </option> 
+  <option value="5859"> Haripurwa Municipality   </option> 
+  <option value="5246"> Hariwan Municipality   </option> 
+  <option value="5230"> Ishworpur Municipality   </option> 
+  <option value="5848"> Kaudena Rural Municipality   </option> 
+  <option value="5847"> Kawilashi Municipality   </option> 
+  <option value="5242"> Lalbandi Municipality   </option> 
+  <option value="5852"> Parsa Rural Municipality   </option> 
+  <option value="5856"> Ramnagar Rural Municipality   </option> 
+`;
+break;
+   
+   case "19":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5193"> Dudhouli Municipality   </option> 
+  <option value="5191"> Ghanglekh Rural Municipality   </option> 
+  <option value="5190"> Golanjor Rural Municipality   </option> 
+  <option value="5197"> Hariharpurgadhi Rural Municipality   </option> 
+  <option value="5189"> Kamalamai Municipality   </option> 
+  <option value="5195"> Marin Rural Municipality   </option> 
+  <option value="5194"> Phikkal Rural Municipality   </option> 
+  <option value="5196"> Sunkoshi Rural Municipality   </option> 
+  <option value="5192"> Tinpatan Rural Municipality   </option> 
+`;
+break;
+   
+   case "30":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5315"> Balefi Rural Municipality   </option> 
+  <option value="5320"> Barhabise Municipality   </option> 
+  <option value="5316"> Bhotekoshi Rural Municipality   </option> 
+  <option value="5311"> Chautara Sangachokgadhi Municipality   </option> 
+  <option value="5322"> Helambu Rural Municipality   </option> 
+  <option value="5318"> Indrawati Rural Municipality   </option> 
+  <option value="5312"> Jugal Rural Municipality   </option> 
+  <option value="5319"> Lisangkhu Pakhar Rural Municipality   </option> 
+  <option value="5317"> Melamchi Municipality   </option> 
+  <option value="5314"> Panchpokhari Thangpal Rural Municipality   </option> 
+  <option value="5321"> Sunkoshi Rural Municipality   </option> 
+  <option value="5313"> Tripurasundari Rural Municipality   </option> 
+`;
+break;
+   
+   case "16":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5155"> Arnama Rural Municipality   </option> 
+  <option value="5156"> Aurahi Rural Municipality   </option> 
+  <option value="5163"> Bariyarpatti Rural Municipality   </option> 
+  <option value="5164"> Bhagawanpur Rural Municipality   </option> 
+  <option value="5168"> Bishnupur Rural Municipality   </option> 
+  <option value="5160"> Dhangadhimai Municipality   </option> 
+  <option value="5159"> Golbazar Municipality   </option> 
+  <option value="5158"> Kalyanpur Municipality   </option> 
+  <option value="5819"> Karjanha Municipality   </option> 
+  <option value="5167"> Lahan Municipality   </option> 
+  <option value="5166"> Laxmipur Patari Rural Municipality   </option> 
+  <option value="5161"> Naraha Rural Municipality   </option> 
+  <option value="5162"> Nawarajpur Rural Municipality   </option> 
+  <option value="5169"> Sakhuwanankarkatti Rural Municipality   </option> 
+  <option value="5170"> Siraha Municipality   </option> 
+  <option value="5171"> Sukhipur Municipality   </option> 
+`;
+break;
+   
+   case "11":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5111"> Dudhakunda Municipality   </option> 
+  <option value="5105"> Dudhkoshi Rural Municipality   </option> 
+  <option value="5104"> Khumbupasanglahmu Rural Municipality   </option> 
+  <option value="5109"> Likhu Pike Rural Municipality   </option> 
+  <option value="5108"> Mahakulung Rural Municipality   </option> 
+  <option value="5107"> Nechasalyan Rural Municipality   </option> 
+  <option value="5110"> Sotang Rural Municipality   </option> 
+  <option value="5106"> Thulungdudhkoshi Rural Municipality   </option> 
+`;
+break;
+   
+   case "10":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5099"> Barahchetra Municipality   </option> 
+  <option value="5101"> Bhokraha Rural Municipality   </option> 
+  <option value="5097"> Dewanganj Rural Municipality   </option> 
+  <option value="5103"> Harinagara Rural Municipality   </option> 
+  <option value="5094"> Koshi Rural Municipality   </option> 
+  <option value="5102"> Ramdhuni Municipality   </option> 
+`;
+break;
+   
+   case "64":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5636"> Barahtal Rural Municipality   </option> 
+  <option value="5638"> Bheriganga Municipality   </option> 
+  <option value="5637"> Birendranagar Municipality   </option> 
+  <option value="5634"> Chaukune Rural Municipality   </option> 
+  <option value="5633"> Chingad Rural Municipality   </option> 
+  <option value="5632"> Gurbhakot Municipality   </option> 
+  <option value="5639"> Lekbeshi Municipality   </option> 
+  <option value="5635"> Panchpuri Municipality   </option> 
+  <option value="5640"> Simta Rural Municipality   </option> 
+`;
+break;
+   
+   case "41":
+   modelSelect.innerHTML += `
+   Tanahun  <option value="40"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5412"> Anbukhaireni Rural Municipality   </option> 
+  <option value="5417"> Bhanu Municipality   </option> 
+  <option value="5420"> Byas Municipality   </option> 
+  <option value="5415"> Devghat Rural Municipality   </option> 
+`;
+break;
+   
+   case "1":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5001"> Aathrai Tribeni Rural Municipality   </option> 
+  <option value="5006"> Maiwakhola Rural Municipality   </option> 
+  <option value="5005"> Meringden Rural Municipality   </option> 
+  <option value="5004"> Mikwakhola Rural Municipality   </option> 
+  <option value="5002"> Phaktanglung Rural Municipality   </option> 
+  <option value="5003"> Phungling Municipality   </option> 
+  <option value="5008"> Sidingba Rural Municipality   </option> 
+  <option value="5009"> Sirijangha Rural Municipality   </option> 
+  <option value="5007"> Yangwarak Rural Municipality   </option> 
+`;
+break;
+   
+   case "6":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5053"> Aathrai Rural Municipality   </option> 
+  <option value="5054"> Chhathar Rural Municipality   </option> 
+  <option value="5058"> Laligurans Municipality   </option> 
+  <option value="5056"> Menchayayam Rural Municipality   </option> 
+  <option value="5057"> Myanglung Municipality   </option> 
+  <option value="5055"> Phedap Rural Municipality   </option> 
+`;
+break;
+   
+   case "14":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5136"> Belaka Municipality   </option> 
+  <option value="5132"> Chaudandigadhi Municipality   </option> 
+  <option value="5131"> Katari Nagarpalika Municipality   </option> 
+  <option value="5137"> limchungbung rural municipality   </option> 
+  <option value="5135"> Rautamai Rural Municipality   </option> 
+  <option value="5133"> Tapli Gaunpalika Rural Municipality   </option> 
+  <option value="5134"> Triyuga Municipality   </option> 
+  <option value="5130"> Udayapurgadhi Rural Municipality   </option> 
+ `;
+ break;
+      }}
+function updateModels() {
+      const panelSelect = document.getElementById('panel');
+      const modelSelect = document.getElementById('model');
+      const selectedPanelValue = panelSelect.value;
+
+      // Clear previous options
+      modelSelect.innerHTML = '<option value="">-Select Model-</option>';
+
+      // Add options based on the selected panel
+      switch (selectedPanelValue) {
+case "1":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="13">  70-3001-0002</option> 
+<option value="14">70-3001-0011</option> 
+<option value="15">70-3001-0012</option> 
+`;
+break;
+case "2":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="39">  ALP100</option> 
+<option value="40">ALP150</option> 
+<option value="41">ALP200</option> 
+<option value="42">ALP250</option> 
+<option value="43">ALP40</option> 
+<option value="44">ALP50</option> 
+<option value="45">ALP80</option> 
+`;
+break;
+case "3":
+modelSelect.innerHTML += `
+<option value=" "> -Select-/option>
+<option value="52">  MM00120</option> 
+<option value="53">MM00145</option> 
+<option value="54">MM0020</option> 
+<option value="55">MM0040</option> 
+<option value="56">MM0050</option> 
+<option value="57">MM0080</option> 
+<option value="58">MMO100</option> 
+<option value="59">MMO150</option> 
+<option value="60">MMOO20</option> 
+<option value="61">MMOO40</option> 
+<option value="62">MMOO75</option> 
+`;
+break;
+case "4":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="63">  QJP20</option> 
+<option value="64">QJP20W</option> 
+<option value="65">QJP40</option> 
+<option value="66">QJP40W</option> 
+<option value="67">QJP50</option> 
+<option value="68">QJP50W</option> 
+<option value="69">QJP85</option> 
+<option value="70">QJP85W</option> 
+`;
+break;
+case "5":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="75">  AXN-P6T230</option> 
+`;
+break;
+case "6":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="86">  12V 40WP</option> 
+<option value="87">12V 60WP</option> 
+<option value="88">ASL-S02012</option> 
+<option value="89">ASL-S04012</option> 
+<option value="90">ASL-S08012</option> 
+`;
+break;
+case "7":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="91">  AP-65</option> 
+`;
+break;
+case "8":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="92">  AE100P(36)</option> 
+<option value="93">AE10P(36)</option> 
+<option value="94">AE120P(36)</option> 
+<option value="95">AE140P(36)</option> 
+<option value="96">AE150P(36)</option> 
+<option value="97">AE20P(36)</option> 
+<option value="98">AE260P(72)</option> 
+<option value="99">AE40P(36)</option> 
+<option value="100">AE50P(36)</option> 
+<option value="101">AE55P(36)</option> 
+<option value="102">AE60P(36)</option> 
+<option value="103">AE75P(36)</option> 
+<option value="104">AE80P(36)</option> 
+<option value="1525">AE100P(36)*2</option> 
+`;
+break;
+case "9":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="105">  AE10P(36)</option> 
+`;
+break;
+case "10":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="122">  AXN-M5T20</option> 
+<option value="123">AXN-M5T40</option> 
+<option value="124">AXN-M5T80</option> 
+`;
+break;
+case "11":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="192">  BP3165N</option> 
+<option value="193">BP3170N</option> 
+<option value="194">BP380J</option> 
+`;
+break;
+case "12":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="200">  CS5A-205M</option> 
+<option value="201">CS5E-20M</option> 
+<option value="202">CS5H-40M</option> 
+<option value="203">CS6D-60P</option> 
+<option value="204">CS6D-70P</option> 
+`;
+break;
+case "13":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="209">  PM 20</option> 
+<option value="210">PM 40</option> 
+<option value="211">PM20</option> 
+<option value="212">PM62</option> 
+`;
+break;
+case "14":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="213">  DJ-120D</option> 
+<option value="214">DJ-20D</option> 
+<option value="215">DJ-40D</option> 
+<option value="216">DJ-70D</option> 
+<option value="217">DJ-80D</option> 
+`;
+break;
+case "15":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="218">  SLP020-12V</option> 
+<option value="219">SLP051-12</option> 
+<option value="220">SLP055-12V</option> 
+<option value="221">SLP100-12</option> 
+<option value="222">SLP105-12</option> 
+<option value="223">SLP120-12V</option> 
+<option value="224">SLP150-12</option> 
+<option value="225">SLP190S-24</option> 
+<option value="226">SLP205-24</option> 
+<option value="227">SLP80-12V</option> 
+`;
+break;
+case "16":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="228">  CNPV 100M</option> 
+<option value="229">CNPV 145 M</option> 
+<option value="230">CNPV 150P</option> 
+<option value="231">CNPV 20 M</option> 
+<option value="232">CNPV 40 M</option> 
+<option value="233">CNPV 50 M</option> 
+<option value="234">CNPV 85 M</option> 
+<option value="235">CNPV-100P</option> 
+`;
+break;
+case "17":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "18":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="236">  CONERGYQ18PA</option> 
+<option value="237">CONERGYQ20PA</option> 
+<option value="238">CONERGYQ25PA</option> 
+`;
+break;
+case "19":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "20":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "21":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="247">  SE140P(36)</option> 
+<option value="248">SE55P(36)</option> 
+`;
+break;
+case "22":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="255">  VE-100-36M</option> 
+<option value="256">VE-20-36M</option> 
+<option value="257">VE-20-36P</option> 
+<option value="258">VE-55-36M</option> 
+<option value="259">VE-80-36M</option> 
+`;
+break;
+case "23":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="263">  SPM-10 MONO</option> 
+<option value="264">SPM-120 MONO</option> 
+`;
+break;
+case "24":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="266">  CNPV-20W</option> 
+<option value="267">CNPV-40W</option> 
+`;
+break;
+case "25":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="279">  ESC-1L</option> 
+<option value="280">ESC-2L</option> 
+<option value="281">ESC-4L</option> 
+<option value="282">ESC72M-310</option> 
+<option value="283">ESC-SSHS-09</option> 
+<option value="284">ESM10-156</option> 
+<option value="285">ESM175-156</option> 
+<option value="286">ESM20-156</option> 
+<option value="287">ESM25-156</option> 
+<option value="288">ESM290-156</option> 
+<option value="289">ESM40-156</option> 
+<option value="290">ESM50-156</option> 
+<option value="291">ESM60-156</option> 
+<option value="292">ESM80-156</option> 
+`;
+break;
+case "26":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="299">  D1 ES20P36</option> 
+<option value="300">D2 ES40P36</option> 
+`;
+break;
+case "27":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="302">  ES100P36</option> 
+<option value="303">ES125P36</option> 
+`;
+break;
+case "28":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "29":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="309">  ESC-36M-100</option> 
+<option value="310">ESC-36M-20</option> 
+`;
+break;
+case "30":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="324">  ESC</option> 
+<option value="325">ESC-20M</option> 
+<option value="326">ESC36M-10</option> 
+<option value="327">ESC-36M-100</option> 
+<option value="328">ESC36M-100</option> 
+<option value="329">ESC-36M-20</option> 
+<option value="330">ESC-36M-25</option> 
+<option value="331">ESC36M-25</option> 
+<option value="332">ESC-36M-40</option> 
+<option value="333">ESC-36M-50</option> 
+<option value="334">ESC-36M-55</option> 
+<option value="335">ESC-36M-60</option> 
+<option value="336">ESC-36M-80</option> 
+<option value="337">ESC-72M-175</option> 
+<option value="338">ESM-140POLY</option> 
+<option value="339">ESM-230POLY</option> 
+<option value="340">ESM-80POLY</option> 
+`;
+break;
+case "31":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="365">  GEPV-030-MNA</option> 
+<option value="366">GEPV-045-MNA</option> 
+<option value="367">GEPV-050-MNA</option> 
+<option value="368">GEPV-072-MNA</option> 
+<option value="369">GEPV-110-MCB</option> 
+`;
+break;
+case "32":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="404">  HSTAC12020M</option> 
+<option value="405">HSTAC12040M</option> 
+`;
+break;
+case "33":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="406">  HSPV100WP125-36M</option> 
+<option value="407">HSPV200WP125-72M</option> 
+<option value="408">HSPV20WP</option> 
+`;
+break;
+case "34":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="427">  HOORAY130MCP</option> 
+<option value="428">HOORAY20MCP</option> 
+<option value="429">HOORAY20MCP-2</option> 
+`;
+break;
+case "35":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "36":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="447">  I-10</option> 
+<option value="448">I-22</option> 
+<option value="449">I-40</option> 
+<option value="450">I-44(22*2)</option> 
+<option value="451">I-75</option> 
+<option value="452">I-80</option> 
+<option value="453">IS-36/12</option> 
+<option value="454">IS-75/12</option> 
+<option value="455">ISF-60/12</option> 
+`;
+break;
+case "37":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="457">  SNM-P190(54)</option> 
+<option value="458">SNM-P20(36)</option> 
+<option value="459">SNM-P20(54)</option> 
+<option value="460">SNM-P200(54)</option> 
+`;
+break;
+case "38":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="461">  JS100D</option> 
+<option value="462">JS150P</option> 
+<option value="463">JS80D</option> 
+`;
+break;
+case "39":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="464">  DSP100P-28</option> 
+<option value="465">DSP120P-32</option> 
+<option value="466">DSP130P-36</option> 
+<option value="467">DSP190P-48</option> 
+<option value="468">DSP200P-54</option> 
+<option value="469">DSP20M-6</option> 
+<option value="470">DSP20M-8</option> 
+<option value="471">DSP20P-6</option> 
+<option value="472">DSP40M-10</option> 
+<option value="473">DSP55M-12</option> 
+<option value="474">DSP55P-12</option> 
+<option value="475">DSP60P-16</option> 
+<option value="476">DSP80M-20</option> 
+<option value="477">DSP80P-20</option> 
+`;
+break;
+case "40":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="478">  DSP10P-3</option> 
+`;
+break;
+case "41":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="479">  DSP100M-40</option> 
+<option value="480">DSP120P-32</option> 
+<option value="481">DSP150M-36</option> 
+<option value="482">DSP51P-12</option> 
+`;
+break;
+case "42":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="483">  JP36C020</option> 
+<option value="484">JP36C040</option> 
+<option value="485">JP36C060</option> 
+<option value="486">JP36C075</option> 
+<option value="487">JP36C080</option> 
+<option value="488">JP36C100</option> 
+<option value="489">JP36C120</option> 
+`;
+break;
+case "43":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="490">  JST 20M(36)</option> 
+<option value="491">JST110M(36)</option> 
+<option value="492">JST120M(36)</option> 
+<option value="493">JST145M(36)</option> 
+<option value="494">JST150M(72)</option> 
+<option value="495">JST190M(72)</option> 
+<option value="496">JST40M(36)</option> 
+<option value="497">JST65M(36)</option> 
+<option value="498">JST80M(36)</option> 
+`;
+break;
+case "44":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="499">  JST20P(36)</option> 
+<option value="500">JST40M(36)</option> 
+<option value="501">JST65M(36)</option> 
+<option value="502">JST80M(36)</option> 
+`;
+break;
+case "45":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="505">  KD100M(40)</option> 
+<option value="506">KD120M(36)</option> 
+<option value="507">KD130M(36)</option> 
+<option value="508">KD20M(36)</option> 
+<option value="509">KD40M(36)</option> 
+<option value="510">KD50M(36)</option> 
+<option value="511">KD80M(36)</option> 
+`;
+break;
+case "46":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="512">  G-EA-060</option> 
+<option value="513">PLE055</option> 
+`;
+break;
+case "47":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "48":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="514">  KL020</option> 
+<option value="515">KL025</option> 
+<option value="516">KL040</option> 
+<option value="517">KL060</option> 
+<option value="518">KL080</option> 
+`;
+break;
+case "49":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="519">  KL020</option> 
+<option value="520">KL025</option> 
+<option value="521">KL040</option> 
+<option value="522">KL060</option> 
+<option value="523">KL080</option> 
+<option value="524">KL120</option> 
+<option value="525">KL180</option> 
+`;
+break;
+case "50":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="526">  KM-0010</option> 
+<option value="527">KM-0020</option> 
+<option value="528">KM-0040</option> 
+<option value="529">KM-0055</option> 
+<option value="530">KM-0060</option> 
+<option value="531">KM-0080</option> 
+<option value="532">KM-0100</option> 
+<option value="533">KM-0120</option> 
+<option value="534">KM-0145</option> 
+<option value="535">KM-020</option> 
+<option value="536">KM-0200</option> 
+<option value="537">KM-0250</option> 
+`;
+break;
+case "51":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="571">  KD135GH-2PU</option> 
+<option value="572">S MODULE</option> 
+<option value="573">SLED L 1W</option> 
+<option value="574">SLED L 5W</option> 
+<option value="575">SSHS</option> 
+`;
+break;
+case "52":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="576">  KC130GT</option> 
+<option value="577">KC16</option> 
+<option value="578">KC16T</option> 
+<option value="579">KC21</option> 
+<option value="580">KC21T</option> 
+<option value="581">KC21T02</option> 
+<option value="582">KC32</option> 
+<option value="583">KC32T</option> 
+<option value="584">KC32T02</option> 
+<option value="585">KC40</option> 
+<option value="586">KC40REB</option> 
+<option value="587">KC40T</option> 
+<option value="588">KC50REB</option> 
+<option value="589">KC50T</option> 
+<option value="590">KC65T</option> 
+<option value="591">KC85T</option> 
+<option value="592">KD135GH-2P</option> 
+<option value="593">KD210GH-2P</option> 
+`;
+break;
+case "53":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="598">  LDK-200D-24(S)</option> 
+<option value="599">LDK-250D-20</option> 
+<option value="600">LDK-280P-24</option> 
+`;
+break;
+case "54":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="616">  ESM-20</option> 
+<option value="617">SL010-12</option> 
+<option value="618">SL020-12</option> 
+<option value="619">SL035-12</option> 
+<option value="620">SL040-12</option> 
+<option value="621">SL050-12</option> 
+<option value="622">SL065-12</option> 
+<option value="623">SL075-12</option> 
+<option value="624">SL080-12</option> 
+<option value="625">SL110-12</option> 
+<option value="626">SPM10-PB</option> 
+<option value="627">SPM20-PB</option> 
+<option value="628">SPM80-PB</option> 
+`;
+break;
+case "55":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="629">  ESM10-156</option> 
+<option value="630">ESM20-156</option> 
+<option value="631">ESM40-156</option> 
+<option value="632">ESM50-156</option> 
+<option value="633">ESM60-156</option> 
+<option value="634">ESM80-156</option> 
+<option value="635">SL010-12</option> 
+<option value="636">SL020-12</option> 
+<option value="637">SL040-12</option> 
+`;
+break;
+case "56":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="658">  MBPV 10 WP</option> 
+`;
+break;
+case "57":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="662">  PV-AD185MF5</option> 
+<option value="663">PV-AE125MF5N</option> 
+<option value="664">PV-EF40MS</option> 
+<option value="665">PV-EF46MS</option> 
+<option value="666">PV-MF100EC4</option> 
+<option value="667">PV-UJ218G6</option> 
+`;
+break;
+case "58":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "59":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="669">  MBPV1220P</option> 
+<option value="670">MBPV1240P</option> 
+<option value="671">MBPV1275P</option> 
+`;
+break;
+case "60":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="688">  DJ-20D</option> 
+<option value="689">DJ-40D</option> 
+`;
+break;
+case "61":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "62":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="691">  20W</option> 
+`;
+break;
+case "63":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="692">  10W</option> 
+<option value="693">15W</option> 
+<option value="694">20W</option> 
+<option value="695">30W</option> 
+<option value="696">40W</option> 
+<option value="697">50W</option> 
+<option value="698">60W</option> 
+<option value="699">80W</option> 
+`;
+break;
+case "64":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="713">  KM(P)10</option> 
+<option value="714">KM(P)140</option> 
+<option value="715">KM(P)150</option> 
+<option value="716">KM(P)20</option> 
+<option value="717">KM(P)25</option> 
+<option value="718">KM(P)40</option> 
+<option value="719">KM(P)55</option> 
+<option value="720">KM(P)60</option> 
+<option value="721">KM-100</option> 
+<option value="722">KM175</option> 
+<option value="723">KM190</option> 
+<option value="724">KM80(6)</option> 
+<option value="725">KMP10</option> 
+`;
+break;
+case "65":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="730">  RD210TU-36P</option> 
+`;
+break;
+case "66":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="731">  B 180(34)S1580*800</option> 
+`;
+break;
+case "67":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="732">  SL100TU-18P</option> 
+<option value="733">SL155TU-18MD</option> 
+<option value="734">SL205TU-36MD</option> 
+<option value="735">SL20TU-18P</option> 
+<option value="736">SL230TU-36BP</option> 
+<option value="737">SL40TU-18MD</option> 
+<option value="738">SL50TU-18P</option> 
+<option value="739">SL51TU-18P</option> 
+<option value="740">SL55TU-18MD</option> 
+`;
+break;
+case "68":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="741">  NBS-100P</option> 
+<option value="742">NBS-130P</option> 
+<option value="743">NBS-190</option> 
+<option value="744">NBS-20P</option> 
+<option value="745">NBS-55P</option> 
+<option value="746">NBS-80P</option> 
+`;
+break;
+case "69":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="747">  KM(P) 130</option> 
+<option value="748">KM(P)10</option> 
+<option value="749">KM175</option> 
+<option value="750">KM-180</option> 
+<option value="751">KM190</option> 
+<option value="752">KM20(6)</option> 
+<option value="753">KM40(6)</option> 
+<option value="754">KM60(6)</option> 
+<option value="755">KM80(6)</option> 
+`;
+break;
+case "70":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "71":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="756">  SL80TU-18P</option> 
+`;
+break;
+case "72":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="760">  125W-MSM</option> 
+<option value="761">20W-MSM</option> 
+<option value="762">40W-MSM</option> 
+<option value="763">60W-MSM</option> 
+`;
+break;
+case "73":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="764">  ODA130-18-P</option> 
+<option value="765">ODA150-18-P</option> 
+<option value="766">ODA55-18-P</option> 
+<option value="767">ODA80-18-P</option> 
+`;
+break;
+case "74":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="768">  TPS-107S(36)-100W</option> 
+<option value="769">TPS-107S(36)-150W</option> 
+<option value="770">TPS-107S(36)-60W</option> 
+<option value="771">TPS-M6U(36)-250W</option> 
+<option value="772">TPS-M6U(60)-250W</option> 
+<option value="773">TPS-P6U(60)-250W</option> 
+<option value="774">TPS-P6U(72)-300W</option> 
+`;
+break;
+case "75":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="775">  RSM100M</option> 
+<option value="776">RSM20P</option> 
+<option value="777">RSM50P</option> 
+<option value="778">RSM55P</option> 
+`;
+break;
+case "76":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="779">  DC100P-36</option> 
+<option value="780">DC10P-36</option> 
+<option value="781">DC120P-36</option> 
+<option value="782">DC125P-36</option> 
+<option value="783">DC145P-36</option> 
+<option value="784">DC150P-36</option> 
+<option value="785">DC205P-72</option> 
+<option value="786">DC20P-36</option> 
+<option value="787">DC250P-72</option> 
+<option value="788">DC30P-36</option> 
+<option value="789">DC40P-36</option> 
+<option value="790">DC55P-36</option> 
+<option value="791">DC80P-36</option> 
+`;
+break;
+case "77":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="792">  NS36P3-20</option> 
+`;
+break;
+case "78":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="793">  ESM-100POLY</option> 
+<option value="794">ESM-150POLY</option> 
+<option value="795">ESM-50POLY</option> 
+<option value="796">ESM-80POLY</option> 
+`;
+break;
+case "79":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="797">  ESPMC020</option> 
+<option value="798">ESPMC060</option> 
+<option value="799">ESPMC080</option> 
+<option value="800">ESPMC100</option> 
+<option value="801">ESPMC150</option> 
+`;
+break;
+case "80":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="802">  RSPL12P100</option> 
+<option value="803">RSPL12P150</option> 
+<option value="804">RSPL12P20</option> 
+<option value="805">RSPL12P40</option> 
+<option value="806">RSPL12P60</option> 
+<option value="807">RSPL12P80</option> 
+<option value="808">RSPL24P200</option> 
+<option value="809">RSPL24P300</option> 
+`;
+break;
+case "81":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="810">  SW020P</option> 
+<option value="811">SW055P</option> 
+<option value="812">SW080P</option> 
+<option value="813">SW100P</option> 
+`;
+break;
+case "82":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="814">  WF10P-02F</option> 
+`;
+break;
+case "83":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="815">  TSE-51</option> 
+`;
+break;
+case "84":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="816">  RD100TU-18P</option> 
+<option value="817">RD20TU-18P</option> 
+<option value="818">RD51TU-18P</option> 
+`;
+break;
+case "85":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="819">  RSM050P-36</option> 
+<option value="820">RSM080P</option> 
+<option value="821">RSM150P</option> 
+`;
+break;
+case "86":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="822">  XH80P(36)</option> 
+`;
+break;
+case "87":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="823">  SL150TU-18P</option> 
+`;
+break;
+case "88":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="824">  NS-160P</option> 
+`;
+break;
+case "89":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="825">  HZS020P-36</option> 
+<option value="826">HZS050P-36</option> 
+<option value="827">HZS100P-36</option> 
+<option value="1519">HZS150P-36</option> 
+`;
+break;
+case "90":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="828">  80 WP</option> 
+`;
+break;
+case "91":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="829">  TL 10W/54 CD LIGHT</option> 
+`;
+break;
+case "92":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="837">  CONERGYQ 25P PA</option> 
+<option value="838">CONERGYQ 25PA</option> 
+<option value="839">CONERGYQ 55 PA</option> 
+<option value="840">CONERGYQ25PA</option> 
+<option value="841">PM0005</option> 
+<option value="842">PM0020</option> 
+<option value="843">PM0040</option> 
+<option value="844">PM0045</option> 
+`;
+break;
+case "93":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="845">  PNX-10</option> 
+<option value="846">PNX-100</option> 
+<option value="847">PNX-20</option> 
+<option value="848">PNX-40</option> 
+<option value="849">PNX-60</option> 
+`;
+break;
+case "94":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="861">  PNX 20 WP</option> 
+<option value="862">PNX 40 WP</option> 
+<option value="863">PNX 60 WP</option> 
+`;
+break;
+case "95":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="864">  PSS 12130</option> 
+<option value="865">PSS 1220</option> 
+<option value="866">PSS 1230</option> 
+<option value="867">PSS 1240</option> 
+<option value="868">PSS 1250</option> 
+<option value="869">PSS 1251</option> 
+<option value="870">PSS 1260</option> 
+<option value="871">PSS 1280</option> 
+<option value="872">PSS-12150</option> 
+<option value="873">PSS1255</option> 
+`;
+break;
+case "96":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="874">  PLM-100P-36F</option> 
+`;
+break;
+case "97":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="875">  PSS 12130</option> 
+<option value="876">PSS 1220</option> 
+<option value="877">PSS 1230</option> 
+<option value="878">PSS 1240</option> 
+<option value="879">PSS 1250</option> 
+<option value="880">PSS 1251</option> 
+<option value="881">PSS 1260</option> 
+<option value="882">PSS 1280</option> 
+<option value="883">PSS-12100</option> 
+<option value="884">PSS-12150</option> 
+<option value="885">PSS-1255</option> 
+`;
+break;
+case "98":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="886">  100WP</option> 
+<option value="887">110WP</option> 
+<option value="888">120WP</option> 
+<option value="889">12V-30WP</option> 
+<option value="890">12V-50WP</option> 
+<option value="891">12V-80WP</option> 
+<option value="892">95W</option> 
+`;
+break;
+case "99":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="918">  RK100P(36)</option> 
+<option value="919">RK120P(36)</option> 
+<option value="920">RK20P(36)</option> 
+<option value="921">RK40P(36)</option> 
+<option value="922">RK60P(36)</option> 
+`;
+break;
+case "100":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="960">  RAS-100W-P</option> 
+<option value="961">RAS-140W-S</option> 
+<option value="962">RAS-150W-P</option> 
+<option value="963">RAS-20W-P</option> 
+<option value="964">RAS-40W-P</option> 
+<option value="965">RAS-50W-P</option> 
+<option value="966">RAS-51W-P</option> 
+<option value="967">RAS-55W-P</option> 
+<option value="968">RAS-80W-P</option> 
+`;
+break;
+case "101":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="992">  RK20M(36)</option> 
+<option value="993">RK40M(36)</option> 
+`;
+break;
+case "102":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="994">  20W36</option> 
+<option value="995">40W36</option> 
+<option value="996">5W36</option> 
+`;
+break;
+case "103":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="997">  RS1240</option> 
+<option value="998">RS1260</option> 
+<option value="999">RS1680</option> 
+`;
+break;
+case "104":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "105":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1024">  H1P190BE3</option> 
+`;
+break;
+case "106":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1028">  12V-6A</option> 
+<option value="1029">20MCP-2/20WP</option> 
+<option value="1030">BP-3170</option> 
+<option value="1031">SCC</option> 
+<option value="1032">XANTERX/C60</option> 
+<option value="1033">XANTREX/C35</option> 
+<option value="1034">XANTREX/C40</option> 
+`;
+break;
+case "107":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1035">  PSS1205</option> 
+`;
+break;
+case "108":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1049">  STO20M(36)/S</option> 
+`;
+break;
+case "109":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1050">  SES-12100</option> 
+<option value="1051">SES-12150</option> 
+<option value="1052">SES-1220</option> 
+`;
+break;
+case "110":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1053">  STIM10</option> 
+<option value="1054">STIM20</option> 
+<option value="1055">STIM3</option> 
+<option value="1056">STIM40</option> 
+<option value="1057">STIM75</option> 
+`;
+break;
+case "111":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1062">  HSPV20WP</option> 
+`;
+break;
+case "112":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1067">  ND-120T1</option> 
+<option value="1068">ND-120T1D</option> 
+<option value="1069">ND-130T1J</option> 
+<option value="1070">ND-T065M1</option> 
+<option value="1071">ND-T06M1</option> 
+<option value="1072">NE-080T1J</option> 
+<option value="1073">NE-80E2EA</option> 
+`;
+break;
+case "113":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "114":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1081">  SHELL POWER MAX ULTR</option> 
+`;
+break;
+case "115":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1082">  ZD020-12M</option> 
+<option value="1083">ZD040-12M</option> 
+`;
+break;
+case "116":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1084">  SPM10-P</option> 
+<option value="1085">SPM-10PB</option> 
+<option value="1086">SPM-10SB</option> 
+<option value="1087">SPM20-M</option> 
+<option value="1088">SPM20-P</option> 
+<option value="1089">SPM-20SB</option> 
+<option value="1090">SPM-30PB</option> 
+<option value="1091">SPM-40SB</option> 
+<option value="1092">SPM45-P</option> 
+<option value="1093">SPM-50PB</option> 
+<option value="1094">SPM-65PB</option> 
+<option value="1095">SPM80-P</option> 
+<option value="1096">SPM-80PB</option> 
+<option value="1097">SPM-80SB</option> 
+`;
+break;
+case "117":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1101">  SUK 20W</option> 
+<option value="1102">SUK 80W</option> 
+`;
+break;
+case "118":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1104">  MSP 100W</option> 
+<option value="1105">MSP 150W</option> 
+<option value="1106">MSP 200W</option> 
+<option value="1107">MSP 20W</option> 
+<option value="1108">MSP 40W</option> 
+<option value="1109">MSP 60W</option> 
+<option value="1110">MSP 80W</option> 
+`;
+break;
+case "119":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "120":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "121":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1116">  SLP010-12</option> 
+<option value="1117">SLP055-12</option> 
+<option value="1118">SLP060-12</option> 
+<option value="1119">SLP080-12</option> 
+<option value="1120">SLP100-12</option> 
+<option value="1121">SLP10-12</option> 
+<option value="1122">SLP20-12</option> 
+<option value="1123">SLP30-12</option> 
+<option value="1124">SLP40-12</option> 
+<option value="1125">SLP50-12</option> 
+`;
+break;
+case "122":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1130">  SUNMODULE/SW25</option> 
+<option value="1131">SUNMODULE/SW40</option> 
+<option value="1132">SW 25 MONO</option> 
+<option value="1133">SW 25 MONO/RB094</option> 
+<option value="1134">SW 40 MONO</option> 
+<option value="1135">SW 40 POLY/RC094</option> 
+<option value="1136">SW 40 POLY/RGA</option> 
+<option value="1137">SW50MONO/RD094</option> 
+<option value="1138">SW80MONO/R5A</option> 
+`;
+break;
+case "123":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1144">  SP185F</option> 
+<option value="1145">SPF200FP12</option> 
+`;
+break;
+case "124":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "125":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "126":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "127":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "128":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1148">  SPARE PARTS</option> 
+`;
+break;
+case "129":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "130":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1155">  STI-05</option> 
+`;
+break;
+case "131":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1206">  SL 080-12</option> 
+<option value="1207">SL 100-12</option> 
+<option value="1208">SL0090-12</option> 
+<option value="1209">SL010-12</option> 
+<option value="1210">SL020-12</option> 
+<option value="1211">SL040-12</option> 
+<option value="1212">SL050-12</option> 
+<option value="1213">SL060-12</option> 
+<option value="1214">SL080-12</option> 
+<option value="1215">SL090-12</option> 
+<option value="1216">SL120-12</option> 
+<option value="1217">SLP005-12</option> 
+`;
+break;
+case "132":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1218">  SNS36CP-100WP</option> 
+<option value="1219">SNS36CP-150WP</option> 
+<option value="1220">SNS36CP-160WP</option> 
+<option value="1221">SNS36CP-200WP</option> 
+<option value="1222">SNS36CP-330WP</option> 
+<option value="1223">SNS36CP-50WP</option> 
+<option value="1224">SNS36CP-55WP</option> 
+<option value="1225">SNS36CP-80WP</option> 
+`;
+break;
+case "133":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1226">  SPM-10PB</option> 
+<option value="1227">SPM-20PB</option> 
+<option value="1228">SPM-20SB</option> 
+<option value="1229">SPM-5SB</option> 
+<option value="1230">SPM-80PB</option> 
+`;
+break;
+case "134":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1231">  PSS1205</option> 
+`;
+break;
+case "135":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1234">  ST</option> 
+`;
+break;
+case "136":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1235">  STP005S-12/DB</option> 
+<option value="1236">STP010-12/KB</option> 
+<option value="1237">STP010-12/KD</option> 
+<option value="1238">STP010S-12/KB</option> 
+<option value="1239">STP020S-12/CB</option> 
+<option value="1240">STP040S-12/RB</option> 
+<option value="1241">STP065S-12/SB</option> 
+<option value="1242">STP120S-12/TB</option> 
+`;
+break;
+case "137":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1246">  STIM10</option> 
+<option value="1247">STIM20</option> 
+<option value="1248">STIM40</option> 
+<option value="1249">STIM75</option> 
+`;
+break;
+case "138":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1255">  SPVM/K</option> 
+`;
+break;
+case "139":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "140":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1258">  BP340J</option> 
+<option value="1259">BP350J</option> 
+<option value="1260">BP375J</option> 
+<option value="1261">TBP1210M</option> 
+<option value="1262">TBP1212M</option> 
+<option value="1263">TBP1220</option> 
+<option value="1264">TBP1220M</option> 
+<option value="1265">TBP1230M</option> 
+<option value="1266">TBP1240M</option> 
+<option value="1267">TBP1260M</option> 
+<option value="1268">TBP1275M</option> 
+<option value="1269">TBP1280M</option> 
+`;
+break;
+case "141":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1270">  B 100 CE</option> 
+<option value="1271">BP 3125 J</option> 
+<option value="1272">BP 3170</option> 
+<option value="1273">BP 3170 N</option> 
+<option value="1274">BP 3230 N</option> 
+<option value="1275">BP 340</option> 
+<option value="1276">BP 340 J</option> 
+<option value="1277">BP 380 J</option> 
+<option value="1278">BP375J</option> 
+<option value="1279">BP380J</option> 
+<option value="1280">LVD CE</option> 
+<option value="1281">LVD HP</option> 
+<option value="1282">LVD SC-1</option> 
+<option value="1283">TBP 1210</option> 
+<option value="1284">TBP 1210 M</option> 
+<option value="1285">TBP 1212 M</option> 
+<option value="1286">TBP 1220</option> 
+<option value="1287">TBP 1220 M</option> 
+<option value="1288">TBP 1240</option> 
+<option value="1289">TBP 1240 M</option> 
+<option value="1290">TBP 1280</option> 
+<option value="1291">TBP 1280 M</option> 
+<option value="1292">TBP1230M</option> 
+<option value="1293">TBP1250M</option> 
+<option value="1294">TBP-1260M</option> 
+<option value="1295">THERMAL</option> 
+`;
+break;
+case "142":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1296">  MS 200WP</option> 
+<option value="1297">MS 250WP</option> 
+<option value="1298">MS 50WP</option> 
+<option value="1299">SC</option> 
+`;
+break;
+case "143":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1300">  TEL12P100</option> 
+<option value="1301">TEL12P150</option> 
+<option value="1302">TEL12P20</option> 
+<option value="1303">TEL12P55</option> 
+<option value="1304">TEL24P250</option> 
+`;
+break;
+case "144":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1305">  GSTN 115</option> 
+<option value="1306">GSTN 150</option> 
+<option value="1307">GSTN 18</option> 
+<option value="1308">GSTN 200</option> 
+<option value="1309">GSTN 35</option> 
+<option value="1310">GSTN 55</option> 
+<option value="1311">GSTN 80</option> 
+`;
+break;
+case "145":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1329">  USP12</option> 
+<option value="1330">USP20</option> 
+<option value="1331">USP25</option> 
+<option value="1332">USP37</option> 
+<option value="1333">USP45</option> 
+`;
+break;
+case "146":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1334">  ELDORA 200</option> 
+<option value="1335">ELDORA 20P</option> 
+<option value="1336">ELDORA 220P</option> 
+<option value="1337">ELDORA 40</option> 
+<option value="1338">ELDORA 40P</option> 
+<option value="1339">ELDORA 50P</option> 
+<option value="1340">ELDORA 75P</option> 
+<option value="1341">ELDORA100</option> 
+<option value="1342">ELDORA20</option> 
+<option value="1343">ELDORA60</option> 
+<option value="1344">ELDORA80</option> 
+`;
+break;
+case "147":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1345">  ELDORA 10</option> 
+`;
+break;
+case "148":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1348">  ELDORA- 10</option> 
+<option value="1349">ELDORA- 125</option> 
+<option value="1350">ELDORA- 20</option> 
+<option value="1351">ELDORA- 40</option> 
+<option value="1352">ELDORA- 60</option> 
+<option value="1353">ELDORA- 80</option> 
+<option value="1354">ELDORA-190</option> 
+`;
+break;
+case "149":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1355">  WS-10</option> 
+<option value="1356">WS-100</option> 
+<option value="1357">WS-20</option> 
+<option value="1358">WS-40</option> 
+<option value="1359">WS-51</option> 
+<option value="1360">WS-60</option> 
+<option value="1361">WS-80</option> 
+`;
+break;
+case "150":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1362">  GS080W-6P</option> 
+<option value="1363">GS100W-6P</option> 
+<option value="1364">GS150W-6P</option> 
+`;
+break;
+case "151":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1365">  WS-10</option> 
+<option value="1366">WS-100</option> 
+<option value="1367">WS-120</option> 
+<option value="1368">WS-130</option> 
+<option value="1369">WS-140</option> 
+<option value="1370">WS-20</option> 
+<option value="1371">WS-40</option> 
+<option value="1372">WS-60</option> 
+<option value="1373">WS-80</option> 
+`;
+break;
+case "152":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1374">  GS020 12V</option> 
+<option value="1375">GS100W-6P</option> 
+<option value="1376">SLP010 12V</option> 
+<option value="1377">SLP010-12V</option> 
+<option value="1378">SLP020-12 V</option> 
+<option value="1379">SLP020-12V</option> 
+<option value="1380">SLP040 12V</option> 
+<option value="1381">SLP060 12V</option> 
+<option value="1382">SLP080 12V</option> 
+<option value="1383">SLP120 12V</option> 
+<option value="1384">SLP190S 24V</option> 
+<option value="1385">SLP280 24V</option> 
+<option value="1386">SLP95 12V</option> 
+<option value="1387">SPL055-12V</option> 
+`;
+break;
+case "153":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1390">  SKT100P6-12</option> 
+<option value="1391">SKT20M6-12</option> 
+<option value="1392">SKT55P6-12</option> 
+<option value="1393">SKT80M6-12</option> 
+`;
+break;
+case "154":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "155":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1403">  KD100M(100)</option> 
+<option value="1404">KD100M(40)</option> 
+<option value="1405">KD120M(36)</option> 
+<option value="1406">KD20M(36)</option> 
+<option value="1407">KD40M(36)</option> 
+<option value="1408">KD50M(36)</option> 
+<option value="1409">KD80M(</option> 
+<option value="1410">KD80M(36)</option> 
+<option value="1411">KD80M(80)</option> 
+`;
+break;
+case "156":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1413">  KD150M(36)</option> 
+<option value="1414">KD20P(36)</option> 
+<option value="1415">KD80P(36)</option> 
+<option value="1416">SP 20W</option> 
+`;
+break;
+case "157":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1417">  TD130P6</option> 
+`;
+break;
+case "158":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1419">  FDS020-12P</option> 
+<option value="1420">FDS050-12P</option> 
+<option value="1421">FDS080-12P</option> 
+<option value="1422">FDS100-12M</option> 
+<option value="1423">FDS100-12P</option> 
+<option value="1504">FDS150-12P</option> 
+`;
+break;
+case "159":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "160":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1424">  SCM100P</option> 
+<option value="1425">SCM120M</option> 
+<option value="1426">SCM145P</option> 
+<option value="1427">SCM205P</option> 
+<option value="1428">SCM20M</option> 
+<option value="1429">SCM20P</option> 
+<option value="1430">SCM40M</option> 
+<option value="1431">SCM40P</option> 
+<option value="1432">SCM55P</option> 
+<option value="1433">SCM60M</option> 
+<option value="1434">SCM80P</option> 
+`;
+break;
+case "161":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1442">  GPM200W(72)</option> 
+<option value="1443">GPM50W(36)</option> 
+<option value="1444">GPP-100W</option> 
+<option value="1445">GPP-100W(36)</option> 
+<option value="1446">GPP-150W</option> 
+<option value="1447">GPP-315W</option> 
+<option value="1448">GPP-55W(36)</option> 
+<option value="1449">GPP-80W</option> 
+<option value="1516">GPP-50w(36)</option> 
+`;
+break;
+case "162":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1450">  KL100W-36P</option> 
+<option value="1451">KL10W-36P</option> 
+<option value="1452">KL150W-36P</option> 
+<option value="1453">KL20W-36P</option> 
+<option value="1454">KL50W-36P</option> 
+<option value="1455">KL80W-36P</option> 
+`;
+break;
+case "163":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1456">  MS-M120(36)</option> 
+<option value="1457">MS-M190(54)</option> 
+<option value="1458">MS-M20(36)</option> 
+<option value="1459">MS-M200(54)</option> 
+<option value="1460">MS-M40(36)</option> 
+<option value="1461">MS-M60(36)</option> 
+<option value="1462">MS-M75(36)</option> 
+`;
+break;
+case "164":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1463">  SNM-P100(36)</option> 
+<option value="1464">SNM-P20(36)</option> 
+<option value="1465">SNM-P40(36)</option> 
+<option value="1466">SNM-P55(36)</option> 
+<option value="1467">SNM-P60(36)</option> 
+`;
+break;
+case "165":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1468">  MS-20M-(36)</option> 
+<option value="1469">MS-M40-(36)</option> 
+<option value="1470">MS-M75(36)</option> 
+<option value="1471">MS-P140(36)</option> 
+`;
+break;
+case "166":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1477">  MONO 180W</option> 
+<option value="1478">MONO 20W</option> 
+<option value="1479">MONO 75W</option> 
+`;
+break;
+case "167":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "168":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1480">  MM 10WP</option> 
+<option value="1481">MM 120WP</option> 
+<option value="1482">MM 185WP</option> 
+<option value="1483">MM 20WP</option> 
+<option value="1484">MM 40WP</option> 
+<option value="1485">MM 60WP</option> 
+<option value="1486">MM 80WP</option> 
+<option value="1487">MM 90WP</option> 
+`;
+break;
+case "169":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "423":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "424":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "449":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+`;
+break;
+case "450":
+modelSelect.innerHTML += `
+<option value=" ">-Select-/option>
+<option value="1520">  YH100W-18P</option> 
+<option value="1521">YH050W-18M</option> 
+`;
+break;
+        default:
+          // No panel selected, do nothing
+          break;
+      }
+    }
+
+    
+function updateBatteryModels() {
+      const Batteryselect = document.getElementById('battery');
+      const modelSelect = document.getElementById('Bmodel');
+      const selectedbatteryValue = Batteryselect.value;
+
+      // Clear previous options
+      modelSelect.innerHTML = '<option value="">-Select Model-</option>';
+
+      // Add options based on the selected panel
+      switch (selectedbatteryValue) {
+        
+case "171":
+    modelSelect.innerHTML += `
+
+<option value="6">HDC-100T</option> 
+<option value="7">HDC-20T</option> 
+<option value="8">HDC-23T</option> 
+<option value="9">HDC-35T</option> 
+<option value="10">HDC-55T</option> 
+<option value="11">HDC-80T</option> 
+`;
+
+break;
+case "203":
+    modelSelect.innerHTML += `
+
+<option value="395">HDC-100T</option> 
+<option value="396">HDC-115T</option> 
+<option value="397">HDC150T</option> 
+<option value="398">HDC-20T</option> 
+<option value="399">HDC-23T</option> 
+<option value="400">HDC-35T</option> 
+<option value="401">HDC-55T</option> 
+<option value="402">HDC-65T</option> 
+<option value="403">HDC-90T</option> 
+`;
+
+break;
+case "170":
+    modelSelect.innerHTML += `
+
+<option value="1">HDC-115T</option> 
+<option value="2">HDC-150T</option> 
+<option value="3">HDC-35T</option> 
+<option value="4">HDC-65T</option> 
+<option value="5">HDC-90T</option> 
+`;
+
+break;
+case "174":
+    modelSelect.innerHTML += `
+
+<option value="47">CLHU2731921</option> 
+<option value="48">GLDU5272194</option> 
+<option value="49">HC 78011000</option> 
+<option value="50">ZIMU1014728</option> 
+`;
+
+break;
+case "173":
+    modelSelect.innerHTML += `
+
+<option value="46">KB23</option> 
+`;
+
+break;
+case "175":
+    modelSelect.innerHTML += `
+
+<option value="76">AB100STB</option> 
+<option value="77">AB150STB</option> 
+<option value="78">AB200STB</option> 
+<option value="79">AB20STB</option> 
+<option value="80">AB23STB</option> 
+<option value="81">AB35STB</option> 
+<option value="82">AB52STB</option> 
+<option value="83">AB55STB</option> 
+<option value="84">AB65STB</option> 
+<option value="85">AB85STB</option> 
+`;
+
+break;
+case "189":
+    modelSelect.innerHTML += `
+
+<option value="175">B6ST040</option> 
+<option value="176">B6ST20</option> 
+<option value="177">B6ST23</option> 
+<option value="178">B6ST51</option> 
+<option value="179">B6ST55</option> 
+<option value="180">B6ST85</option> 
+<option value="181">B8TT100</option> 
+`;
+
+break;
+case "182":
+    modelSelect.innerHTML += `
+
+<option value="137">RIS 150</option> 
+<option value="138">RIS 20</option> 
+<option value="139">RIS 35</option> 
+<option value="140">RIS 51</option> 
+<option value="141">RIS100</option> 
+<option value="142">RIS65</option> 
+`;
+
+break;
+case "191":
+    modelSelect.innerHTML += `
+
+<option value="195">IT 1000</option> 
+<option value="196">N 70 Z</option> 
+`;
+
+break;
+case "188":
+    modelSelect.innerHTML += `
+
+<option value="156">12 VOLT -50Z PP</option> 
+<option value="157">BH-150</option> 
+<option value="158">BH-200</option> 
+<option value="159">BH-240</option> 
+<option value="160">BH-300</option> 
+<option value="161">SMP-120</option> 
+`;
+
+break;
+case "190":
+    modelSelect.innerHTML += `
+
+<option value="182">SMP-105</option> 
+<option value="183">SMP-150</option> 
+<option value="184">SMP-18</option> 
+<option value="185">SMP-23</option> 
+<option value="186">SMP-35</option> 
+<option value="187">SMP-40</option> 
+<option value="188">SMP-55</option> 
+<option value="189">SMP-60</option> 
+<option value="190">SMP-80</option> 
+`;
+
+break;
+case "192":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "181":
+    modelSelect.innerHTML += `
+
+<option value="136">SLB-7.5AH</option> 
+`;
+
+break;
+case "193":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "194":
+    modelSelect.innerHTML += `
+
+<option value="260">DP-150 LMTT</option> 
+<option value="261">DP-20 PMST</option> 
+<option value="262">DP-75 PMST</option> 
+`;
+
+break;
+case "195":
+    modelSelect.innerHTML += `
+
+<option value="265">DP50PMST</option> 
+`;
+
+break;
+case "186":
+    modelSelect.innerHTML += `
+
+<option value="152">DEL50S</option> 
+`;
+
+break;
+case "196":
+    modelSelect.innerHTML += `
+
+<option value="276">EA100SB</option> 
+<option value="277">EA150SB</option> 
+<option value="278">EA51SB</option> 
+`;
+
+break;
+case "172":
+    modelSelect.innerHTML += `
+
+<option value="12">EA51SR</option> 
+`;
+
+break;
+case "198":
+    modelSelect.innerHTML += `
+
+<option value="345">6LMS100</option> 
+<option value="346">6LMS150</option> 
+<option value="347">6LMS20</option> 
+<option value="348">6LMS20L</option> 
+<option value="349">6LMS40</option> 
+<option value="350">6LMS56</option> 
+<option value="351">6LMS60</option> 
+<option value="352">6LMS75</option> 
+<option value="353">6LMS75L</option> 
+<option value="354">6TT100</option> 
+`;
+
+break;
+case "197":
+    modelSelect.innerHTML += `
+
+<option value="293">FE00-6LMS100L</option> 
+<option value="294">FE00-6LMS35</option> 
+<option value="295">FE00-6LMS40</option> 
+<option value="296">FE00-6LMS75L</option> 
+<option value="297">FE02-6LMS40L</option> 
+<option value="298">FE02-6LMS75L</option> 
+`;
+
+break;
+case "200":
+    modelSelect.innerHTML += `
+
+<option value="363">FST-6700</option> 
+`;
+
+break;
+case "199":
+    modelSelect.innerHTML += `
+
+<option value="362">FP12200D</option> 
+`;
+
+break;
+case "179":
+    modelSelect.innerHTML += `
+
+<option value="134">FNS-LI78</option> 
+`;
+
+break;
+case "184":
+    modelSelect.innerHTML += `
+
+<option value="145">SMP-100</option> 
+<option value="146">SMP-150</option> 
+<option value="147">SMP-20</option> 
+<option value="148">SMP-35</option> 
+<option value="149">SMP-55</option> 
+<option value="150">SMP-60</option> 
+`;
+
+break;
+case "201":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "202":
+    modelSelect.innerHTML += `
+
+<option value="370">GSTN-105</option> 
+<option value="371">GSTN-115</option> 
+<option value="372">GSTN-130</option> 
+<option value="373">GSTN-150</option> 
+<option value="374">GSTN-18</option> 
+<option value="375">GSTN-200</option> 
+<option value="376">GSTN-23</option> 
+<option value="377">GSTN-25</option> 
+<option value="378">GSTN-35</option> 
+<option value="379">GSTN-51</option> 
+<option value="380">GSTN-55</option> 
+<option value="381">GSTN-80</option> 
+`;
+
+break;
+case "204":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "205":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "206":
+    modelSelect.innerHTML += `
+
+<option value="423">HP12200D</option> 
+<option value="424">HP1240D</option> 
+<option value="425">HP1275D</option> 
+`;
+
+break;
+case "446":
+    modelSelect.innerHTML += `
+
+<option value="1517">UJ-FZ553012.8</option> 
+`;
+
+break;
+case "207":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "208":
+    modelSelect.innerHTML += `
+
+<option value="433">EVE-100</option> 
+<option value="434">EVE-115</option> 
+<option value="435">EVE-150</option> 
+<option value="436">EVE-18</option> 
+<option value="437">EVE-20</option> 
+<option value="438">EVE-200</option> 
+<option value="439">EVE-23</option> 
+<option value="440">EVE-35</option> 
+<option value="441">EVE-40</option> 
+<option value="442">EVE-55</option> 
+<option value="443">EVE-85</option> 
+`;
+
+break;
+case "209":
+    modelSelect.innerHTML += `
+
+<option value="444">115AH 12V</option> 
+<option value="445">160AH 12V</option> 
+`;
+
+break;
+case "177":
+    modelSelect.innerHTML += `
+
+<option value="132">STP-23</option> 
+`;
+
+break;
+case "445":
+    modelSelect.innerHTML += `
+
+<option value="1505">SL60</option> 
+<option value="1506">STB-100</option> 
+<option value="1507">STB20</option> 
+<option value="1509">STB-60</option> 
+<option value="1510">STB-40</option> 
+<option value="1514">STB-150</option> 
+<option value="1515">STB51</option> 
+<option value="1526">SL35</option> 
+`;
+
+break;
+case "210":
+    modelSelect.innerHTML += `
+
+<option value="538">6KSB11</option> 
+<option value="539">6KSB16</option> 
+<option value="540">6KSB23</option> 
+<option value="541">6KSB50</option> 
+<option value="542">6KSB55</option> 
+<option value="543">KSB23</option> 
+`;
+
+break;
+case "211":
+    modelSelect.innerHTML += `
+
+<option value="544">3KSB6</option> 
+<option value="545">6 KSB 25</option> 
+<option value="546">6 KSB 40</option> 
+<option value="547">6 KSB 57 T/2</option> 
+<option value="548">6 KSB 75 T/3</option> 
+<option value="549">6 KSB100</option> 
+<option value="550">6 KSB45</option> 
+<option value="551">6KSB 45</option> 
+<option value="552">6KSB 75</option> 
+<option value="553">6KSB100</option> 
+<option value="554">6KSB100AH</option> 
+<option value="555">6KSB100T/4</option> 
+<option value="556">6KSB16</option> 
+<option value="557">6KSB20</option> 
+<option value="558">6KSB20/T1</option> 
+<option value="559">6KSB23</option> 
+<option value="560">6KSB35</option> 
+<option value="561">6KSB45</option> 
+<option value="562">6KSB45/T2</option> 
+<option value="563">6KSB50</option> 
+<option value="564">6KSB55</option> 
+<option value="565">6KSB60T/3</option> 
+<option value="566">6KSB65</option> 
+<option value="567">6KSB70T/3</option> 
+<option value="568">6KSB75</option> 
+<option value="569">6KSB80</option> 
+<option value="570">6SKB23</option> 
+`;
+
+break;
+case "212":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "214":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "223":
+    modelSelect.innerHTML += `
+
+<option value="1098">LPTEX 1223</option> 
+<option value="1099">LPTEX 1260</option> 
+<option value="1100">LTPEX 1235L</option> 
+`;
+
+break;
+case "215":
+    modelSelect.innerHTML += `
+
+<option value="639">LPT TX12100</option> 
+<option value="640">LPT TX12150</option> 
+<option value="641">LPT TX1223</option> 
+<option value="642">LPTEX 1275</option> 
+<option value="643">LPTEX12150</option> 
+<option value="644">LPTEX1220</option> 
+<option value="645">LPTEX1223</option> 
+<option value="646">LPTEX1235L</option> 
+<option value="647">LPTEX1240</option> 
+`;
+
+break;
+case "180":
+    modelSelect.innerHTML += `
+
+<option value="135">STF23</option> 
+`;
+
+break;
+case "217":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "216":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "451":
+    modelSelect.innerHTML += `
+
+<option value="1522">DTX-35AH</option> 
+<option value="1523">DTX-150AH</option> 
+`;
+
+break;
+case "187":
+    modelSelect.innerHTML += `
+
+<option value="153">DTX-100AH</option> 
+<option value="154">DTX-52AH</option> 
+<option value="155">DTX-65AH</option> 
+`;
+
+break;
+case "218":
+    modelSelect.innerHTML += `
+
+<option value="954">HL100T</option> 
+<option value="955">HL23T</option> 
+<option value="956">HL51T</option> 
+<option value="957">HL55T</option> 
+`;
+
+break;
+case "219":
+    modelSelect.innerHTML += `
+
+<option value="969">6BC120T/2</option> 
+<option value="970">6SB18</option> 
+<option value="971">6SB40</option> 
+<option value="972">6SB65</option> 
+<option value="973">6SB90</option> 
+<option value="974">DL51</option> 
+<option value="975">RE100</option> 
+<option value="976">RE130</option> 
+<option value="977">RE150</option> 
+<option value="978">RE20</option> 
+<option value="979">RE23</option> 
+<option value="980">RE28</option> 
+<option value="981">RE40</option> 
+<option value="982">RE51</option> 
+<option value="983">RE55</option> 
+<option value="984">RE60</option> 
+<option value="985">RE70</option> 
+<option value="986">RE80</option> 
+<option value="987">V115</option> 
+<option value="988">V140</option> 
+<option value="989">V35</option> 
+<option value="990">V55</option> 
+<option value="991">V80</option> 
+`;
+
+break;
+case "220":
+    modelSelect.innerHTML += `
+
+<option value="1000">CARTONS</option> 
+<option value="1001">DC 235S/8</option> 
+<option value="1002">DC 470T/14</option> 
+<option value="1003">DC 470T/6</option> 
+<option value="1004">DC 470T/7</option> 
+<option value="1005">DC-470S/6</option> 
+<option value="1006">DL23</option> 
+<option value="1007">DL60</option> 
+<option value="1008">RE100T</option> 
+<option value="1009">RE15</option> 
+<option value="1010">RE35</option> 
+<option value="1011">V 115</option> 
+<option value="1012">V 140</option> 
+<option value="1013">V 35</option> 
+<option value="1014">V 55</option> 
+<option value="1015">V 80</option> 
+<option value="1016">V140 WARENTY RETURN</option> 
+<option value="1017">V35 WARENTY RETURN</option> 
+<option value="1018">V50</option> 
+<option value="1019">V55 WARENTY RETURN</option> 
+<option value="1020">V80 WARENTY RETURN</option> 
+`;
+
+break;
+case "185":
+    modelSelect.innerHTML += `
+
+<option value="151">EXP-100</option> 
+`;
+
+break;
+case "222":
+    modelSelect.innerHTML += `
+
+<option value="1061">SSP12-12</option> 
+`;
+
+break;
+case "213":
+    modelSelect.innerHTML += `
+
+<option value="604">DJM12100</option> 
+<option value="605">DJM1270</option> 
+<option value="606">DJW12-17</option> 
+`;
+
+break;
+case "176":
+    modelSelect.innerHTML += `
+
+<option value="125">KB100</option> 
+<option value="126">KB150</option> 
+<option value="127">KB20</option> 
+<option value="128">KB23</option> 
+<option value="129">KB40</option> 
+<option value="130">KB51</option> 
+<option value="131">KB60</option> 
+`;
+
+break;
+case "221":
+    modelSelect.innerHTML += `
+
+<option value="1058">SSB</option> 
+`;
+
+break;
+case "224":
+    modelSelect.innerHTML += `
+
+<option value="1126">SLL-L2003D</option> 
+`;
+
+break;
+case "225":
+    modelSelect.innerHTML += `
+
+<option value="1140">6SB100SLR</option> 
+<option value="1141">6SB20PPT</option> 
+<option value="1142">6SB40PPT</option> 
+<option value="1143">6SB80SLR</option> 
+`;
+
+break;
+case "226":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "227":
+    modelSelect.innerHTML += `
+
+<option value="1146">6 TP 50N</option> 
+<option value="1147">6TP-150 IT</option> 
+`;
+
+break;
+case "228":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "229":
+    modelSelect.innerHTML += `
+
+<option value="1201">6KSB 100AH</option> 
+<option value="1202">6KSB45</option> 
+<option value="1203">6KSB75</option> 
+`;
+
+break;
+case "230":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "183":
+    modelSelect.innerHTML += `
+
+<option value="143">GSTN-20</option> 
+<option value="144">GSTN-35</option> 
+`;
+
+break;
+case "452":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "453":
+    modelSelect.innerHTML += `
+
+`;
+
+break;
+case "231":
+    modelSelect.innerHTML += `
+
+<option value="1314">IST100</option> 
+<option value="1315">IST23</option> 
+<option value="1316">IST40</option> 
+<option value="1317">ISTT1500</option> 
+`;
+
+break;
+case "232":
+    modelSelect.innerHTML += `
+<option value="12121212">NOTHING</option>
+`;
+
+break;
+case "233":
+    modelSelect.innerHTML += `
+
+<option value="1322">VT1217</option> 
+<option value="1323">VT1236ES</option> 
+<option value="1324">VT1270ES</option> 
+<option value="1325">VT1290ES</option> 
+`;
+
+break;
+case "178":
+    modelSelect.innerHTML += `
+
+<option value="133">B6ST51</option> 
+ `;
+ break;
+        default:
+          // No panel selected, do nothing
+          break;
+      }
+    }
+
+
+    
+        document.querySelectorAll('input[name="radio_option"]').forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                console.log(this.value);
+            });
+        });
+        document.getElementById('systemcap').addEventListener('input', function () {
+            var num_of_bulbs = parseInt(document.getElementById('num_of_bulbs').value);
+            var system_cap = parseInt(this.value);
+
+            if (isNaN(system_cap)) return; // If system_cap is not a number, exit function
+
+            var mobile_charge_option = '1'; // Default value
+            var radio_charge_option = '2'; // Default value
+            var radio_option = '2'; // Default value
+            var tv_option = '2'; // Default value
+
+            if (system_cap < 39) {
+                num_of_bulbs = 3;
+                radio_charge_option = '2';
+            } else if (system_cap >= 39 && system_cap < 80) {
+                num_of_bulbs = 5;
+                radio_charge_option = '1';
+            } else if (system_cap >= 80 && system_cap < 100) {
+                num_of_bulbs = 7;
+                radio_charge_option = '1';
+                radio_option = '1';
+            } else {
+                num_of_bulbs = 8;
+                radio_charge_option = '1';
+                radio_option = '1';
+                tv_option = '1';
+            }
+
+            document.getElementById('num_of_bulbs').value = num_of_bulbs;
+            document.getElementById('type_of_bulb').value = 'W-LED';
+            document.querySelector('input[name="mobile_charge_option"][value="' + mobile_charge_option + '"]').checked = true;
+            document.querySelector('input[name="radio_charge_option"][value="' + radio_charge_option + '"]').checked = true;
+            document.querySelector('input[name="radio_option"][value="' + radio_option + '"]').checked = true;
+            document.querySelector('input[name="tv_option"][value="' + tv_option + '"]').checked = true;
+        });
+        let containerWidth = 80;
+        let containerHeight = 80;
+        let backgroundImageWidth = 100;
+        let backgroundImageHeight = 100;
+
+        function scaleUpWidth() {
+            containerWidth += 10;
+            backgroundImageWidth += 10;
+            updateStyles();
+        }
+
+        function scaleDownWidth() {
+            containerWidth -= 10;
+            backgroundImageWidth -= 10;
+            updateStyles();
+        }
+
+        function scaleUpHeight() {
+            containerHeight += 10;
+            backgroundImageHeight += 10;
+            updateStyles();
+        }
+
+        function scaleDownHeight() {
+            containerHeight -= 10;
+            backgroundImageHeight -= 10;
+            updateStyles();
+        }
+
+        function updateStyles() {
+            document.querySelector('.container').style.width = containerWidth + '%';
+            document.querySelector('.container').style.height = containerHeight + '%';
+            document.querySelector('.background-image img').style.width = backgroundImageWidth + '%';
+            document.querySelector('.background-image img').style.height = backgroundImageHeight + '%';
+        }
+        function scrollUp() {
+            var backgroundImage = document.getElementById('backgroundImageContainer');
+            backgroundImage.scrollTop -= 10; // Adjust scroll speed as needed
+        }
+
+        function scrollDown() {
+            var backgroundImage = document.getElementById('backgroundImageContainer');
+            backgroundImage.scrollTop += 10; // Adjust scroll speed as needed
+        }
+        var scrollInterval;
+
+        document.body.addEventListener('mousemove', function (event) {
+            var mouseY = event.clientY;
+            var backgroundImage = document.getElementById('backgroundImageContainer');
+            var scrollTop = backgroundImage.scrollTop;
+
+            if (mouseY < 50 && scrollTop > 0) {
+                backgroundImage.scrollTop -= 22; // Adjust scroll speed as needed
+            } else if (mouseY > window.innerHeight - 50 && scrollTop < (backgroundImage.scrollHeight - backgroundImage.clientHeight)) {
+                backgroundImage.scrollTop += 22; // Adjust scroll speed as needed
+            }
+        });
+        document.body.addEventListener('keydown', function (event) {
+            var backgroundImage = document.getElementById('backgroundImageContainer');
+            var scrollTop = backgroundImage.scrollTop;
+
+            // Check if the pressed key is the up arrow key (key code 38)
+            if (event.keyCode === 38 && scrollTop > 0) {
+                backgroundImage.scrollTop -= 22; // Adjust scroll speed as needed
+            }
+            // Check if the pressed key is the down arrow key (key code 40)
+            else if (event.keyCode === 40 && scrollTop < (backgroundImage.scrollHeight - backgroundImage.clientHeight)) {
+                backgroundImage.scrollTop += 22; // Adjust scroll speed as needed
+            }
+        });
+
+        document.getElementById("subsidyForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get input values and construct CSV string
+            let inputs = document.querySelectorAll("input[type='text'], input[type='number'], input[type='checkbox']:checked,input[type='radio']:checked, select");
+            let csvString = "";
+
+            inputs.forEach(function (input, index) {
+                if (index !== 0) {
+                    csvString += ";"; // Add '#' separator except for the first value
+                }
+                if (input.tagName === "SELECT") {
+                    // Get the value of the selected option
+                    csvString += input.value;
+                } else if (input.type === "radio") {
+                    csvString += input.value === "1" ? "Yes" : "No"; // Convert "1" to "Yes" and "0" to "No"
+                } else if (input.type === "checkbox") {
+                    if (input.checked) {
+                        csvString += input.value;
+                    }
+                }
+                else {
+                    csvString += input.value; // Add input value to the CSV string
+                }
+            });
+
+            // Log or send the CSV string as needed
+            console.log(csvString);
+        });
+
+
+        // Clear values of text inputs and number inputs where value is not given
+        document.getElementById("clearButton").addEventListener("click", function () {
+            // Clear values of text inputs and number inputs where value is not given
+            document.querySelectorAll("input[type='text']:not([value]), input[type='number']:not([value])").forEach(function (input) {
+                input.value = "";
+            });
+
+            // Uncheck checkboxes
+            document.querySelectorAll("input[type='text']").forEach(function (radio) {
+                input.value = "";
+            });
+
+            // Uncheck radio buttons
+            document.querySelectorAll("input[type='radio']").forEach(function (radio) {
+                radio.checked = false;
+            });
+
+            // Reset select elements
+            document.querySelectorAll("select").forEach(function (select) {
+                select.selectedIndex = 0; // Select the first option
+            });
+        });
+        let currentIndex = 0;
+
+const backgroundImage = document.getElementById('backgroundImage');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+
+function updateImage() {
+    backgroundImage.src = images[currentIndex];
+}
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) < 0 ? images.length - 1 : (currentIndex - 1 + images.length) % images.length;
+    updateImage();
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage();
+});
+
+    </script>
+</body>
+
+</html>

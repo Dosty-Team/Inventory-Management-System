@@ -1,0 +1,685 @@
+1<option value="171">Battery Name: Abdhulah Battery Co. Pvt. Ltd.</option> 
+
+case "171":
+    modelSelect.innerHTML += `
+
+<option value="6">HDC-100T</option> 
+<option value="7">HDC-20T</option> 
+<option value="8">HDC-23T</option> 
+<option value="9">HDC-35T</option> 
+<option value="10">HDC-55T</option> 
+<option value="11">HDC-80T</option> ********************************
+`;
+1<option value="203">Battery Name: Abdhulah Battery Co. Pvt. Ltd.</option> 
+
+case "203":
+    modelSelect.innerHTML += `
+
+<option value="395">HDC-100T</option> 
+<option value="396">HDC-115T</option> 
+<option value="397">HDC150T</option> 
+<option value="398">HDC-20T</option> 
+<option value="399">HDC-23T</option> 
+<option value="400">HDC-35T</option> 
+<option value="401">HDC-55T</option> 
+<option value="402">HDC-65T</option> 
+<option value="403">HDC-90T</option> ********************************
+`;
+1<option value="170">Battery Name: Abdullah Battery Co. Pvt. Ltd.</option> 
+
+case "170":
+    modelSelect.innerHTML += `
+
+<option value="1">HDC-115T</option> 
+<option value="2">HDC-150T</option> 
+<option value="3">HDC-35T</option> 
+<option value="4">HDC-65T</option> 
+<option value="5">HDC-90T</option> ********************************
+`;
+1<option value="174">Battery Name: Amalgamated Metal Corporation</option> 
+
+case "174":
+    modelSelect.innerHTML += `
+
+<option value="47">CLHU2731921</option> 
+<option value="48">GLDU5272194</option> 
+<option value="49">HC 78011000</option> 
+<option value="50">ZIMU1014728</option> ********************************
+`;
+1<option value="173">Battery Name: Amtek Batteries, India</option> 
+
+case "173":
+    modelSelect.innerHTML += `
+
+<option value="46">KB23</option> ********************************
+`;
+1<option value="175">Battery Name: Asian Batteries Pvt. Ltd.</option> 
+
+case "175":
+    modelSelect.innerHTML += `
+
+<option value="76">AB100STB</option> 
+<option value="77">AB150STB</option> 
+<option value="78">AB200STB</option> 
+<option value="79">AB20STB</option> 
+<option value="80">AB23STB</option> 
+<option value="81">AB35STB</option> 
+<option value="82">AB52STB</option> 
+<option value="83">AB55STB</option> 
+<option value="84">AB65STB</option> 
+<option value="85">AB85STB</option> ********************************
+`;
+1<option value="189">Battery Name: Bharat Accumulators Ltd. (Urja Battries Limited)</option> 
+
+case "189":
+    modelSelect.innerHTML += `
+
+<option value="175">B6ST040</option> 
+<option value="176">B6ST20</option> 
+<option value="177">B6ST23</option> 
+<option value="178">B6ST51</option> 
+<option value="179">B6ST55</option> 
+<option value="180">B6ST85</option> 
+<option value="181">B8TT100</option> ********************************
+`;
+1<option value="182">Battery Name: Bindal PowerTech Pvt Ltd, India</option> 
+
+case "182":
+    modelSelect.innerHTML += `
+
+<option value="137">RIS 150</option> 
+<option value="138">RIS 20</option> 
+<option value="139">RIS 35</option> 
+<option value="140">RIS 51</option> 
+<option value="141">RIS100</option> 
+<option value="142">RIS65</option> ********************************
+`;
+1<option value="191">Battery Name: Bindal Technopolymer Pvt. Ltd.</option> 
+
+case "191":
+    modelSelect.innerHTML += `
+
+<option value="195">IT 1000</option> 
+<option value="196">N 70 Z</option> ********************************
+`;
+1<option value="188">Battery Name: Bisha Developers Pvt. Ltd</option> 
+
+case "188":
+    modelSelect.innerHTML += `
+
+<option value="156">12 VOLT -50Z PP</option> 
+<option value="157">BH-150</option> 
+<option value="158">BH-200</option> 
+<option value="159">BH-240</option> 
+<option value="160">BH-300</option> 
+<option value="161">SMP-120</option> ********************************
+`;
+1<option value="190">Battery Name: Bisha Developers pvt. ltd (smart)</option> 
+
+case "190":
+    modelSelect.innerHTML += `
+
+<option value="182">SMP-105</option> 
+<option value="183">SMP-150</option> 
+<option value="184">SMP-18</option> 
+<option value="185">SMP-23</option> 
+<option value="186">SMP-35</option> 
+<option value="187">SMP-40</option> 
+<option value="188">SMP-55</option> 
+<option value="189">SMP-60</option> 
+<option value="190">SMP-80</option> ********************************
+`;
+1<option value="192">Battery Name: Castwell Metal Industries</option> ********************************
+
+case "192":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="181">Battery Name: China Machinery Engineering Wuxi Co. Ltd.</option> 
+
+case "181":
+    modelSelect.innerHTML += `
+
+<option value="136">SLB-7.5AH</option> ********************************
+`;
+1<option value="193">Battery Name: Daramic Battery Separator India Pvt Ltd</option> ********************************
+
+case "193":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="194">Battery Name: Deepak power storages</option> 
+
+case "194":
+    modelSelect.innerHTML += `
+
+<option value="260">DP-150 LMTT</option> 
+<option value="261">DP-20 PMST</option> 
+<option value="262">DP-75 PMST</option> ********************************
+`;
+1<option value="195">Battery Name: Deepak International Limited, India</option> 
+
+case "195":
+    modelSelect.innerHTML += `
+
+<option value="265">DP50PMST</option> ********************************
+`;
+1<option value="186">Battery Name: Delco Battery Udhyog Pvt. Ltd</option> 
+
+case "186":
+    modelSelect.innerHTML += `
+
+<option value="152">DEL50S</option> ********************************
+`;
+1<option value="196">Battery Name: Eastman Auto & Power Ltd</option> 
+
+case "196":
+    modelSelect.innerHTML += `
+
+<option value="276">EA100SB</option> 
+<option value="277">EA150SB</option> 
+<option value="278">EA51SB</option> ********************************
+`;
+1<option value="172">Battery Name: Eastman Auto & Power Ltd.</option> 
+
+case "172":
+    modelSelect.innerHTML += `
+
+<option value="12">EA51SR</option> ********************************
+`;
+1<option value="198">Battery Name: Excide Industries Ltd.</option> 
+
+case "198":
+    modelSelect.innerHTML += `
+
+<option value="345">6LMS100</option> 
+<option value="346">6LMS150</option> 
+<option value="347">6LMS20</option> 
+<option value="348">6LMS20L</option> 
+<option value="349">6LMS40</option> 
+<option value="350">6LMS56</option> 
+<option value="351">6LMS60</option> 
+<option value="352">6LMS75</option> 
+<option value="353">6LMS75L</option> 
+<option value="354">6TT100</option> ********************************
+`;
+1<option value="197">Battery Name: Exide Industries Limited</option> 
+
+case "197":
+    modelSelect.innerHTML += `
+
+<option value="293">FE00-6LMS100L</option> 
+<option value="294">FE00-6LMS35</option> 
+<option value="295">FE00-6LMS40</option> 
+<option value="296">FE00-6LMS75L</option> 
+<option value="297">FE02-6LMS40L</option> 
+<option value="298">FE02-6LMS75L</option> ********************************
+`;
+1<option value="200">Battery Name: Far East First New Energy Co. Ltd.</option> 
+
+case "200":
+    modelSelect.innerHTML += `
+
+<option value="363">FST-6700</option> ********************************
+`;
+1<option value="199">Battery Name: First Power Battery Ltd.</option> 
+
+case "199":
+    modelSelect.innerHTML += `
+
+<option value="362">FP12200D</option> ********************************
+`;
+1<option value="179">Battery Name: FNS Power Technology Inc.</option> 
+
+case "179":
+    modelSelect.innerHTML += `
+
+<option value="134">FNS-LI78</option> ********************************
+`;
+1<option value="184">Battery Name: Gem Accumulators Nepal Pvt Ltd</option> 
+
+case "184":
+    modelSelect.innerHTML += `
+
+<option value="145">SMP-100</option> 
+<option value="146">SMP-150</option> 
+<option value="147">SMP-20</option> 
+<option value="148">SMP-35</option> 
+<option value="149">SMP-55</option> 
+<option value="150">SMP-60</option> ********************************
+`;
+1<option value="201">Battery Name: Gem Batteries Pvt. Ltd</option> ********************************
+
+case "201":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="202">Battery Name: Gem Batteries Pvt. Ltd.</option> 
+
+case "202":
+    modelSelect.innerHTML += `
+
+<option value="370">GSTN-105</option> 
+<option value="371">GSTN-115</option> 
+<option value="372">GSTN-130</option> 
+<option value="373">GSTN-150</option> 
+<option value="374">GSTN-18</option> 
+<option value="375">GSTN-200</option> 
+<option value="376">GSTN-23</option> 
+<option value="377">GSTN-25</option> 
+<option value="378">GSTN-35</option> 
+<option value="379">GSTN-51</option> 
+<option value="380">GSTN-55</option> 
+<option value="381">GSTN-80</option> ********************************
+`;
+1<option value="204">Battery Name: HBL Power Systems Ltd.</option> ********************************
+
+case "204":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="205">Battery Name: HNS Tech Enterprise</option> ********************************
+
+case "205":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="206">Battery Name: Hollandai</option> 
+
+case "206":
+    modelSelect.innerHTML += `
+
+<option value="423">HP12200D</option> 
+<option value="424">HP1240D</option> 
+<option value="425">HP1275D</option> ********************************
+`;
+1<option value="446">Battery Name: Hygen Energy Ltd.</option> 
+
+case "446":
+    modelSelect.innerHTML += `
+
+<option value="1517">UJ-FZ553012.8</option> ********************************
+`;
+1<option value="207">Battery Name: Incoe Battery</option> ********************************
+
+case "207":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="208">Battery Name: Inzen Power Solution PVt ltd</option> 
+
+case "208":
+    modelSelect.innerHTML += `
+
+<option value="433">EVE-100</option> 
+<option value="434">EVE-115</option> 
+<option value="435">EVE-150</option> 
+<option value="436">EVE-18</option> 
+<option value="437">EVE-20</option> 
+<option value="438">EVE-200</option> 
+<option value="439">EVE-23</option> 
+<option value="440">EVE-35</option> 
+<option value="441">EVE-40</option> 
+<option value="442">EVE-55</option> 
+<option value="443">EVE-85</option> ********************************
+`;
+1<option value="209">Battery Name: Inzen Power Solutions Pvt. Ltd.</option> 
+
+case "209":
+    modelSelect.innerHTML += `
+
+<option value="444">115AH 12V</option> 
+<option value="445">160AH 12V</option> ********************************
+`;
+1<option value="177">Battery Name: Jagadamba Battery Udhyog</option> 
+
+case "177":
+    modelSelect.innerHTML += `
+
+<option value="132">STP-23</option> ********************************
+`;
+1<option value="445">Battery Name: Jagadamba Corporation (P). Ltd.</option> 
+
+case "445":
+    modelSelect.innerHTML += `
+
+<option value="1505">SL60</option> 
+<option value="1506">STB-100</option> 
+<option value="1507">STB20</option> 
+<option value="1509">STB-60</option> 
+<option value="1510">STB-40</option> 
+<option value="1514">STB-150</option> 
+<option value="1515">STB51</option> 
+<option value="1526">SL35</option> ********************************
+`;
+1<option value="210">Battery Name: Kulayan Batteries Industry</option> 
+
+case "210":
+    modelSelect.innerHTML += `
+
+<option value="538">6KSB11</option> 
+<option value="539">6KSB16</option> 
+<option value="540">6KSB23</option> 
+<option value="541">6KSB50</option> 
+<option value="542">6KSB55</option> 
+<option value="543">KSB23</option> ********************************
+`;
+1<option value="211">Battery Name: Kulayan Battery Industry Pvt. Ltd.</option> 
+
+case "211":
+    modelSelect.innerHTML += `
+
+<option value="544">3KSB6</option> 
+<option value="545">6 KSB 25</option> 
+<option value="546">6 KSB 40</option> 
+<option value="547">6 KSB 57 T/2</option> 
+<option value="548">6 KSB 75 T/3</option> 
+<option value="549">6 KSB100</option> 
+<option value="550">6 KSB45</option> 
+<option value="551">6KSB 45</option> 
+<option value="552">6KSB 75</option> 
+<option value="553">6KSB100</option> 
+<option value="554">6KSB100AH</option> 
+<option value="555">6KSB100T/4</option> 
+<option value="556">6KSB16</option> 
+<option value="557">6KSB20</option> 
+<option value="558">6KSB20/T1</option> 
+<option value="559">6KSB23</option> 
+<option value="560">6KSB35</option> 
+<option value="561">6KSB45</option> 
+<option value="562">6KSB45/T2</option> 
+<option value="563">6KSB50</option> 
+<option value="564">6KSB55</option> 
+<option value="565">6KSB60T/3</option> 
+<option value="566">6KSB65</option> 
+<option value="567">6KSB70T/3</option> 
+<option value="568">6KSB75</option> 
+<option value="569">6KSB80</option> 
+<option value="570">6SKB23</option> ********************************
+`;
+1<option value="212">Battery Name: Leadstone Energy Limited</option> ********************************
+
+case "212":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="214">Battery Name: luminious Power Technologies Pvt. ltd.</option> ********************************
+
+case "214":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="223">Battery Name: Luminious Power Technologies Pvt. Ltd.</option> 
+
+case "223":
+    modelSelect.innerHTML += `
+
+<option value="1098">LPTEX 1223</option> 
+<option value="1099">LPTEX 1260</option> 
+<option value="1100">LTPEX 1235L</option> ********************************
+`;
+1<option value="215">Battery Name: Luminous Power Technology Pvt. Ltd.</option> 
+
+case "215":
+    modelSelect.innerHTML += `
+
+<option value="639">LPT TX12100</option> 
+<option value="640">LPT TX12150</option> 
+<option value="641">LPT TX1223</option> 
+<option value="642">LPTEX 1275</option> 
+<option value="643">LPTEX12150</option> 
+<option value="644">LPTEX1220</option> 
+<option value="645">LPTEX1223</option> 
+<option value="646">LPTEX1235L</option> 
+<option value="647">LPTEX1240</option> ********************************
+`;
+1<option value="180">Battery Name: Marathon Batteries Pvt. Ltd.</option> 
+
+case "180":
+    modelSelect.innerHTML += `
+
+<option value="135">STF23</option> ********************************
+`;
+1<option value="217">Battery Name: Metafield Trade Pte Ltd</option> ********************************
+
+case "217":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="216">Battery Name: Mn&T Sdn Bhd</option> ********************************
+
+case "216":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="451">Battery Name: Power Tech Industries Pvt. Ltd.</option> 
+
+case "451":
+    modelSelect.innerHTML += `
+
+<option value="1522">DTX-35AH</option> 
+<option value="1523">DTX-150AH</option> ********************************
+`;
+1<option value="187">Battery Name: Powertech Industries Pvt. Ltd</option> 
+
+case "187":
+    modelSelect.innerHTML += `
+
+<option value="153">DTX-100AH</option> 
+<option value="154">DTX-52AH</option> 
+<option value="155">DTX-65AH</option> ********************************
+`;
+1<option value="218">Battery Name: Racily udyog</option> 
+
+case "218":
+    modelSelect.innerHTML += `
+
+<option value="954">HL100T</option> 
+<option value="955">HL23T</option> 
+<option value="956">HL51T</option> 
+<option value="957">HL55T</option> ********************************
+`;
+1<option value="219">Battery Name: Rahimafrooz Accumlaters limited (VOLTA)</option> 
+
+case "219":
+    modelSelect.innerHTML += `
+
+<option value="969">6BC120T/2</option> 
+<option value="970">6SB18</option> 
+<option value="971">6SB40</option> 
+<option value="972">6SB65</option> 
+<option value="973">6SB90</option> 
+<option value="974">DL51</option> 
+<option value="975">RE100</option> 
+<option value="976">RE130</option> 
+<option value="977">RE150</option> 
+<option value="978">RE20</option> 
+<option value="979">RE23</option> 
+<option value="980">RE28</option> 
+<option value="981">RE40</option> 
+<option value="982">RE51</option> 
+<option value="983">RE55</option> 
+<option value="984">RE60</option> 
+<option value="985">RE70</option> 
+<option value="986">RE80</option> 
+<option value="987">V115</option> 
+<option value="988">V140</option> 
+<option value="989">V35</option> 
+<option value="990">V55</option> 
+<option value="991">V80</option> ********************************
+`;
+1<option value="220">Battery Name: Rahimafrooz Accumulators Ltd</option> 
+
+case "220":
+    modelSelect.innerHTML += `
+
+<option value="1000">CARTONS</option> 
+<option value="1001">DC 235S/8</option> 
+<option value="1002">DC 470T/14</option> 
+<option value="1003">DC 470T/6</option> 
+<option value="1004">DC 470T/7</option> 
+<option value="1005">DC-470S/6</option> 
+<option value="1006">DL23</option> 
+<option value="1007">DL60</option> 
+<option value="1008">RE100T</option> 
+<option value="1009">RE15</option> 
+<option value="1010">RE35</option> 
+<option value="1011">V 115</option> 
+<option value="1012">V 140</option> 
+<option value="1013">V 35</option> 
+<option value="1014">V 55</option> 
+<option value="1015">V 80</option> 
+<option value="1016">V140 WARENTY RETURN</option> 
+<option value="1017">V35 WARENTY RETURN</option> 
+<option value="1018">V50</option> 
+<option value="1019">V55 WARENTY RETURN</option> 
+<option value="1020">V80 WARENTY RETURN</option> ********************************
+`;
+1<option value="185">Battery Name: Saif Powertec Limited, Bangladesh</option> 
+
+case "185":
+    modelSelect.innerHTML += `
+
+<option value="151">EXP-100</option> ********************************
+`;
+1<option value="222">Battery Name: shandong sacredusn power sources co.ltd</option> 
+
+case "222":
+    modelSelect.innerHTML += `
+
+<option value="1061">SSP12-12</option> ********************************
+`;
+1<option value="213">Battery Name: Shenzhen Leoch Battery Technology Co.Ltd.</option> 
+
+case "213":
+    modelSelect.innerHTML += `
+
+<option value="604">DJM12100</option> 
+<option value="605">DJM1270</option> 
+<option value="606">DJW12-17</option> ********************************
+`;
+1<option value="176">Battery Name: Shree Jagdamba Battery Udhyog (P) Ltd.</option> 
+
+case "176":
+    modelSelect.innerHTML += `
+
+<option value="125">KB100</option> 
+<option value="126">KB150</option> 
+<option value="127">KB20</option> 
+<option value="128">KB23</option> 
+<option value="129">KB40</option> 
+<option value="130">KB51</option> 
+<option value="131">KB60</option> ********************************
+`;
+1<option value="221">Battery Name: Solar Frontier Ltd. Japan</option> 
+
+case "221":
+    modelSelect.innerHTML += `
+
+<option value="1058">SSB</option> ********************************
+`;
+1<option value="224">Battery Name: Solarland Solar Technology & Solution</option> 
+
+case "224":
+    modelSelect.innerHTML += `
+
+<option value="1126">SLL-L2003D</option> ********************************
+`;
+1<option value="225">Battery Name: Southern Batteries Pvt. ltd</option> 
+
+case "225":
+    modelSelect.innerHTML += `
+
+<option value="1140">6SB100SLR</option> 
+<option value="1141">6SB20PPT</option> 
+<option value="1142">6SB40PPT</option> 
+<option value="1143">6SB80SLR</option> ********************************
+`;
+1<option value="226">Battery Name: Sparco batteries Pvt. Ltd.</option> ********************************
+
+case "226":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="227">Battery Name: Star Battery Limited</option> 
+
+case "227":
+    modelSelect.innerHTML += `
+
+<option value="1146">6 TP 50N</option> 
+<option value="1147">6TP-150 IT</option> ********************************
+`;
+1<option value="228">Battery Name: Sundaya</option> ********************************
+
+case "228":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="229">Battery Name: SUNERA Battery/Kulyan</option> 
+
+case "229":
+    modelSelect.innerHTML += `
+
+<option value="1201">6KSB 100AH</option> 
+<option value="1202">6KSB45</option> 
+<option value="1203">6KSB75</option> ********************************
+`;
+1<option value="230">Battery Name: Taken for Repair</option> ********************************
+
+case "230":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="183">Battery Name: Tamrag Green Solutions (India) Pvt Ltd</option> 
+
+case "183":
+    modelSelect.innerHTML += `
+
+<option value="143">GSTN-20</option> 
+<option value="144">GSTN-35</option> ********************************
+`;
+1<option value="452">Battery Name: testsss</option> ********************************
+
+case "452":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="453">Battery Name: testsss</option> ********************************
+
+case "453":
+    modelSelect.innerHTML += `
+
+`;
+1<option value="231">Battery Name: Trident Metal Energy Pvt. Ltd.</option> 
+
+case "231":
+    modelSelect.innerHTML += `
+
+<option value="1314">IST100</option> 
+<option value="1315">IST23</option> 
+<option value="1316">IST40</option> 
+<option value="1317">ISTT1500</option> ********************************
+`;
+1<option value="232">Battery Name: Trojan Battery</option> ********************************
+
+case "232":
+    modelSelect.innerHTML += `
+<option value="12121212">NOTHING</option>
+`;
+1<option value="233">Battery Name: Unikor Battery Company Pvt. Ltd.(MX Volta)</option> 
+
+case "233":
+    modelSelect.innerHTML += `
+
+<option value="1322">VT1217</option> 
+<option value="1323">VT1236ES</option> 
+<option value="1324">VT1270ES</option> 
+<option value="1325">VT1290ES</option> ********************************
+`;
+1<option value="178">Battery Name: Urja Batteries Limited</option> 
+
+case "178":
+    modelSelect.innerHTML += `
+
+<option value="133">B6ST51</option> 
+ `;

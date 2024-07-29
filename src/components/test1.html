@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidy Application Form</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css">
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /* Prevent scrolling */
+        }
+
+        td {
+            color: white;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow-y: scroll;
+            /* Enable vertical scrolling */
+        }
+
+        .background-image img {
+            width: 100%;
+            height: auto;
+            /* Allow the image to maintain its aspect ratio */
+            object-fit: cover;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+            /* Adjust maximum width as needed */
+            height: 80%;
+            max-height: 800px;
+            /* Adjust maximum height as needed */
+            background-color: rgb(0, 0, 0);
+            /* Transparent white background */
+            padding: 20px;
+            border: 1px solid #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            /* Ensure the form is above the background image */
+            overflow: auto;
+            /* Allow scrolling if content overflows */
+            transition: all 0.3s ease;
+            /* Smooth transition for scaling */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid rgb(255, 255, 255);
+            padding: 5px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #2c2c2c21;
+            color: white;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #2c2c2c21;
+            color: white;
+        }
+
+        option {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #2c2c2c21;
+            color: white;
+        }
+
+        .scale-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body onmouseover="startScrolling();" onmouseout="stopScrolling();">
+    <div class="container">
+        <form id="subsidyForm">
+
+
+            <table>
+                <tr>
+                    <td colspan="4" class="header">SUBSIDY APPLICATION FORM FOR SMALL/SOLAR HOME SYSTEM</td>
+                </tr>
+                <tr>
+                    <td colspan="2">To be filled in by AEPC</td>
+                    <td colspan="2" class="right-align">Compnay ID: <input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">To be filled in by Company</td>
+                    <td>Remote Area Class: A <input type="checkbox"> B <input type="checkbox"> C <input type="checkbox">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="section-title">GENERAL INFORMATION</td>
+                </tr>
+                <tr>
+                    <td>System's Owner Name</td>
+                    <td><input type="text" value="ऋषि शर्मा"></td>
+                    <td>Mobileno </td>
+                    <td>
+                        <input type="text" value="9847106343">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Owner's Age
+                        <input type="text" value="४७">
+                    </td>
+
+                    <td>Male <input type="checkbox"> Female <input type="checkbox"></td>
+                    <td>ETHNICITY </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>HUSBAND/FATHER</td>
+                    <td><input type="text"></td>
+                    <td>Mobileno </td>
+                    <td>
+                        <input type="text" value="9847106343">
+                    </td>
+                </tr>
+                <td>Citizenship No. </td>
+                <td><input type="text" value="५६-२०६८/२०५६"></td>
+                <td>Citizenship District</td>
+                <td><input type="text" value="RAPTI"></td>
+                <tr>
+                    <td>neighbor's Name</td>
+                    <td><input type="text" value="ऋषि शर्मा"></td>
+                    <td>Mobileno </td>
+                    <td>
+                        <input type="text" value="9847106343">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="header">Installation address
+                    <td colspan="3"> </td>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>Present Address </td>
+                    <td></td>
+
+                    <td>Old Address </td>
+                </tr>
+                <tr>
+                    <td>Pradesh <input type="text"></td>
+                    <td>District Name <input type="text"></td>
+                    <td></td>
+                    <td>older Municipality <input type="text" value="chahidaina"></td>
+                </tr>
+                <tr>
+                    <td>Ward No. <input type="text"></td>
+
+                    <td>present Village <input type="text"></td>
+                    <td></td>
+                    <td>older Village Name <input type="text" value="chahidaina"></td>
+                </tr>
+                <tr>
+                    <td>Technical Specification Heading</td>
+                    <td colspan="3"> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Date of Installation (Nepali) <input type="text" id="nepaliDate" placeholder="day-month-year">
+                    </td>
+                    <td></td>
+                    <td>system Capacity<input type="text" id="systemcap" placeholder="system Capacity"></td>
+                </tr>
+                <tr>
+                    <td>Installer Company Name</td>
+                    <td colspan="3"><input type="text" value="chahidaina"></td>
+                </tr>
+                <tr>
+                    <td>Address of Installer Company</td>
+                    <td colspan="3"><input type="text" value="chahidaina"></td>
+                </tr>
+                <tr>
+                    <td>Branch Dealer Option</td>
+                    <td></td>
+                    <td colspan="2">Branch <input type="checkbox"> Dealer <input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>After Sales Company Name</td>
+                    <td><input type="text"></td>
+                    <td>District</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Municipality <input type="text"></td>
+                    <td>Village <input type="text"></td>
+                    <td colspan="3">Telephone Number
+                        <input type="text">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Installer Technician Name <input type="text"></td>
+                    <td>Phone Number <input type="text" value="chahidaina" disabled></td>
+                    <td>Annual Income</td>
+                    <td> <input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Installer Registration Number</td>
+                    <td><input type="text" value="chahidaina" disabled></td>
+                    <td>Source of Income</td>
+
+                    <td> <input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">New System <input type="radio" name="system"> Upgrade <input type="radio"
+                            name="system"></td>
+                </tr>
+                <tr>
+                    <td>Panel Manufacturer Name</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Panel Manufacturer SN</td>
+                    <td colspan="3"><input type="text"></td>
+
+                </tr>
+                <tr>
+                    <td>Panel Model Number</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Battery Manufacturer Name</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Battery Manufacturer SN</td>
+                    <td colspan="3"><input type="text"></td>
+
+                </tr>
+                <tr>
+                    <td>Battery Model Number</td>
+                    <td colspan="3"> <input type="text"></td>
+                </tr>
+                <tr>
+                    <td>battery type</td>
+                    <td>Flooded <input type="radio" name="battery"> Lithium Ion <input type="radio" name="battery"></td>
+                    <td colspan="2">Battery Capacity
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td>Charge Controller Name</td>
+                    <td>
+                        <select>
+                            <option value="306">Unified Electronics India LT d</option>
+                            <option value="291">Solar Zone</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">controller Brand <input type="text" value="chahidaina" disabled></td>
+
+                    <td colspan="2">controller Model
+                        <select>
+                            <option value="1327">SCC12V/8A</option>
+                            <option value="1115">SZ/SZ08A</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>lamp Name</td>
+                    <td colspan="3">
+                        <select>
+                            <option value="385">China machinary</option>
+                            <option value="319">Everexceed Solr Corp Pte. Ltd</option>
+                            <option value="369">shenzhen xing long</option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td> lamp Model</td>
+                    <td>
+                        <select colspan="3">
+                            <option value="1388">SLL-L2402D</option>
+                            <option value="312">ESC-2L</option>
+                            <option value="1074">UNIQUE-2</option>
+                            <option value="313">ESC-4L</option>
+                            <option value="1389">SLL-L2403D</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>Total cost</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>subsidy cost</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>user amount</td>
+                    <td><input type="text"></td>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <label for="num_of_bulbs">No. of Bulbs</label>
+                    </td>
+                    <td>
+                        <input type="number" id="num_of_bulbs">
+                    </td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label for="type_of_bulb">Type of Bulb</label>
+                    </td>
+                    <td>
+                        <input type="text" id="type_of_bulb" value="W-LED">
+                           
+                        </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label>Mobile Charge Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="mobile_charge_option" value="1">Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="mobile_charge_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label>Radio charge Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="radio_charge_option" value="1" >Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="radio_charge_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Radio Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="radio_option" value="1">Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="radio_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label>Television Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="tv_option" value="1">Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="tv_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <label>Other Option</label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="other_option" value="1">Yes
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="other_option" value="2">No
+                        </label>
+                    </td>
+                </tr>
+                
+                
+
+
+                <button type="submit">Submit</button>
+            </table>
+
+        </form>
+    </div>
+<SCript>
+    document.getElementById('systemcap').addEventListener('input', function() {
+    var num_of_bulbs = parseInt(document.getElementById('num_of_bulbs').value);
+    var system_cap = parseInt(this.value);
+
+    if (isNaN(system_cap)) return; // If system_cap is not a number, exit function
+    
+    var mobile_charge_option = '1'; // Default value
+    var radio_charge_option = '2'; // Default value
+    var radio_option = '2'; // Default value
+    var tv_option = '2'; // Default value
+    
+    if (system_cap < 39) {
+        num_of_bulbs = 3;
+        radio_charge_option = '2';
+    } else if (system_cap >= 39 && system_cap < 80) {
+        num_of_bulbs = 5;
+        radio_charge_option = '1';
+    } else if (system_cap >= 80 && system_cap < 100) {
+        num_of_bulbs = 7;
+        radio_charge_option = '1';
+        radio_option = '1';
+    } else {
+        num_of_bulbs = 8;
+        radio_charge_option = '1';
+        radio_option = '1';
+        tv_option = '1';
+    }
+    
+    document.getElementById('num_of_bulbs').value = num_of_bulbs;
+    document.querySelector('input[name="mobile_charge_option"][value="' + mobile_charge_option + '"]').checked = true;
+    document.querySelector('input[name="radio_charge_option"][value="' + radio_charge_option + '"]').checked = true;
+    document.querySelector('input[name="radio_option"][value="' + radio_option + '"]').checked = true;
+    document.querySelector('input[name="tv_option"][value="' + tv_option + '"]').checked = true;
+});
+</SCript>
+</body>
+
+</html>

@@ -1,0 +1,1147 @@
+ 
+   case "68":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5671"> Bannigadhi Jayagadh Rural Municipality   </option> 
+  <option value="5667"> Chaurpati Rural Municipality   </option> 
+  <option value="5668"> Dhakari Rural Municipality   </option> 
+  <option value="5666"> Kamalbazar Municipality   </option> 
+  <option value="5672"> Mangalsen Municipality   </option> 
+  <option value="5673"> Mellekh Rural Municipality   </option> 
+  <option value="5670"> Panchadewal Binayak Municipality   </option> 
+  <option value="5674"> Ramaroshan Rural Municipality   </option> 
+  <option value="5675"> Sanphebagar Municipality   </option> 
+  <option value="5669"> Turmakhad Rural Municipality   </option> 
+`;
+break;
+   
+   case "44":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5460"> Sitganga Municipality   </option> 
+`;
+break;
+   
+   case "50":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5521"> Badigad Rural Municipality   </option> 
+  <option value="5522"> Bareng Rural Municipality   </option> 
+  <option value="5516"> Dhorpatan Municipality   </option> 
+  <option value="5514"> Galkot Municipality   </option> 
+  <option value="5515"> Jaimuni Municipality   </option> 
+  <option value="5519"> Nisikhola Rural Municipality   </option> 
+  <option value="5517"> Taman Khola Rural Municipality   </option> 
+  <option value="5518"> Tara Khola Rural Municipality   </option> 
+`;
+break;
+   
+   case "73":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5720"> Dasharathchanda Municipality   </option> 
+  <option value="5719"> Dilasaini Rural Municipality   </option> 
+  <option value="5721"> Dogadakedar Rural Municipality   </option> 
+  <option value="5725"> Melauli Municipality   </option> 
+  <option value="5722"> Pancheshwar Rural Municipality   </option> 
+  <option value="5723"> Patan Municipality   </option> 
+  <option value="5724"> Purchaudi Municipality   </option> 
+  <option value="5726"> Shivanath Rural Municipality   </option> 
+  <option value="5727"> Sigas Rural Municipality   </option> 
+  <option value="5728"> Surnaya Rural Municipality   </option> 
+`;
+break;
+   
+   case "69":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5686"> Bithadchir Rural Municipality   </option> 
+  <option value="5684"> Bungal Municipality   </option> 
+  <option value="5679"> Chabispathivera Rural Municipality   </option> 
+  <option value="5683"> Durgathali Rural Municipality   </option> 
+  <option value="5680"> Jayaprithivi Municipality   </option> 
+  <option value="5677"> Kedarseu Rural Municipality   </option> 
+  <option value="5678"> Khaptadchhanna Rural Municipality   </option> 
+  <option value="5685"> Masta Rural Municipality   </option> 
+  <option value="5676"> Saipal Rural Municipality   </option> 
+  <option value="5687"> Surma Rural Municipality   </option> 
+  <option value="5681"> Talkot Rural Municipality   </option> 
+  <option value="5682"> Thalara Rural Municipality   </option> 
+`;
+break;
+   
+   case "67":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5661"> Badimalika Municipality   </option> 
+  <option value="5662"> Budhiganga Municipality   </option> 
+  <option value="5663"> Budhinanda Municipality   </option> 
+  <option value="5657"> Gaumul Rural Municipality   </option> 
+  <option value="5665"> Himali Rural Municipality   </option> 
+  <option value="5660"> Jagannath Rural Municipality   </option> 
+  <option value="5658"> Khaptad Chhededaha Rural Municipality   </option> 
+  <option value="5664"> Swami Kartik Rural Municipality   </option> 
+  <option value="5659"> Tribeni Municipality   </option> 
+`;
+break;
+   
+   case "65":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5644"> Duduwa Rural Municipality   </option> 
+  <option value="5643"> Janaki Rural Municipality   </option> 
+  <option value="5642"> Khajura Rural Municipality   </option> 
+  <option value="5645"> Narainapur Rural Municipality   </option> 
+  <option value="5648"> Raptisonari Rural Municipality   </option> 
+`;
+break;
+   
+   case "33":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5349"> Adarshkotwal Rural Municipality   </option> 
+  <option value="5880"> Bisrampur Rural Municipality   </option> 
+   Jitpur Simara Sub Metropolitan  <option value="5353"> </option> 
+  <option value="5352"> Kolhabi Municipality   </option> 
+  <option value="5361"> Mahagadhimai Municipality   </option> 
+  <option value="5876"> Pacharauta Municipality   </option> 
+  <option value="5362"> Simraungadh Municipality   </option> 
+`;
+break;
+   
+   case "66":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5654"> Bansagadhi Municipality   </option> 
+  <option value="5653"> Barbardiya Municipality   </option> 
+`;
+break;
+   
+   case "27":
+   modelSelect.innerHTML += `
+   Bhojpur  <option value="7"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5060"> Aamchowk Rural Municipality   </option> 
+  <option value="5059"> Arun Rural Municipality   </option> 
+  <option value="5063"> Bhojpur Municipality   </option> 
+  <option value="5067"> Hatuwagadhi Rural Municipality   </option> 
+  <option value="5062"> Pauwadungma Rural Municipality   </option> 
+  <option value="5064"> Ramprasad Rai Rural Municipality   </option> 
+  <option value="5066"> Salpasilichho Rural Municipality   </option> 
+  <option value="5065"> Shadananda Municipality   </option> 
+  <option value="5061"> Tyamkemaiyung Rural Municipality   </option> 
+`;
+break;
+   
+   case "35":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5377"> Ichchhyakamana Rural Municipality   </option> 
+  <option value="5378"> Kalika Municipality   </option> 
+  <option value="5379"> Khairahani Municipality   </option> 
+  <option value="5381"> Madi Municipality   </option> 
+  <option value="5383"> Rapti Municipality   </option> 
+`;
+break;
+   
+   case "74":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5729"> Ajaymeru Rural Municipality   </option> 
+  <option value="5731"> Alital Rural Municipality   </option> 
+  <option value="5730"> Amargadhi Municipality   </option> 
+  <option value="5735"> Bhageshwar Rural Municipality   </option> 
+  <option value="5732"> Ganayapdhura Rural Municipality   </option> 
+  <option value="5733"> Nawadurga Rural Municipality   </option> 
+  <option value="5734"> Parashuram Municipality   </option> 
+`;
+break;
+   
+   case "63":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5621"> Aathabis Municipality   </option> 
+  <option value="5629"> Bhagawatimai Rural Municipality   </option> 
+  <option value="5630"> Bhairabi Rural Municipality   </option> 
+  <option value="5623"> Chamunda Bindrasaini Municipality   </option> 
+  <option value="5626"> Dullu Municipality   </option> 
+  <option value="5625"> Dungeshwor Rural Municipality   </option> 
+  <option value="5622"> Gurans Rural Municipality   </option> 
+  <option value="5631"> Mahabu Rural Municipality   </option> 
+  <option value="5627"> Narayan Municipality   </option> 
+  <option value="5628"> Naumule Rural Municipality   </option> 
+  <option value="5624"> Thantikandh Rural Municipality   </option> 
+`;
+break;
+   
+   case "56":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5573"> Babai Rural Municipality   </option> 
+  <option value="5572"> Banglachuli Rural Municipality   </option> 
+  <option value="5571"> Dangisharan Rural Municipality   </option> 
+  <option value="5568"> Gadhawa Rural Municipality   </option> 
+   Ghorahi Sub Metropolitan  <option value="5569"> </option> 
+  <option value="5576"> Lamahi Municipality   </option> 
+  <option value="5574"> Rajpur Rural Municipality   </option> 
+  <option value="5575"> Rapti Rural Municipality   </option> 
+  <option value="5577"> Shantinagar Rural Municipality   </option> 
+   Tulsipur Sub Metropolitan  <option value="5570"> </option> 
+`;
+break;
+   
+   case "72":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5710"> Apihimal Rural Municipality   </option> 
+  <option value="5713"> Byas Rural Municipality   </option> 
+  <option value="5711"> Dunhu Rural Municipality   </option> 
+  <option value="5717"> Lakam Rural Municipality   </option> 
+  <option value="5714"> Mahakali Municipality   </option> 
+  <option value="5716"> Malikarjun Rural Municipality   </option> 
+  <option value="5715"> Marma Rural Municipality   </option> 
+  <option value="5712"> Naugad Rural Municipality   </option> 
+  <option value="5718"> Shailyashikhar Municipality   </option> 
+`;
+break;
+   
+   case "24":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5262"> Benighat Rorang Rural Municipality   </option> 
+  <option value="5259"> Dhunibesi Municipality   </option> 
+  <option value="5254"> Gajuri Rural Municipality   </option> 
+  <option value="5255"> Galchi Rural Municipality   </option> 
+  <option value="5253"> Gangajamuna Rural Municipality   </option> 
+  <option value="5256"> Jwalamukhi Rural Municipality   </option> 
+  <option value="5252"> Khaniyabash Rural Municipality   </option> 
+  <option value="5260"> Nilakantha Municipality   </option> 
+  <option value="5263"> Rubi Valley Rural Municipality   </option> 
+  <option value="5258"> Thakre Rural Municipality   </option> 
+  <option value="5257"> Tripura Sundari Rural Municipality   </option> 
+`;
+break;
+   
+   case "8":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5069"> Chaubise Rural Municipality   </option> 
+  <option value="5070"> Chhathar Jorpati Rural Municipality   </option> 
+  <option value="5071"> Dhankuta Municipality   </option> 
+  <option value="5073"> Mahalaxmi Municipality   </option> 
+  <option value="5072"> Pakhribas Municipality   </option> 
+  <option value="5068"> Sahidbhumi Rural Municipality   </option> 
+  <option value="5074"> Sangurigadhi Rural Municipality   </option> 
+`;
+break;
+   
+   case "20":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5829"> Bateshwor Rural Municipality   </option> 
+  <option value="5834"> Bideha Municipality   </option> 
+  <option value="5827"> Dhanauji Rural Municipality   </option> 
+  <option value="5823"> Ganeshman Charnath Municipality   </option> 
+  <option value="5837"> Hansapiur Municipality   </option> 
+  <option value="5824"> Janaknandani Rural Municipality   </option> 
+  <option value="5821"> Kamala Municipality   </option> 
+  <option value="5831"> Mithila Bihari Municipality   </option> 
+  <option value="5832"> Mukhiyapatti Musarmiya Rural Municipality   </option> 
+  <option value="5836"> Sabaila Municipality   </option> 
+  <option value="5835"> Sahidnagar Municipality   </option> 
+`;
+break;
+   
+   case "17":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5178"> Bigu Rural Municipality   </option> 
+  <option value="5173"> Gaurishankar Rural Municipality   </option> 
+`;
+break;
+   
+   case "57":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5579"> Chharka Tangsong Rural Municipality   </option> 
+  <option value="5582"> Dolpo Buddha Rural Municipality   </option> 
+  <option value="5580"> Jagadulla Rural Municipality   </option> 
+  <option value="5578"> Kaike Rural Municipality   </option> 
+  <option value="5584"> Mudkechula Rural Municipality   </option> 
+  <option value="5585"> Shey Phoksundo Rural Municipality   </option> 
+  <option value="5581"> Thuli Bheri Municipality   </option> 
+  <option value="5583"> Tripurasundari Municipality   </option> 
+`;
+break;
+   
+   case "70":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5688"> Adharsha Rural Municipality   </option> 
+  <option value="5693"> Badikedar Rural Municipality   </option> 
+  <option value="5694"> Bogtan Rural Municipality   </option> 
+  <option value="5691"> Dipayal Silgadi Municipality   </option> 
+  <option value="5690"> Jorayal Rural Municipality   </option> 
+  <option value="5689"> K I Singh Rural Municipality   </option> 
+  <option value="5692"> Purbichauki Rural Municipality   </option> 
+  <option value="5696"> Sayal Rural Municipality   </option> 
+  <option value="5695"> Shikhar Municipality   </option> 
+`;
+break;
+   
+   case "36":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5384"> Ajirkot Rural Municipality   </option> 
+  <option value="5394"> Barpak Sulikot Rural Municipality   </option> 
+  <option value="5388"> Chum Nubri Rural Municipality   </option> 
+  <option value="5389"> Dharche Rural Municipality   </option> 
+`;
+break;
+   
+   case "42":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5438"> Dhurkot Rural Municipality   </option> 
+  <option value="5433"> Isma Rural Municipality   </option> 
+  <option value="5439"> Madane Rural Municipality   </option> 
+  <option value="5440"> Malika Rural Municipality   </option> 
+  <option value="5441"> Musikot Municipality   </option> 
+`;
+break;
+   
+   case "61":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5607"> Adanchuli Rural Municipality   </option> 
+  <option value="5609"> Chankheli Rural Municipality   </option> 
+  <option value="5608"> Kharpunath Rural Municipality   </option> 
+  <option value="5611"> Namkha Rural Municipality   </option> 
+  <option value="5612"> Sarkegad Rural Municipality   </option> 
+  <option value="5613"> Simkot Rural Municipality   </option> 
+  <option value="5610"> Tanjakot Rural Municipality   </option> 
+`;
+break;
+   
+   case "3":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5019"> Chulachuli Rural Municipality   </option> 
+  <option value="5020"> Deumai Municipality   </option> 
+  <option value="5021"> Fakphokthum Rural Municipality   </option> 
+  <option value="5018"> Illam Municipality   </option> 
+  <option value="5022"> Mai Municipality   </option> 
+  <option value="5023"> Maijogmai Rural Municipality   </option> 
+  <option value="5024"> Mangsebung Rural Municipality   </option> 
+  <option value="5025"> Rong Rural Municipality   </option> 
+  <option value="5026"> Sandakpur Rural Municipality   </option> 
+  <option value="5027"> Suryodata Municipality   </option> 
+`;
+break;
+   
+   case "62":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5618"> Barekot Rural Municipality   </option> 
+  <option value="5619"> Bheri Municipality   </option> 
+  <option value="5615"> Chhedagad Municipality   </option> 
+  <option value="5616"> Junichande Rural Municipality   </option> 
+  <option value="5614"> Kuse Rural Municipality   </option> 
+  <option value="5617"> Nalagad Municipality   </option> 
+  <option value="5620"> Shiwalaya Rural Municipality   </option> 
+`;
+break;
+   
+   case "4":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5028"> Arjundhara Municipality   </option> 
+  <option value="5036"> Barhadashi Rural Municipality   </option> 
+  <option value="5038"> Bhadrapur Municipality   </option> 
+  <option value="5040"> Birtamod Municipality   </option> 
+  <option value="5037"> Buddhashanti Rural Municipality   </option> 
+  <option value="5035"> Damak Municipality   </option> 
+  <option value="5032"> Gauradhaha Municipality   </option> 
+  <option value="5033"> Gauriganj Rural Municipality   </option> 
+  <option value="5042"> Haldibari Rural Municipality   </option> 
+  <option value="5029"> Kachankawal Rural Municipality   </option> 
+  <option value="5031"> Kamal Rural Municipality   </option> 
+  <option value="5030"> Kankai Municipality   </option> 
+  <option value="5039"> Mechinagar Municipality   </option> 
+  <option value="5041"> Shivasataxi Municipality   </option> 
+`;
+break;
+   
+   case "59":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5592"> Chandannath Municipality   </option> 
+  <option value="5591"> Guthichaur Rural Municipality   </option> 
+  <option value="5597"> Hima Rural Municipality   </option> 
+  <option value="5590"> Kanakasundari Rural Municipality   </option> 
+  <option value="5595"> Patarasi Rural Municipality   </option> 
+  <option value="5596"> Sinja Rural Municipality   </option> 
+  <option value="5593"> Tatopani Rural Municipality   </option> 
+  <option value="5594"> Tila Rural Municipality   </option> 
+`;
+break;
+   
+   case "71":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5706"> Bardagoriya Rural Municipality   </option> 
+  <option value="5701"> Chure Rural Municipality   </option> 
+   Dhangadhi Sub Metropolitan  <option value="5705"> </option> 
+  <option value="5699"> Gauriganga Municipality   </option> 
+  <option value="5698"> Godawari Municipality   </option> 
+  <option value="5702"> Janaki Rural Municipality   </option> 
+  <option value="5697"> Kailari Rural Municipality   </option> 
+  <option value="5708"> Mohanyal Rural Municipality   </option> 
+`;
+break;
+   
+   case "60":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5599"> Khandachakra Municipality   </option> 
+  <option value="5604"> Mahawai Rural Municipality   </option> 
+  <option value="5601"> Naraharinath Rural Municipality   </option> 
+  <option value="5602"> Pachaljharana Rural Municipality   </option> 
+  <option value="5603"> Palata Rural Municipality   </option> 
+  <option value="5605"> Raskot Municipality   </option> 
+  <option value="5606"> Sanni Tribeni Rural Municipality   </option> 
+  <option value="5598"> Subha Kalika Rural Municipality   </option> 
+  <option value="5600"> Tilagufa Municipality   </option> 
+`;
+break;
+   
+   case "75":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5743"> Bedkot Municipality   </option> 
+  <option value="5738"> Beldandi Rural Municipality   </option> 
+  <option value="5740"> Bhimdatta Municipality   </option> 
+  <option value="5741"> Dodhara Chandani Municipality   </option> 
+  <option value="5736"> Krishnapur Municipality   </option> 
+  <option value="5742"> Laljhadi Rural Municipality   </option> 
+  <option value="5744"> Shuklaphanta Municipality   </option> 
+`;
+break;
+   
+   case "47":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5499"> Bijayanagar Rural Municipality   </option> 
+  <option value="5495"> Buddhabhumi Municipality   </option> 
+  <option value="5493"> Krishnanagar Municipality   </option> 
+  <option value="5496"> Maharajgunj Municipality   </option> 
+  <option value="5500"> Shivaraj Municipality   </option> 
+`;
+break;
+   
+   case "39":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5407"> Annapurna Rural Municipality   </option> 
+  <option value="5409"> Machhapuchchhre Rural Municipality   </option> 
+`;
+break;
+   
+   case "26":
+   modelSelect.innerHTML += `
+   Kavrepalanchowk  <option value="29"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5305"> Banepa Municipality   </option> 
+  <option value="5306"> Bethanchowk Rural Municipality   </option> 
+  <option value="5307"> Bhumlu Rural Municipality   </option> 
+  <option value="5299"> Chaurideurali Rural Municipality   </option> 
+  <option value="5301"> Dhulikhel Municipality   </option> 
+  <option value="5298"> Khanikhola Rural Municipality   </option> 
+  <option value="5309"> Mahabharat Rural Municipality   </option> 
+  <option value="5308"> Mandandeupur Municipality   </option> 
+  <option value="5302"> Namobuddha Municipality   </option> 
+  <option value="5303"> Panauti Municipality   </option> 
+  <option value="5304"> Panchkhal Municipality   </option> 
+  <option value="5310"> Roshi Rural Municipality   </option> 
+  <option value="5300"> Temal Rural Municipality   </option> 
+`;
+break;
+   
+   case "12":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5112"> Ainselukhark Rural Municipality   </option> 
+  <option value="5117"> Barahapokhari Rural Municipality   </option> 
+  <option value="5116"> Diprung Rural Municipality   </option> 
+  <option value="5121"> Halesi Tuwachung Municipality   </option> 
+  <option value="5115"> Jantedhunga Rural Municipality   </option> 
+  <option value="5113"> Kepilasagadhi Rural Municipality   </option> 
+  <option value="5114"> Khotehang Rural Municipality   </option> 
+  <option value="5119"> Rawabesi Rural Municipality   </option> 
+  <option value="5118"> Rupakot Majhuwagadhi Municipality   </option> 
+  <option value="5120"> Sakela Rural Municipality   </option> 
+`;
+break;
+   
+   case "28":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5294"> Bagmati Rural Municipality   </option> 
+  <option value="5292"> Konjyosom Rural Municipality   </option> 
+  <option value="5295"> Mahankal Rural Municipality   </option> 
+`;
+break;
+   
+   case "38":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5400"> Dudhpokhari Rural Municipality   </option> 
+  <option value="5399"> Kwholasothar Rural Municipality   </option> 
+  <option value="5404"> Marsyangdi Rural Municipality   </option> 
+`;
+break;
+   
+   case "21":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5841"> Balawa Municipality   </option> 
+  <option value="5842"> Bhangaha Municipality   </option> 
+  <option value="5838"> Ekdanra Rural Municipality   </option> 
+  <option value="5218"> Jaleswor Municipality   </option> 
+  <option value="5846"> Loharpatti Municipality   </option> 
+  <option value="5225"> Mahottari Rural Municipality   </option> 
+  <option value="5844"> Manara Sisawa Municipality   </option> 
+  <option value="5843"> Matihani Municipality   </option> 
+  <option value="5219"> Pipra Rural Municipality   </option> 
+  <option value="5845"> Ramgopalpur Municipality   </option> 
+  <option value="5228"> Samsi Rural Municipality   </option> 
+  <option value="5229"> Sonama Rural Municipality   </option> 
+`;
+break;
+   
+   case "31":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5327"> Bagmati Rural Municipality   </option> 
+  <option value="5326"> Bakaiya Rural Municipality   </option> 
+  <option value="5328"> Bhimphedi Rural Municipality   </option> 
+   Hetauda Sub Metropolitan  <option value="5332"> </option> 
+  <option value="5323"> Indrasarowar Rural Municipality   </option> 
+  <option value="5324"> Kailash Rural Municipality   </option> 
+  <option value="5329"> Makawanpurgadhi Rural Municipality   </option> 
+  <option value="5330"> Manahari Rural Municipality   </option> 
+  <option value="5331"> Raksirang Rural Municipality   </option> 
+  <option value="5325"> Thaha Municipality   </option> 
+`;
+break;
+   
+   case "37":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5395"> Chame Rural Municipality   </option> 
+  <option value="5398"> Manang Jhang Rural Municipality   </option> 
+  <option value="5396"> Narpa Bhumi Rural Municipality   </option> 
+  <option value="5397"> Nashong Rural Municipality   </option> 
+`;
+break;
+   
+   case "9":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5084"> Belbari Municipality   </option> 
+  <option value="5083"> Budhiganga Rural Municipality   </option> 
+  <option value="5081"> Dhanpalthan Rural Municipality   </option> 
+  <option value="5079"> Gramthan Rural Municipality   </option> 
+  <option value="5080"> Jahada Rural Municipality   </option> 
+  <option value="5077"> Kanepokhari Rural Municipality   </option> 
+  <option value="5076"> Katahari Rural Municipality   </option> 
+  <option value="5078"> Kerabari Rural Municipality   </option> 
+  <option value="5088"> Letang Municipality   </option> 
+  <option value="5085"> Milkajunga Rural Municipality   </option> 
+  <option value="5082"> Pathari Shanishchare Municipality   </option> 
+  <option value="5086"> Rangeli Municipality   </option> 
+  <option value="5087"> Ratuwamai Municipality   </option> 
+  <option value="5091"> Sundarharaicha Municipality   </option> 
+  <option value="5090"> Sunwarshi Municipality   </option> 
+  <option value="5075"> Uralabari Municipality   </option> 
+`;
+break;
+   
+   case "58":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5587"> Chhayanath Rara Municipality   </option> 
+  <option value="5586"> Khatyad Rural Municipality   </option> 
+  <option value="5588"> Mugum Karmarong Rural Municipality   </option> 
+  <option value="5589"> Soru Rural Municipality   </option> 
+`;
+break;
+   
+   case "48":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5504"> Lo-ghekar damodarkunda Rural Municipality   </option> 
+`;
+break;
+   
+   case "49":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5507"> Annapurna Rural Municipality   </option> 
+  <option value="5509"> Beni Municipality   </option> 
+  <option value="5508"> Dhaulagiri Rural Municipality   </option> 
+  <option value="5511"> Malika Rural Municipality   </option> 
+  <option value="5510"> Mangala Rural Municipality   </option> 
+  <option value="5512"> Raghuganga Rural Municipality   </option> 
+`;
+break;
+Dis:bardaghat susta pashchim)  <optionNawalparasi value="76"> </option> 
+   
+   case )  <optionNawalparasi valu:
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5467"> Bardaghat Municipality   </option> 
+  <option value="5463"> Susta Rural Municipality   </option> 
+`;
+break;
+Dis:bardaghat susta purba)  <optionNawalparasi value="45"> </option> 
+   
+   case )  <optionNawalparasi valu:
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5468"> Baudikali Rural Municipality   </option> 
+  <option value="5472"> Binayee Tribeni Rural Municipality   </option> 
+  <option value="5469"> Bulingtar Rural Municipality   </option> 
+  <option value="5464"> Devchuli Municipality   </option> 
+  <option value="5462"> Gaidakot Municipality   </option> 
+  <option value="5475"> Hupsekot Rural Municipality   </option> 
+  <option value="5461"> Kawasoti Municipality   </option> 
+  <option value="5470"> Madhyabindu Municipality   </option> 
+`;
+break;
+   
+   case "25":
+   modelSelect.innerHTML += `
+   Okhaldhunga  <option value="13"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5123"> Champadevi Rural Municipality   </option> 
+  <option value="5124"> Chisankhugadhi Rural Municipality   </option> 
+  <option value="5122"> Khijidemba Rural Municipality   </option> 
+  <option value="5127"> Likhu Rural Municipality   </option> 
+  <option value="5125"> Manebhanjyang Rural Municipality   </option> 
+  <option value="5126"> Molung Rural Municipality   </option> 
+  <option value="5128"> Siddhicharan Municipality   </option> 
+  <option value="5129"> Sunkoshi Rural Municipality   </option> 
+`;
+break;
+   
+   case "43":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5449"> Bagnaskali Rural Municipality   </option> 
+  <option value="5450"> Mathagadhi Rural Municipality   </option> 
+  <option value="5447"> Nisdi Rural Municipality   </option> 
+  <option value="5448"> Purbakhola Rural Municipality   </option> 
+  <option value="5454"> Rainadevi Chhahara Rural Municipality   </option> 
+  <option value="5451"> Rambha Rural Municipality   </option> 
+  <option value="5452"> Rampur Municipality   </option> 
+  <option value="5453"> Ribdikot Rural Municipality   </option> 
+  <option value="5445"> Tansen Municipality   </option> 
+  <option value="5446"> Tinau Rural Municipality   </option> 
+`;
+break;
+   
+   case "2":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5012"> Falelung Rural Municipality   </option> 
+  <option value="5013"> Falgunanda Rural Municipality   </option> 
+  <option value="5017"> Hilihang Rural Municipality   </option> 
+  <option value="5015"> Miklajung Rural Municipality   </option> 
+  <option value="5014"> Phidim Municipality   </option> 
+  <option value="5011"> Tumbewa Rural Municipality   </option> 
+  <option value="5016"> Yangwarak Rural Municipality   </option> 
+`;
+break;
+   
+   case "51":
+   modelSelect.innerHTML += `
+   Parsa  <option value="34"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5887"> Bahudramai Municipality   </option> 
+  <option value="5372"> Bindabasini Rural Municipality   </option> 
+  <option value="5364"> Chhipaharmai Rural Municipality   </option> 
+  <option value="5366"> Dhobini Rural Municipality   </option> 
+  <option value="5365"> Jagarnathpur Rural Municipality   </option> 
+  <option value="5882"> Jirabhawani Rural Municipality   </option> 
+  <option value="5881"> Kalikamai Rural Municipality   </option> 
+  <option value="5367"> Pakahamainpur Rural Municipality   </option> 
+  <option value="5885"> Parsagadi Municipality   </option> 
+  <option value="5884"> Paterwasugauli Rural Municipality   </option> 
+  <option value="5375"> Sakhuwaprasauni Rural Municipality   </option> 
+  <option value="5883"> Thori Rural Municipality   </option> 
+`;
+break;
+   
+   case "54":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5550"> Gaumukhi Rural Municipality   </option> 
+  <option value="5554"> Mallarani Rural Municipality   </option> 
+  <option value="5552"> Naubahini Rural Municipality   </option> 
+  <option value="5556"> Sarumarani Rural Municipality   </option> 
+  <option value="5557"> Sworgadwary Municipality   </option> 
+`;
+break;
+   
+   case "18":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5181"> Umakunda Rural Municipality   </option> 
+`;
+break;
+   
+   case "23":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5251"> Aama Chhodingmo Rural Municipality   </option> 
+  <option value="5249"> Gosaikunda Rural Municipality   </option> 
+  <option value="5248"> Kalika Rural Municipality   </option> 
+  <option value="5250"> Naukunda Rural Municipality   </option> 
+  <option value="5247"> Uttargaya Rural Municipality   </option> 
+`;
+break;
+   
+   case "32":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5875"> Brindawan Municipality   </option> 
+  <option value="5866"> Dewahi Gonahi   Municipality   </option> 
+  <option value="5865"> Durga Bhagwati Rural Municipality   </option> 
+  <option value="5862"> Gadimai Municipality   </option> 
+  <option value="5336"> Garuda Municipality   </option> 
+  <option value="5863"> Gujara Municipality   </option> 
+  <option value="5860"> Ishnath Municipality   </option> 
+  <option value="5861"> Katahariya Municipality   </option> 
+  <option value="5870"> Madhav Narayan Municipality   </option> 
+  <option value="5867"> Paroha Municipality   </option> 
+  <option value="5868"> Phatuwa Bijayapur Municipality   </option> 
+  <option value="5872"> Yamunamai  Rural Municipality   </option> 
+`;
+break;
+   
+   case "53":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+   Gangadev Rural Muncipality  <option value="5546"> </option> 
+  <option value="5545"> Lungri Rural Municipality   </option> 
+  <option value="5542"> Madi Rural Municipality   </option> 
+  <option value="5541"> Paribartan Rural Municipality   </option> 
+  <option value="5544"> Rolpa Municipality   </option> 
+  <option value="5543"> Runtigadi Rural Municipality   </option> 
+  <option value="5547"> Sunchhahari Rural Municipality   </option> 
+  <option value="5548"> Sunil Smriti Rural Municipality   </option> 
+  <option value="5540"> Thawang Rural Municipality   </option> 
+  <option value="5539"> Tribeni Rural Municipality   </option> 
+`;
+break;
+   
+   case "77":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5530"> Aathbiskot Municipality   </option> 
+  <option value="5534"> Banfikot Rural Municipality   </option> 
+  <option value="5531"> Chaurjahari Municipality   </option> 
+  <option value="5536"> Musikot Municipality   </option> 
+  <option value="5537"> Sani Bheri Rural Municipality   </option> 
+  <option value="5532"> Tribeni Rural Municipality   </option> 
+`;
+break;
+Dis:option value="52"> Rukum (purba) </option> 
+   
+   case 2"> Ruku:
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5535"> Bhume Rural Municipality   </option> 
+  <option value="5533"> Putha Uttarganga Rural Municipality   </option> 
+  <option value="5538"> Sisne Rural Municipality   </option> 
+`;
+break;
+   
+   case "46":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5479"> Gaidahawa Rural Municipality   </option> 
+  <option value="5477"> Kanchan Rural Municipality   </option> 
+  <option value="5478"> Kotahimai Rural Municipality   </option> 
+  <option value="5486"> Lumbini Sanskritik Municipality   </option> 
+  <option value="5483"> Marchawari Rural Municipality   </option> 
+  <option value="5484"> Mayadevi Rural Municipality   </option> 
+  <option value="5476"> Omsatiya Rural Municipality   </option> 
+  <option value="5488"> Sammarimai Rural Municipality   </option> 
+`;
+break;
+   
+   case "55":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5566"> Bagchaur Municipality   </option> 
+  <option value="5565"> Bangad Kupinde Municipality   </option> 
+  <option value="5561"> Chhatreshwori Rural Municipality   </option> 
+  <option value="5564"> Darma Rural Municipality   </option> 
+  <option value="5559"> Kalimati Rural Municipality   </option> 
+  <option value="5558"> Kapurkot Rural Municipality   </option> 
+   Kumakh Rural Municipalilty  <option value="5560"> </option> 
+  <option value="5567"> Sharada Municipality   </option> 
+   Siddha Kumakh Rural Municipalilty  <option value="5562"> </option> 
+  <option value="5563"> Tribeni Rural Municipality   </option> 
+`;
+break;
+   
+   case "5":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5048"> Bhotkhola Rural Municipality   </option> 
+  <option value="5045"> Chainpur Municipality   </option> 
+  <option value="5044"> Chichila Rural Municipality   </option> 
+  <option value="5046"> Dharmadevi Municipality   </option> 
+  <option value="5043"> Khandbari Municipality   </option> 
+  <option value="5050"> Madi Municipality   </option> 
+  <option value="5049"> Makalu Rural Municipality   </option> 
+  <option value="5047"> Panchkhapan Municipality   </option> 
+  <option value="5051"> Sabhapokhari Rural Municipality   </option> 
+  <option value="5052"> Silichong Rural Municipality   </option> 
+`;
+break;
+   
+   case "15":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5801"> Aagrasaiyar Krishnasawaran Rural Municipality   </option> 
+  <option value="5814"> Bishnupur Rural Municipality   </option> 
+  <option value="5804"> Chhinnamasta Rural Municipality   </option> 
+  <option value="5805"> Dakneshwori Municipality   </option> 
+  <option value="5818"> Hanumanpur Kankalini Municipality   </option> 
+  <option value="5803"> Khadak Municipality   </option> 
+  <option value="5810"> Mahadev Rural Municipality   </option> 
+  <option value="5811"> Rajbiraj Municipality   </option> 
+  <option value="5808"> Rajgadh Rural Municipality   </option> 
+  <option value="5812"> Rupani Rural Municipality   </option> 
+  <option value="5815"> Sambhunath  Municipality   </option> 
+  <option value="5816"> Saptakoshi  Municipality   </option> 
+  <option value="5817"> Surunga Municipality   </option> 
+  <option value="5807"> Tilathi Koiladi Rural Municipality   </option> 
+  <option value="5813"> Walan-Bihul Rural Municipality   </option> 
+`;
+break;
+   
+   case "22":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5238"> Bagmati Municipality   </option> 
+  <option value="5853"> Balara Municipality   </option> 
+  <option value="5854"> Basbariya Rural Municipality   </option> 
+  <option value="5857"> Bishnu Rural Municipality   </option> 
+  <option value="5855"> Brahmapuri  Rural Municipality   </option> 
+  <option value="5850"> Chakraghatta  Rural Municipality   </option> 
+  <option value="5234"> Chandranagar Rural Municipality   </option> 
+  <option value="5851"> Dhankaul Rural Municipality   </option> 
+  <option value="5849"> Godaita  Municipality   </option> 
+  <option value="5858"> Haripur Municipality   </option> 
+  <option value="5859"> Haripurwa Municipality   </option> 
+  <option value="5246"> Hariwan Municipality   </option> 
+  <option value="5230"> Ishworpur Municipality   </option> 
+  <option value="5848"> Kaudena Rural Municipality   </option> 
+  <option value="5847"> Kawilashi Municipality   </option> 
+  <option value="5242"> Lalbandi Municipality   </option> 
+  <option value="5852"> Parsa Rural Municipality   </option> 
+  <option value="5856"> Ramnagar Rural Municipality   </option> 
+`;
+break;
+   
+   case "19":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5193"> Dudhouli Municipality   </option> 
+  <option value="5191"> Ghanglekh Rural Municipality   </option> 
+  <option value="5190"> Golanjor Rural Municipality   </option> 
+  <option value="5197"> Hariharpurgadhi Rural Municipality   </option> 
+  <option value="5189"> Kamalamai Municipality   </option> 
+  <option value="5195"> Marin Rural Municipality   </option> 
+  <option value="5194"> Phikkal Rural Municipality   </option> 
+  <option value="5196"> Sunkoshi Rural Municipality   </option> 
+  <option value="5192"> Tinpatan Rural Municipality   </option> 
+`;
+break;
+   
+   case "30":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5315"> Balefi Rural Municipality   </option> 
+  <option value="5320"> Barhabise Municipality   </option> 
+  <option value="5316"> Bhotekoshi Rural Municipality   </option> 
+  <option value="5311"> Chautara Sangachokgadhi Municipality   </option> 
+  <option value="5322"> Helambu Rural Municipality   </option> 
+  <option value="5318"> Indrawati Rural Municipality   </option> 
+  <option value="5312"> Jugal Rural Municipality   </option> 
+  <option value="5319"> Lisangkhu Pakhar Rural Municipality   </option> 
+  <option value="5317"> Melamchi Municipality   </option> 
+  <option value="5314"> Panchpokhari Thangpal Rural Municipality   </option> 
+  <option value="5321"> Sunkoshi Rural Municipality   </option> 
+  <option value="5313"> Tripurasundari Rural Municipality   </option> 
+`;
+break;
+   
+   case "16":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5155"> Arnama Rural Municipality   </option> 
+  <option value="5156"> Aurahi Rural Municipality   </option> 
+  <option value="5163"> Bariyarpatti Rural Municipality   </option> 
+  <option value="5164"> Bhagawanpur Rural Municipality   </option> 
+  <option value="5168"> Bishnupur Rural Municipality   </option> 
+  <option value="5160"> Dhangadhimai Municipality   </option> 
+  <option value="5159"> Golbazar Municipality   </option> 
+  <option value="5158"> Kalyanpur Municipality   </option> 
+  <option value="5819"> Karjanha Municipality   </option> 
+  <option value="5167"> Lahan Municipality   </option> 
+  <option value="5166"> Laxmipur Patari Rural Municipality   </option> 
+  <option value="5161"> Naraha Rural Municipality   </option> 
+  <option value="5162"> Nawarajpur Rural Municipality   </option> 
+  <option value="5169"> Sakhuwanankarkatti Rural Municipality   </option> 
+  <option value="5170"> Siraha Municipality   </option> 
+  <option value="5171"> Sukhipur Municipality   </option> 
+`;
+break;
+   
+   case "11":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5111"> Dudhakunda Municipality   </option> 
+  <option value="5105"> Dudhkoshi Rural Municipality   </option> 
+  <option value="5104"> Khumbupasanglahmu Rural Municipality   </option> 
+  <option value="5109"> Likhu Pike Rural Municipality   </option> 
+  <option value="5108"> Mahakulung Rural Municipality   </option> 
+  <option value="5107"> Nechasalyan Rural Municipality   </option> 
+  <option value="5110"> Sotang Rural Municipality   </option> 
+  <option value="5106"> Thulungdudhkoshi Rural Municipality   </option> 
+`;
+break;
+   
+   case "10":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5099"> Barahchetra Municipality   </option> 
+  <option value="5101"> Bhokraha Rural Municipality   </option> 
+  <option value="5097"> Dewanganj Rural Municipality   </option> 
+  <option value="5103"> Harinagara Rural Municipality   </option> 
+  <option value="5094"> Koshi Rural Municipality   </option> 
+  <option value="5102"> Ramdhuni Municipality   </option> 
+`;
+break;
+   
+   case "64":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5636"> Barahtal Rural Municipality   </option> 
+  <option value="5638"> Bheriganga Municipality   </option> 
+  <option value="5637"> Birendranagar Municipality   </option> 
+  <option value="5634"> Chaukune Rural Municipality   </option> 
+  <option value="5633"> Chingad Rural Municipality   </option> 
+  <option value="5632"> Gurbhakot Municipality   </option> 
+  <option value="5639"> Lekbeshi Municipality   </option> 
+  <option value="5635"> Panchpuri Municipality   </option> 
+  <option value="5640"> Simta Rural Municipality   </option> 
+`;
+break;
+   
+   case "41":
+   modelSelect.innerHTML += `
+   Tanahun  <option value="40"> </option> 
+   <option value="  -"> --Select---</option> 
+  <option value="5412"> Anbukhaireni Rural Municipality   </option> 
+  <option value="5417"> Bhanu Municipality   </option> 
+  <option value="5420"> Byas Municipality   </option> 
+  <option value="5415"> Devghat Rural Municipality   </option> 
+`;
+break;
+   
+   case "1":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5001"> Aathrai Tribeni Rural Municipality   </option> 
+  <option value="5006"> Maiwakhola Rural Municipality   </option> 
+  <option value="5005"> Meringden Rural Municipality   </option> 
+  <option value="5004"> Mikwakhola Rural Municipality   </option> 
+  <option value="5002"> Phaktanglung Rural Municipality   </option> 
+  <option value="5003"> Phungling Municipality   </option> 
+  <option value="5008"> Sidingba Rural Municipality   </option> 
+  <option value="5009"> Sirijangha Rural Municipality   </option> 
+  <option value="5007"> Yangwarak Rural Municipality   </option> 
+`;
+break;
+   
+   case "6":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5053"> Aathrai Rural Municipality   </option> 
+  <option value="5054"> Chhathar Rural Municipality   </option> 
+  <option value="5058"> Laligurans Municipality   </option> 
+  <option value="5056"> Menchayayam Rural Municipality   </option> 
+  <option value="5057"> Myanglung Municipality   </option> 
+  <option value="5055"> Phedap Rural Municipality   </option> 
+`;
+break;
+   
+   case "14":
+   modelSelect.innerHTML += `
+   <option value="  -"> --Select---</option> 
+  <option value="5136"> Belaka Municipality   </option> 
+  <option value="5132"> Chaudandigadhi Municipality   </option> 
+  <option value="5131"> Katari Nagarpalika Municipality   </option> 
+  <option value="5137"> limchungbung rural municipality   </option> 
+  <option value="5135"> Rautamai Rural Municipality   </option> 
+  <option value="5133"> Tapli Gaunpalika Rural Municipality   </option> 
+  <option value="5134"> Triyuga Municipality   </option> 
+  <option value="5130"> Udayapurgadhi Rural Municipality   </option> 
+ `;
+ break;
+
+
+ Dis: <option value="68">Achham </option> 
+
+Dis: <option value="44">Arghakhanchi </option> 
+
+Dis: <option value="50">Baglung </option> 
+
+Dis: <option value="73">Baitadi </option> 
+
+Dis: <option value="69">Bajhang </option> 
+
+Dis: <option value="67">Bajura </option> 
+
+Dis: <option value="65">Banke </option> 
+
+Dis: <option value="33">Bara </option> 
+
+Dis: <option value="66">Bardiya </option> 
+
+Dis: <option value="27">Bhaktapur </option> 
+
+Dis: <option value="35">Chitwan </option> 
+
+Dis: <option value="74">Dadeldhura </option> 
+
+Dis: <option value="63">Dailekh </option> 
+
+Dis: <option value="56">Dang </option> 
+
+Dis: <option value="72">Darchula </option> 
+
+Dis: <option value="24">Dhading </option> 
+
+Dis: <option value="8">Dhankuta </option> 
+
+Dis: <option value="20">Dhanusha </option> 
+
+Dis: <option value="17">Dolakha </option> 
+
+Dis: <option value="57">Dolpa </option> 
+
+Dis: <option value="70">Doti </option> 
+
+Dis: <option value="36">Gorkha </option> 
+
+Dis: <option value="42">Gulmi </option> 
+
+Dis: <option value="61">Humla </option> 
+
+Dis: <option value="3">Illam </option> 
+
+Dis: <option value="62">Jajarkot </option> 
+
+Dis: <option value="4">Jhapa </option> 
+
+Dis: <option value="59">Jumla </option> 
+
+Dis: <option value="71">Kailali </option> 
+
+Dis: <option value="60">Kalikot </option> 
+
+Dis: <option value="75">Kanchanpur </option> 
+
+Dis: <option value="47">Kapilwastu </option> 
+
+Dis: <option value="39">Kaski </option> 
+
+Dis: <option value="26">Kathmandu </option> 
+
+Dis: <option value="12">Khotang </option> 
+
+Dis: <option value="28">Lalitpur </option> 
+
+Dis: <option value="38">Lamjung </option> 
+
+Dis: <option value="21">Mahottari </option> 
+
+Dis: <option value="31">Makwanpur </option> 
+
+Dis: <option value="37">Manang </option> 
+
+Dis: <option value="9">Morang </option> 
+
+Dis: <option value="58">Mugu </option> 
+
+Dis: <option value="48">Mustang </option> 
+
+Dis: <option value="49">Myagdi </option> 
+
+Dis: <option value="25">Nuwakot </option> 
+
+Dis: <option value="43">Palpa </option> 
+
+Dis: <option value="2">Panchthar </option> 
+
+Dis: <option value="51">Parbat </option> 
+
+Dis: <option value="54">Pyuthan </option> 
+
+Dis: <option value="18">Ramechhap </option> 
+
+Dis: <option value="23">Rasuwa </option> 
+
+Dis: <option value="32">Rautahat </option> 
+
+Dis: <option value="53">Rolpa </option> 
+
+Dis: <option value="77">Rukum(paschim) </option> 
+
+Dis: <option value="46">Rupandehi </option> 
+
+Dis: <option value="55">Salyan </option> 
+
+Dis: <option value="5">Sankhuwasabha </option> 
+
+Dis: <option value="15">Saptari </option> 
+
+Dis: <option value="22">Sarlahi </option> 
+
+Dis: <option value="19">Sindhuli </option> 
+
+Dis: <option value="30">Sindhupalchowk </option> 
+
+Dis: <option value="16">Siraha </option> 
+
+Dis: <option value="11">Solukhumbu </option> 
+
+Dis: <option value="10">Sunsari </option> 
+
+Dis: <option value="64">Surkhet </option> 
+
+Dis: <option value="41">Syangja </option> 
+
+Dis: <option value="1">Taplejung </option> 
+
+Dis: <option value="6">Terhathum </option> 
+
+Dis: <option value="14">Udayapur </option> 
